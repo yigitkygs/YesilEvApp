@@ -1,0 +1,6 @@
+C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.Validation\bin\Debug\YesilEvAppYigit.Validation.dll
+C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.Validation\bin\Debug\YesilEvAppYigit.Validation.pdb
+C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.Validation\obj\Debug\YesilEvAppYigit.Validation.csproj.AssemblyReference.cache
+C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.Validation\obj\Debug\YesilEvAppYigit.Validation.csproj.CoreCompileInputs.cache
+C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.Validation\obj\Debug\YesilEvAppYigit.Validation.dll
+C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.Validation\obj\Debug\YesilEvAppYigit.Validation.pdb

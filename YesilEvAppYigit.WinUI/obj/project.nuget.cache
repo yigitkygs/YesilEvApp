@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "KoefHyTp4twAPzESE3R3XBS2Lp9dUQG9zqsbMrr8DrhoC0rzpZxYy6I605rAciVkyX1HpUCHeQ9jkESySBdWXw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.WinUI\\YesilEvAppYigit.WinUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Zeki\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
+    "C:\\Users\\Zeki\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

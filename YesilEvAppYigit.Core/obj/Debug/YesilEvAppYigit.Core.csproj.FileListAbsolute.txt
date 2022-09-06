@@ -1,0 +1,12 @@
+C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.Core\bin\Debug\YesilEvAppYigit.Core.dll.config
+C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.Core\bin\Debug\YesilEvAppYigit.Core.dll
+C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.Core\bin\Debug\YesilEvAppYigit.Core.pdb
+C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.Core\bin\Debug\EntityFramework.dll
+C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.Core\bin\Debug\EntityFramework.xml
+C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.Core\obj\Debug\YesilEvAppYigit.Core.csproj.AssemblyReference.cache
+C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.Core\obj\Debug\YesilEvAppYigit.Core.csproj.CoreCompileInputs.cache
+C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.Core\obj\Debug\YesilEvAppYigit.Core.csproj.CopyComplete
+C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.Core\obj\Debug\YesilEvAppYigit.Core.dll
+C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.Core\obj\Debug\YesilEvAppYigit.Core.pdb

@@ -1,0 +1,147 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.WinUI\\YesilEvAppYigit.WinUI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.Core\\YesilEvAppYigit.Core.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.Core\\YesilEvAppYigit.Core.csproj",
+        "projectName": "YesilEvAppYigit.Core",
+        "projectPath": "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.Core\\YesilEvAppYigit.Core.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.DAL\\YesilEvAppYigit.DAL.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.DAL\\YesilEvAppYigit.DAL.csproj",
+        "projectName": "YesilEvAppYigit.DAL",
+        "projectPath": "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.DAL\\YesilEvAppYigit.DAL.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.Core\\YesilEvAppYigit.Core.csproj": {
+                "projectPath": "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.Core\\YesilEvAppYigit.Core.csproj"
+              },
+              "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.DTO\\YesilEvAppYigit.DTO.csproj": {
+                "projectPath": "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.DTO\\YesilEvAppYigit.DTO.csproj"
+              },
+              "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.Mapping\\YesilEvAppYigit.Mapping.csproj": {
+                "projectPath": "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.Mapping\\YesilEvAppYigit.Mapping.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.DTO\\YesilEvAppYigit.DTO.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.DTO\\YesilEvAppYigit.DTO.csproj",
+        "projectName": "YesilEvAppYigit.DTO",
+        "projectPath": "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.DTO\\YesilEvAppYigit.DTO.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.Core\\YesilEvAppYigit.Core.csproj": {
+                "projectPath": "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.Core\\YesilEvAppYigit.Core.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.Mapping\\YesilEvAppYigit.Mapping.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.Mapping\\YesilEvAppYigit.Mapping.csproj",
+        "projectName": "YesilEvAppYigit.Mapping",
+        "projectPath": "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.Mapping\\YesilEvAppYigit.Mapping.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.Core\\YesilEvAppYigit.Core.csproj": {
+                "projectPath": "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.Core\\YesilEvAppYigit.Core.csproj"
+              },
+              "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.DTO\\YesilEvAppYigit.DTO.csproj": {
+                "projectPath": "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.DTO\\YesilEvAppYigit.DTO.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.WinUI\\YesilEvAppYigit.WinUI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.WinUI\\YesilEvAppYigit.WinUI.csproj",
+        "projectName": "YesilEvAppYigit.WinUI",
+        "projectPath": "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.WinUI\\YesilEvAppYigit.WinUI.csproj",
+        "packagesPath": "C:\\Users\\Zeki\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.WinUI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Zeki\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net4.7.2-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net4.7.2-windows",
+            "projectReferences": {
+              "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.DAL\\YesilEvAppYigit.DAL.csproj": {
+                "projectPath": "C:\\Users\\Zeki\\source\\repos\\YesilEvAppYigit\\YesilEvAppYigit.DAL\\YesilEvAppYigit.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net4.7.2-windows",
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win7-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

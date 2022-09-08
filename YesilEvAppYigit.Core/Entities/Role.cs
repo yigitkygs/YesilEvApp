@@ -13,5 +13,7 @@ namespace YesilEvAppYigit.Core
 
         [StringLength(50)]
         public string RoleType { get; set; }
+        public DateTime CreateDate { get; set; }
+
     }
 }

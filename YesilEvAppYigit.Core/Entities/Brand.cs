@@ -15,8 +15,11 @@ namespace YesilEvAppYigit.Core
         [StringLength(50)]
         public string BrandName { get; set; }
 
-        public int? UreticiID { get; set; }
+        public int? ManufacturerID { get; set; }
 
         public virtual Manufacturer Manufacturer { get; set; }
+        public DateTime? CreateDate { get; set; }
+
+        public bool? IsActive { get; set; }
     }
 }

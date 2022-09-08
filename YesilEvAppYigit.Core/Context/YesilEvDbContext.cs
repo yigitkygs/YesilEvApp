@@ -18,13 +18,13 @@ namespace YesilEvAppYigit.Core
         public virtual DbSet<Brand> Brands { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
         public virtual DbSet<Favorite> Favorites { get; set; }
-        public virtual DbSet<FavoriUrun> FavoriUruns { get; set; }
+        public virtual DbSet<FavoriteProduct> FavoriteProducts { get; set; }
         public virtual DbSet<Manufacturer> Manufacturers { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Risk> Risks { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Search> Searches { get; set; }
-        public virtual DbSet<UrunAllergen> UrunAllergens { get; set; }
+        public virtual DbSet<ProductAllergen> ProductAllergens { get; set; }
         public virtual DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -38,7 +38,7 @@ namespace YesilEvAppYigit.Core
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Allergen>()
-                .HasMany(e => e.UrunAllergens)
+                .HasMany(e => e.ProductAllergens)
                 .WithRequired(e => e.Allergen)
                 .HasForeignKey(e => e.AllergenID)
                 .WillCascadeOnDelete(false);
@@ -50,24 +50,19 @@ namespace YesilEvAppYigit.Core
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Favorite>()
-                .HasMany(e => e.FavoriUruns)
+                .HasMany(e => e.FavoriteProducts)
                 .WithRequired(e => e.Favorite)
-                .HasForeignKey(e => e.FavoriID)
+                .HasForeignKey(e => e.FavoriteID)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Product>()
-                .HasMany(e => e.FavoriUruns)
+                .HasMany(e => e.FavoriteProducts)
                 .WithRequired(e => e.Product)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Product>()
-                .HasMany(e => e.UrunAllergens)
+                .HasMany(e => e.ProductAllergens)
                 .WithRequired(e => e.Product)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<User>()
-                .HasMany(e => e.Blacklists)
-                .WithRequired(e => e.User)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<User>()

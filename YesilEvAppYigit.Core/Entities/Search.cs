@@ -10,10 +10,10 @@ namespace YesilEvAppYigit.Core
     public partial class Search
     {
         [Key]
-        public int AramaID { get; set; }
+        public int SearchID { get; set; }
 
         [StringLength(50)]
-        public string AramaKeyword { get; set; }
+        public string SearchKeyword { get; set; }
 
         public int? UserID { get; set; }
 

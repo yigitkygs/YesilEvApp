@@ -1,0 +1,6 @@
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.Testing\bin\Debug\YesilEvAppYigit.Testing.dll
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.Testing\bin\Debug\YesilEvAppYigit.Testing.pdb
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.Testing\obj\Debug\YesilEvAppYigit.Testing.csproj.AssemblyReference.cache
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.Testing\obj\Debug\YesilEvAppYigit.Testing.csproj.CoreCompileInputs.cache
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.Testing\obj\Debug\YesilEvAppYigit.Testing.dll
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.Testing\obj\Debug\YesilEvAppYigit.Testing.pdb

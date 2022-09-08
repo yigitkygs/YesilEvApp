@@ -9,14 +9,14 @@ namespace YesilEvAppYigit.Core
     [Table("BlacklistAllergen")]
     public partial class BlacklistAllergen
     {
-        public int ID { get; set; }
+        public int BlacklistAllergenID { get; set; }
 
         public int BlacklistID { get; set; }
 
         public int AllergenID { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? DateAdded { get; set; }
+        public DateTime? CreateDate { get; set; }
 
         public bool? IsActive { get; set; }
 

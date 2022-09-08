@@ -10,3 +10,15 @@ C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.DTO\obj\Debug\YesilEv
 C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.DTO\obj\Debug\YesilEvAppYigit.DTO.csproj.CopyComplete
 C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.DTO\obj\Debug\YesilEvAppYigit.DTO.dll
 C:\Users\Zeki\source\repos\YesilEvAppYigit\YesilEvAppYigit.DTO\obj\Debug\YesilEvAppYigit.DTO.pdb
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.DTO\bin\Debug\YesilEvAppYigit.DTO.dll
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.DTO\bin\Debug\YesilEvAppYigit.DTO.pdb
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.DTO\bin\Debug\YesilEvAppYigit.Core.dll
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.DTO\bin\Debug\EntityFramework.dll
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.DTO\bin\Debug\YesilEvAppYigit.Core.pdb
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.DTO\bin\Debug\YesilEvAppYigit.Core.dll.config
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.DTO\bin\Debug\EntityFramework.xml
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.DTO\obj\Debug\YesilEvAppYigit.DTO.csproj.AssemblyReference.cache
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.DTO\obj\Debug\YesilEvAppYigit.DTO.csproj.CoreCompileInputs.cache
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.DTO\obj\Debug\YesilEvAppYigit.DTO.csproj.CopyComplete
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.DTO\obj\Debug\YesilEvAppYigit.DTO.dll
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.DTO\obj\Debug\YesilEvAppYigit.DTO.pdb

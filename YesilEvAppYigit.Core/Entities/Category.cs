@@ -10,11 +10,15 @@ namespace YesilEvAppYigit.Core
     public partial class Category
     {
         [Key]
-        public int KategoriID { get; set; }
+        public int CategoryID { get; set; }
 
         [StringLength(50)]
-        public string KategoriAdi { get; set; }
+        public string CategoryName { get; set; }
 
-        public int UstKategoriID { get; set; }
+        public int UpperCategoryID { get; set; }
+        public bool? IsActive { get; set; }
+        public DateTime? CreateDate { get; set; }
+
+
     }
 }

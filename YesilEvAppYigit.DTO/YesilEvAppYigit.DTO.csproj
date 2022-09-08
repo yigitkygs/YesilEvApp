@@ -42,30 +42,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlerjenDTO\AlerjenFavoriDTO.cs" />
-    <Compile Include="AlerjenDTO\AlerjenRiskDTO.cs" />
+    <Compile Include="Reporting DTOs\AlerjenFavoriDTO.cs" />
+    <Compile Include="Reporting DTOs\AlerjenRiskDTO.cs" />
     <Compile Include="AlerjenDTO\AlerjenUrunDTO.cs" />
     <Compile Include="AlerjenDTO\AllergenDTO.cs" />
     <Compile Include="BlacklistDTO\BlacklistDTO.cs" />
     <Compile Include="BlacklistDTO\BlacklistAllergenDTO.cs" />
     <Compile Include="BrandDTO.cs" />
     <Compile Include="CategoryDTO.cs" />
-    <Compile Include="FavoriKaralisteEklenenUrunlerDTO.cs" />
-    <Compile Include="FavoriteDTO\EnYuksekFavoriUrunDTO.cs" />
+    <Compile Include="Reporting DTOs\FavoriKaralisteEklenenUrunlerDTO.cs" />
+    <Compile Include="Reporting DTOs\EnYuksekFavoriUrunDTO.cs" />
     <Compile Include="FavoriteDTO\FavoriteDTO.cs" />
-    <Compile Include="FavoriteDTO\FavoriUrunDTO.cs" />
-    <Compile Include="FavoriteDTO\KullaniciListeSayisiDTO.cs" />
-    <Compile Include="KullaniciAdminRaporDTO.cs" />
-    <Compile Include="KullaniciKaraListeAdetDTO.cs" />
-    <Compile Include="KullaniciUrunDTO.cs" />
+    <Compile Include="FavoriteDTO\FavoriteProductDTO.cs" />
+    <Compile Include="Reporting DTOs\KullaniciListeSayisiDTO.cs" />
+    <Compile Include="Reporting DTOs\UsersAndAdminsDTO.cs" />
+    <Compile Include="Reporting DTOs\KullaniciKaraListeAdetDTO.cs" />
+    <Compile Include="Reporting DTOs\UsersAndTheirAddedProducts.cs" />
     <Compile Include="ManufacturerDTO.cs" />
-    <Compile Include="ProductDTO\OnaylanmamisUrunDTO.cs" />
+    <Compile Include="Reporting DTOs\OnaylanmamisUrunDTO.cs" />
     <Compile Include="ProductDTO\ProductDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchDTO.cs" />
-    <Compile Include="ProductDTO\UrunAllergenDTO.cs" />
-    <Compile Include="ProductDTO\UrunRiskFavoriDTO.cs" />
-    <Compile Include="ProductDTO\UrunUrunIcerikAdetDTO.cs" />
+    <Compile Include="ProductDTO\ProductAllergenDTO.cs" />
+    <Compile Include="Reporting DTOs\UrunRiskFavoriDTO.cs" />
+    <Compile Include="Reporting DTOs\UrunUrunIcerikAdetDTO.cs" />
     <Compile Include="UserDTO.cs" />
   </ItemGroup>
   <ItemGroup>

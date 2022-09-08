@@ -9,18 +9,20 @@ namespace YesilEvAppYigit.DTO
 {
     public class CategoryDTO
     {
-        public int KategoriID { get; set; }
+        public int CategoryID { get; set; }
 
         [Required]
 
-        public string KategoriAdi { get; set; }
+        public string CategoryName { get; set; }
         [Required]
 
-        public int UstKategoriID { get; set; }
+        public int UpperCategoryID { get; set; }
+        public bool? IsActive { get; set; }
+        public DateTime? CreateDate { get; set; }
 
         public override string ToString()
         {
-            return KategoriAdi;
+            return CategoryName;
         }
     }
 }

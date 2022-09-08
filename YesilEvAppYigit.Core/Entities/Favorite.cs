@@ -12,14 +12,14 @@ namespace YesilEvAppYigit.Core
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Favorite()
         {
-            FavoriUruns = new HashSet<FavoriUrun>();
+            FavoriteProducts = new HashSet<FavoriteProduct>();
         }
 
         [Key]
-        public int ListID { get; set; }
+        public int FavoriteID { get; set; }
 
         [StringLength(50)]
-        public string ListName { get; set; }
+        public string FavoriteName { get; set; }
 
         public int UserID { get; set; }
 
@@ -31,6 +31,6 @@ namespace YesilEvAppYigit.Core
         public virtual User User { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FavoriUrun> FavoriUruns { get; set; }
+        public virtual ICollection<FavoriteProduct> FavoriteProducts { get; set; }
     }
 }

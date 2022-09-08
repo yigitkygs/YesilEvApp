@@ -12,7 +12,7 @@ namespace YesilEvAppYigit.Core
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
-            Blacklists = new HashSet<Blacklist>();
+            Blacklist = null;
             Favorites = new HashSet<Favorite>();
             Products = new HashSet<Product>();
             Searches = new HashSet<Search>();
@@ -27,11 +27,11 @@ namespace YesilEvAppYigit.Core
         public string Password { get; set; }
 
         public int RoleID { get; set; }
-
+        public DateTime CreateDate { get; set; }
         public bool? IsActive { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Blacklist> Blacklists { get; set; }
+        public virtual Blacklist Blacklist { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Favorite> Favorites { get; set; }

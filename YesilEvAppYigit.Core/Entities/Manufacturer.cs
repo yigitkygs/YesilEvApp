@@ -16,10 +16,12 @@ namespace YesilEvAppYigit.Core
         }
 
         [Key]
-        public int UreticiID { get; set; }
+        public int ManufacturerID { get; set; }
 
         [StringLength(50)]
-        public string UreticiAdi { get; set; }
+        public string ManufacturerName { get; set; }
+        public bool? IsActive { get; set; }
+        public DateTime? CreateDate { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Brand> Brands { get; set; }

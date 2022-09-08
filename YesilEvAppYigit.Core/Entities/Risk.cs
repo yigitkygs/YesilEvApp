@@ -19,9 +19,15 @@ namespace YesilEvAppYigit.Core
 
         [Required]
         [StringLength(50)]
-        public string RiskTipi { get; set; }
+        public string RiskType { get; set; }
+        public DateTime CreateDate { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Allergen> Allergens { get; set; }
+
+        public override string ToString()
+        {
+            return RiskType;
+        }
     }
 }

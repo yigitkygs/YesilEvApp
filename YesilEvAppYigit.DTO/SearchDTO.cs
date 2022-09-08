@@ -10,10 +10,14 @@ namespace YesilEvAppYigit.DTO
 {
     public class SearchDTO
     {
-        public string AramaKeyword { get; set; }
+        [Browsable(false)]
+        public int SearchID { get; set; }
+        public string SearchKeyword { get; set; }
         public DateTime? SearchDate { get; set; } = DateTime.Now;
+
         [Browsable(false)]
         public int UserID { get; set; }
+
         [Browsable(false)]
         public bool IsDeleted { get; set; }
     }

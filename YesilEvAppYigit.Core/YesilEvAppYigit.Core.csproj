@@ -57,13 +57,13 @@
     <Compile Include="Entities\Brand.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Favorite.cs" />
-    <Compile Include="Entities\FavoriUrun.cs" />
+    <Compile Include="Entities\FavoriteProduct.cs" />
     <Compile Include="Entities\Manufacturer.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\Risk.cs" />
     <Compile Include="Entities\Role.cs" />
     <Compile Include="Entities\Search.cs" />
-    <Compile Include="Entities\UrunAllergen.cs" />
+    <Compile Include="Entities\ProductAllergen.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Interfaces\IDeletableRepo.cs" />
     <Compile Include="Interfaces\IInsertableRepo.cs" />
@@ -73,10 +73,26 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\RepoBase.cs" />
+    <Compile Include="YesilEvDBYigitDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YesilEvDBYigitDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="YesilEvDBYigitDataSet.xsc">
+      <DependentUpon>YesilEvDBYigitDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="YesilEvDBYigitDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YesilEvDBYigitDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="YesilEvDBYigitDataSet.xss">
+      <DependentUpon>YesilEvDBYigitDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

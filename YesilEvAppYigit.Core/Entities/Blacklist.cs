@@ -16,7 +16,7 @@ namespace YesilEvAppYigit.Core
         }
 
         [Key]
-        public int ListID { get; set; }
+        public int BlacklistID { get; set; }
 
         public int UserID { get; set; }
 
@@ -24,7 +24,7 @@ namespace YesilEvAppYigit.Core
         public DateTime? CreateDate { get; set; }
 
         public bool? IsActive { get; set; }
-
+        [Required]
         public virtual User User { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

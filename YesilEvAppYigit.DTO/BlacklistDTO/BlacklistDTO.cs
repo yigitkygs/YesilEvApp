@@ -6,7 +6,7 @@ namespace YesilEvAppYigit.DTO
 {
     public class BlacklistDTO
     {
-        public int ListID { get; set; }
+        public int BlacklistID { get; set; }
         [Required]
         public int UserID { get; set; }
 
@@ -14,7 +14,6 @@ namespace YesilEvAppYigit.DTO
 
         public bool? IsActive { get; set; }
         public UserDTO User { get; set; }
-
         public List<BlacklistAllergenDTO> BlacklistAllergens { get; set; }
     }
 }

@@ -13,19 +13,21 @@ namespace YesilEvAppYigit.Core
         public Allergen()
         {
             BlacklistAllergens = new HashSet<BlacklistAllergen>();
-            UrunAllergens = new HashSet<UrunAllergen>();
+            ProductAllergens = new HashSet<ProductAllergen>();
         }
 
         [Key]
-        public int AlerjenID { get; set; }
+        public int AllergenID { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string AlerjenAdi { get; set; }
+        public string AllergenName { get; set; }
 
-        public string Aciklama { get; set; }
+        public string Description { get; set; }
 
         public int? RiskID { get; set; }
+        public bool? IsActive { get; set; }
+        public DateTime? CreateDate { get; set; }
 
         public virtual Risk Risk { get; set; }
 
@@ -33,6 +35,6 @@ namespace YesilEvAppYigit.Core
         public virtual ICollection<BlacklistAllergen> BlacklistAllergens { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UrunAllergen> UrunAllergens { get; set; }
+        public virtual ICollection<ProductAllergen> ProductAllergens { get; set; }
     }
 }

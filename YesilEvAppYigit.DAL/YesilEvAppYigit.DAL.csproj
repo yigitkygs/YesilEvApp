@@ -51,19 +51,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Concerete\AllergenDAL.cs" />
-    <Compile Include="Concerete\BlacklistAllergenDAL.cs" />
-    <Compile Include="Concerete\BlacklistDAL.cs" />
-    <Compile Include="Concerete\BrandDAL.cs" />
-    <Compile Include="Concerete\CategoryDAL.cs" />
-    <Compile Include="Concerete\FavoriteDAL.cs" />
-    <Compile Include="Concerete\ManufacturerDAL.cs" />
-    <Compile Include="Concerete\ProductDAL.cs" />
-    <Compile Include="Concerete\RaporlamaDAL.cs" />
-    <Compile Include="Concerete\SearchDAL.cs" />
-    <Compile Include="Concerete\UrunAllergenDAL.cs" />
+    <Compile Include="Concrete\AllergenDAL.cs" />
+    <Compile Include="Concrete\BlacklistAllergenDAL.cs" />
+    <Compile Include="Concrete\BlacklistDAL.cs" />
+    <Compile Include="Concrete\BrandDAL.cs" />
+    <Compile Include="Concrete\CategoryDAL.cs" />
+    <Compile Include="Concrete\FavoriteProductDAL.cs" />
+    <Compile Include="Concrete\FavoriteDAL.cs" />
+    <Compile Include="Concrete\ManufacturerDAL.cs" />
+    <Compile Include="Concrete\ProductDAL.cs" />
+    <Compile Include="Concrete\ReportingDAL.cs" />
+    <Compile Include="Concrete\SearchDAL.cs" />
+    <Compile Include="Concrete\ProductAllergenDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Concerete\UserDAL.cs" />
+    <Compile Include="Concrete\UserDAL.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

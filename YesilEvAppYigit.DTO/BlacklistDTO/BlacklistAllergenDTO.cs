@@ -8,14 +8,14 @@ namespace YesilEvAppYigit.DTO
 {
     public class BlacklistAllergenDTO
     {
-        public int ID { get; set; }
+        public int BlacklistAllergenID { get; set; }
         [Required]
         public int BlacklistID { get; set; }
         [Required]
         public int AllergenID { get; set; }
         public int UserID { get; set; }
 
-        public DateTime? DateAdded { get; set; }
+        public DateTime? CreateDate { get; set; }
 
         public bool? IsActive { get; set; }
 

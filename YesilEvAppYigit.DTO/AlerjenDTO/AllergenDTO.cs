@@ -10,16 +10,18 @@ namespace YesilEvAppYigit.DTO
 {
     public class AllergenDTO
     {
-        public int AlerjenID { get; set; }
+        public int AllergenID { get; set; }
         [Required]
-        public string AlerjenAdi { get; set; }
+        public string AllergenName { get; set; }
 
-        public string Aciklama { get; set; }
+        public string Description { get; set; }
         [Required]
         public int RiskID { get; set; }
 
+        public bool? IsActive { get; set; }
         public Risk Risk { get; set; }
+        public DateTime CreateDate { get; set; }
 
-        public List<UrunAllergenDTO> UrunAllergen { get; set; }
+        public List<ProductAllergenDTO> ProductAllergen { get; set; }
     }
 }

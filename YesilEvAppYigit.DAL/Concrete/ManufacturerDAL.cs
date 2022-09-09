@@ -18,12 +18,26 @@ namespace YesilEvAppYigit.DAL.Concrete
             List<ManufacturerDTO> dto = new List<ManufacturerDTO>();
             try
             {
-                dto = MyMapper.ListManufacturerToListManufacturerDTO(new ManufacturerDAL().GetAll());
+                dto = MyMapper.ListManufacturerToListManufacturerDTO(new ManufacturerDAL().GetAll().Where(a => a.IsActive == true).ToList());
             }
 
             catch (Exception e)
             {
                 Console.WriteLine("Hata: GetAllManufacturers");
+            }
+            return dto;
+        }
+        public List<ManufacturerDTO> GetAllManufacturersAdmin()
+        {
+            List<ManufacturerDTO> dto = new List<ManufacturerDTO>();
+            try
+            {
+                dto = MyMapper.ListManufacturerToListManufacturerDTO(new ManufacturerDAL().GetAll());
+            }
+
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: GetAllManufacturersAdmin");
             }
             return dto;
         }

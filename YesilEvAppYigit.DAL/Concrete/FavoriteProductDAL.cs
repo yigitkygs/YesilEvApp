@@ -18,11 +18,25 @@ namespace YesilEvAppYigit.DAL.Concrete
             try
             {
                 FavoriteProductDAL dal = new FavoriteProductDAL();
-                dto = MyMapper.ListFavoriteProductToListFavoriteProductDTO(dal.GetAll());
+                dto = MyMapper.ListFavoriteProductToListFavoriteProductDTO(dal.GetAll().Where(a => a.IsActive == true).ToList());
             }
             catch (Exception e)
             {
                 Console.WriteLine("Hata: GetAllFavoriteProducts");
+            }
+            return dto;
+        }
+        public List<FavoriteProductDTO> GetAllFavoriteProductsAdmin()
+        {
+            List<FavoriteProductDTO> dto = new List<FavoriteProductDTO>();
+            try
+            {
+                FavoriteProductDAL dal = new FavoriteProductDAL();
+                dto = MyMapper.ListFavoriteProductToListFavoriteProductDTO(dal.GetAll());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: GetAllFavoriteProductsAdmin");
             }
             return dto;
         }

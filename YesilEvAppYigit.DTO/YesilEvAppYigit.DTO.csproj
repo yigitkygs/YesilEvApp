@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProductDTO\ProductUserPageDTO.cs" />
     <Compile Include="Reporting DTOs\AlerjenFavoriDTO.cs" />
     <Compile Include="Reporting DTOs\AlerjenRiskDTO.cs" />
     <Compile Include="AlerjenDTO\AlerjenUrunDTO.cs" />

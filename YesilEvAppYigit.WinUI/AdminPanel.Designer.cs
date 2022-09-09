@@ -68,6 +68,7 @@
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.tabPage11 = new System.Windows.Forms.TabPage();
             this.tabPage12 = new System.Windows.Forms.TabPage();
+            this.button13 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdminPanel)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -319,6 +320,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button13);
             this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.button5);
             this.tabPage2.Controls.Add(this.button7);
@@ -476,6 +478,15 @@
             this.tabPage12.Text = "tabPage12";
             this.tabPage12.UseVisualStyleBackColor = true;
             // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(393, 6);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(183, 41);
+            this.button13.TabIndex = 6;
+            this.button13.Text = "Onay Bekleyen Ürünleri Göster";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
             // AdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -541,5 +552,6 @@
         private System.Windows.Forms.TabPage tabPage10;
         private System.Windows.Forms.TabPage tabPage11;
         private System.Windows.Forms.TabPage tabPage12;
+        private System.Windows.Forms.Button button13;
     }
 }

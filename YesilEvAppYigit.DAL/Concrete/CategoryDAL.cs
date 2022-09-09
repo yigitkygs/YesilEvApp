@@ -13,27 +13,31 @@ namespace YesilEvAppYigit.DAL.Concrete
 {
     public class CategoryDAL : RepoBase<YesilEvDbContext, Category>
     {
-        public CategoryDAL()
-        {
-
-        }
-
-        public CategoryDAL(YesilEvDbContext db) : base(db)
-        {
-
-        }
-
         public List<CategoryDTO> GetAllCategories()
         {
             List<CategoryDTO> dto = new List<CategoryDTO>();
             try
             {
-                dto = MyMapper.ListCategoryToListCategoryDTO( new CategoryDAL().GetAll());
+                dto = MyMapper.ListCategoryToListCategoryDTO(new CategoryDAL().GetAll().Where(a => a.IsActive == true).ToList());
             }
 
             catch (Exception e)
             {
-                Console.WriteLine("Hata: KategorileriGetir");
+                Console.WriteLine("Hata: GetAllCategories");
+            }
+            return dto;
+        }
+        public List<CategoryDTO> GetAllCategoriesAdmin()
+        {
+            List<CategoryDTO> dto = new List<CategoryDTO>();
+            try
+            {
+                dto = MyMapper.ListCategoryToListCategoryDTO(new CategoryDAL().GetAll());
+            }
+
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: GetAllCategoriesAdmin");
             }
             return dto;
         }
@@ -46,11 +50,11 @@ namespace YesilEvAppYigit.DAL.Concrete
             }
             catch (Exception e)
             {
-                Console.WriteLine("Hata: KategoriGetir");
+                Console.WriteLine("Hata: GetCategoryFromID");
             }
             return gonderilecek;
         }
-        public bool KategoriEkle(CategoryDTO dto)
+        public bool AddNewCategory(CategoryDTO dto)
         {
             try
             {
@@ -62,25 +66,25 @@ namespace YesilEvAppYigit.DAL.Concrete
 
             catch (Exception e)
             {
-                Console.WriteLine("Hata: KategoriEkle");
+                Console.WriteLine("Hata: AddNewCategory");
             }
             return false;
         }
-        public void KategoriGuncelle(CategoryDTO dto)
+        public void UpdateCategory(CategoryDTO dto)
         {
             try
             {
                 CategoryDAL dal = new CategoryDAL();
-                dal.Update(MyMapper.CategoryDTOToCategory(dto));
+                dal.Update(MyMapper.CategoryDTOToCategory(dto),dto.CategoryID);
                 dal.MySaveChanges();
             }
 
             catch (Exception e)
             {
-                Console.WriteLine("Hata: KategoriGuncelle");
+                Console.WriteLine("Hata: UpdateCategory");
             }
         }
-        public bool KategoriSil(CategoryDTO dto)
+        public bool DeleteCategory(CategoryDTO dto)
         {
             try
             {
@@ -90,7 +94,7 @@ namespace YesilEvAppYigit.DAL.Concrete
             }
             catch (Exception e)
             {
-                Console.WriteLine("Hata: KategoriSil");
+                Console.WriteLine("Hata: DeleteCategory");
             }
             return false;
         }

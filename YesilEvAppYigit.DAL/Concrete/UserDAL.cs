@@ -19,6 +19,20 @@ namespace YesilEvAppYigit.DAL
             try
             {
                 UserDAL dal = new UserDAL();
+                dto = MyMapper.ListUserToListUserDTO(dal.GetAll().Where(a => a.IsActive == true).ToList());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: GetAllUsers");
+            }
+            return dto;
+        }
+        public List<UserDTO> GetAllUsersAdmin()
+        {
+            List<UserDTO> dto = new List<UserDTO>();
+            try
+            {
+                UserDAL dal = new UserDAL();
                 dto = MyMapper.ListUserToListUserDTO(dal.GetAll());
             }
             catch (Exception e)

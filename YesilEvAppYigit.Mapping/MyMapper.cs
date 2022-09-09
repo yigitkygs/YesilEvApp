@@ -405,21 +405,56 @@ namespace YesilEvAppYigit.Mapping
             return mapper.Map<ProductDTO>(obj);
         }
 
-        public static List<Product> ListProductDTOToListProduct(List<ProductDTO> dto)
+        public static List<Product> ListProductDTOToListProduct(List<ProductDTO> obj)
         {
-            var mapperConfig = new MapperConfiguration(cfg =>
-            {
-                cfg.CreateMap<List<ProductDTO>, List<Product>>();
-                cfg.AllowNullCollections = true;
-            });
-            var mapper = new Mapper(mapperConfig);
-            return mapper.Map<List<Product>>(dto);
+            List<Product> dto = new List<Product>();
+            obj.ForEach(a => dto.Add(ProductDTOToProduct(a)));
+            return dto;
         }
 
         public static List<ProductDTO> ListProductToListProductDTO(List<Product> obj)
         {
             List<ProductDTO> dto = new List<ProductDTO>();
             obj.ForEach(a => dto.Add(ProductToProductDTO(a)));
+            return dto;
+        }
+
+        public static ProductUserPageDTO ProductDTOToProductUserPageDTO(ProductDTO dto)
+        {
+            var mapperConfig = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<ProductDTO, ProductUserPageDTO>();
+                cfg.AllowNullCollections = true;
+            });
+            var mapper = new Mapper(mapperConfig);
+            return mapper.Map<ProductUserPageDTO>(dto);
+        }
+
+        public static ProductDTO ProductUserPageDTOToProductDTO(ProductUserPageDTO obj)
+        {
+            var mapperConfig = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<ProductUserPageDTO, ProductDTO>()
+                .ForMember(dest => dest.FavoriteProducts, opt => opt.Ignore())
+                .ForMember(dest => dest.ProductAllergens, opt => opt.Ignore());
+                cfg.AllowNullCollections = true;
+
+            });
+            var mapper = new Mapper(mapperConfig);
+            return mapper.Map<ProductDTO>(obj);
+        }
+
+        public static List<ProductUserPageDTO> ListProductDTOToListProductUserPageDTO(List<ProductDTO> obj)
+        {
+            List<ProductUserPageDTO> dto = new List<ProductUserPageDTO>();
+            obj.ForEach(a => dto.Add(ProductDTOToProductUserPageDTO(a)));
+            return dto;
+        }
+
+        public static List<ProductDTO> ListProductUserPageDTOToListProductDTO(List<ProductUserPageDTO> obj)
+        {
+            List<ProductDTO> dto = new List<ProductDTO>();
+            obj.ForEach(a => dto.Add(ProductUserPageDTOToProductDTO(a)));
             return dto;
         }
 

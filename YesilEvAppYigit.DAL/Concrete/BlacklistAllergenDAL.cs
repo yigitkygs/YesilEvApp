@@ -17,11 +17,24 @@ namespace YesilEvAppYigit.DAL.Concrete
             List<BlacklistAllergenDTO> dto = new List<BlacklistAllergenDTO>();
             try
             {
-                dto = MyMapper.ListBlacklistAllergenToListBlacklistAllergenDTO(new BlacklistAllergenDAL().GetAll());
+                dto = MyMapper.ListBlacklistAllergenToListBlacklistAllergenDTO(new BlacklistAllergenDAL().GetAll().Where(a => a.IsActive == true).ToList());
             }
             catch (Exception e)
             {
                 Console.WriteLine("Hata: GetAllBlacklistAllergens");
+            }
+            return dto;
+        }
+        public List<BlacklistAllergenDTO> GetAllBlacklistAllergensAdmin()
+        {
+            List<BlacklistAllergenDTO> dto = new List<BlacklistAllergenDTO>();
+            try
+            {
+                dto = MyMapper.ListBlacklistAllergenToListBlacklistAllergenDTO(new BlacklistAllergenDAL().GetAll());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: GetAllBlacklistAllergensAdmin");
             }
             return dto;
         }

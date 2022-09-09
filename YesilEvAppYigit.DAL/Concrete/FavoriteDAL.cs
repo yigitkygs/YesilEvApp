@@ -18,15 +18,29 @@ namespace YesilEvAppYigit.DAL.Concrete
             try
             {
                 FavoriteDAL dal = new FavoriteDAL();
+                dto = MyMapper.ListFavoriteToListFavoriteDTO(dal.GetAll().Where(a => a.IsActive == true).ToList());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: GetAllFavorites");
+            }
+            return dto;
+        }
+        public List<FavoriteDTO> GetAllFavoritesAdmin()
+        {
+            List<FavoriteDTO> dto = new List<FavoriteDTO>();
+            try
+            {
+                FavoriteDAL dal = new FavoriteDAL();
                 dto = MyMapper.ListFavoriteToListFavoriteDTO(dal.GetAll());
             }
             catch (Exception e)
             {
-                Console.WriteLine("Hata: KullanicilariGetir");
+                Console.WriteLine("Hata: GetAllFavoritesAdmin");
             }
             return dto;
         }
-        public FavoriteDTO FavoriGetir(int ID)
+        public FavoriteDTO GetFavoriteByID(int ID)
         {
             FavoriteDTO gonderilecek = null;
             try
@@ -39,7 +53,7 @@ namespace YesilEvAppYigit.DAL.Concrete
             }
             return gonderilecek;
         }
-        public List<FavoriteDTO> GetFavoriteListsFromUserID(object ID)
+        public List<FavoriteDTO> GetFavoriteFromUserID(object ID)
         {
             List<FavoriteDTO> dto = new List<FavoriteDTO>();
             try
@@ -53,7 +67,7 @@ namespace YesilEvAppYigit.DAL.Concrete
             }
             return dto;
         }
-        public bool AddNewFavoriteList(FavoriteDTO dto)
+        public bool AddNewFavorite(FavoriteDTO dto)
         {
             try
             {
@@ -68,7 +82,7 @@ namespace YesilEvAppYigit.DAL.Concrete
             }
             return false;
         }
-        public void UpdateFavoriteList(FavoriteDTO dto)
+        public void UpdateFavorite(FavoriteDTO dto)
         {
             try
             {
@@ -81,7 +95,7 @@ namespace YesilEvAppYigit.DAL.Concrete
                 Console.WriteLine("Hata: UpdateFavoriteList");
             }
         }
-        public bool DeleteFavoriteList(object ID)
+        public bool DeleteFavorite(object ID)
         {
             try
             {

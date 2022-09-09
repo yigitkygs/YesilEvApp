@@ -14,16 +14,20 @@ namespace YesilEvAppYigit.DAL
 {
     public class ProductDAL : RepoBase<YesilEvDbContext, Product>
     {
-        public ProductDAL()
-        {
-        }
-
-        public ProductDAL(YesilEvDbContext db) : base(db)
-        {
-
-        }
-
         public List<ProductDTO> GetAllProducts()
+        {
+            List<ProductDTO> dto = new List<ProductDTO>();
+            try
+            {
+                dto = MyMapper.ListProductToListProductDTO(new ProductDAL().GetAll().Where(a => a.IsActive == true).ToList());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: GetAllProducts");
+            }
+            return dto;
+        }
+        public List<ProductDTO> GetAllProductsAdmin()
         {
             List<ProductDTO> dto = new List<ProductDTO>();
             try
@@ -32,7 +36,7 @@ namespace YesilEvAppYigit.DAL
             }
             catch (Exception e)
             {
-                Console.WriteLine("Hata: GetAllProducts");
+                Console.WriteLine("Hata: GetAllProductsAdmin");
             }
             return dto;
         }
@@ -89,6 +93,36 @@ namespace YesilEvAppYigit.DAL
             catch (Exception e)
             {
                 Console.WriteLine("Hata: UpdateProduct");
+            }
+        }
+        public void ApproveProduct(object ID)
+        {
+            try
+            {
+                ProductDAL dal = new ProductDAL();
+                ProductDTO productDTO= GetProductByID(ID);
+                productDTO.IsApproved = true;
+                dal.Update(MyMapper.ProductDTOToProduct(productDTO), (int)ID);
+                dal.MySaveChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: ApproveProduct");
+            }
+        }
+        public void UnapproveProduct(object ID)
+        {
+            try
+            {
+                ProductDAL dal = new ProductDAL();
+                ProductDTO productDTO = GetProductByID(ID);
+                productDTO.IsApproved = false;
+                dal.Update(MyMapper.ProductDTOToProduct(productDTO), (int)ID);
+                dal.MySaveChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: UnapproveProduct");
             }
         }
         public void SoftDeleteProduct(ProductDTO dto)

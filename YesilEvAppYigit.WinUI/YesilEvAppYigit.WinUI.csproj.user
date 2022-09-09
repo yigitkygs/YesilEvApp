@@ -4,6 +4,12 @@
     <Compile Update="AdminPanel.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="BrandPopUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CategoryPopUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -17,14 +17,27 @@ namespace YesilEvAppYigit.DAL.Concrete
             List<ProductAllergenDTO> dto = new List<ProductAllergenDTO>();
             try
             {
-                dto = MyMapper.ListProductAllergenToListProductAllergenDTO(new ProductAllergenDAL().GetAll());
+                dto = MyMapper.ListProductAllergenToListProductAllergenDTO(new ProductAllergenDAL().GetAll().Where(a => a.IsActive == true).ToList());
             }
             catch (Exception e)
             {
                 Console.WriteLine("Hata: GetAllProductAllergens");
             }
             return dto;
-        }       
+        }
+        public List<ProductAllergenDTO> GetAllProductAllergensAdmin()
+        {
+            List<ProductAllergenDTO> dto = new List<ProductAllergenDTO>();
+            try
+            {
+                dto = MyMapper.ListProductAllergenToListProductAllergenDTO(new ProductAllergenDAL().GetAll());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: GetAllProductAllergensAdmin");
+            }
+            return dto;
+        }
         public ProductAllergenDTO GetProductAllergenFromID(object ID)
         {
             ProductAllergenDTO gonderilecek = new ProductAllergenDTO();

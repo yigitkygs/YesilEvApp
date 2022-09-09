@@ -41,18 +41,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button59 = new System.Windows.Forms.Button();
             this.btnAdminPanel = new System.Windows.Forms.Button();
             this.btnRapor = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
-            this.button18 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.button19 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -67,12 +65,16 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button62 = new System.Windows.Forms.Button();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.button61 = new System.Windows.Forms.Button();
+            this.button60 = new System.Windows.Forms.Button();
+            this.cbUserConsent = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button26 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.rtbUrunDetay = new System.Windows.Forms.RichTextBox();
             this.txtBarkod = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbBrand = new System.Windows.Forms.ComboBox();
@@ -82,9 +84,7 @@
             this.button24 = new System.Windows.Forms.Button();
             this.cbCategories = new System.Windows.Forms.ComboBox();
             this.button25 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
+            this.rtbUrunDetay = new System.Windows.Forms.RichTextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.label18 = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -95,11 +95,9 @@
             this.button33 = new System.Windows.Forms.Button();
             this.txtBarkodSearch = new System.Windows.Forms.TextBox();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.dgvSearchedProducts = new System.Windows.Forms.DataGridView();
             this.button47 = new System.Windows.Forms.Button();
             this.txtProductSearch = new System.Windows.Forms.TextBox();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.lblArama = new System.Windows.Forms.Label();
             this.tabControl4 = new System.Windows.Forms.TabControl();
@@ -115,9 +113,6 @@
             this.tabPage16 = new System.Windows.Forms.TabPage();
             this.dgvBlacklist = new System.Windows.Forms.DataGridView();
             this.button54 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.label15 = new System.Windows.Forms.Label();
             this.tabControl3 = new System.Windows.Forms.TabControl();
@@ -135,10 +130,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.tbYeniSifre = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.button37 = new System.Windows.Forms.Button();
-            this.button38 = new System.Windows.Forms.Button();
-            this.button39 = new System.Windows.Forms.Button();
             this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.button55 = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -147,8 +140,45 @@
             this.button43 = new System.Windows.Forms.Button();
             this.button44 = new System.Windows.Forms.Button();
             this.button45 = new System.Windows.Forms.Button();
+            this.tabPage17 = new System.Windows.Forms.TabPage();
+            this.label25 = new System.Windows.Forms.Label();
+            this.lbIngredients = new System.Windows.Forms.ListBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.lbUserWhoPosted = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.lbHighRiskIngredients = new System.Windows.Forms.Label();
+            this.lbBlacklistIngredients = new System.Windows.Forms.Label();
+            this.lbProductName = new System.Windows.Forms.Label();
+            this.lbBrandName = new System.Windows.Forms.Label();
+            this.lbCategoryName = new System.Windows.Forms.Label();
+            this.button63 = new System.Windows.Forms.Button();
+            this.lbAddedProducts = new System.Windows.Forms.Label();
+            this.tbBrand = new System.Windows.Forms.TextBox();
+            this.tbCategory = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button28 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
+            this.button30 = new System.Windows.Forms.Button();
+            this.button34 = new System.Windows.Forms.Button();
+            this.button35 = new System.Windows.Forms.Button();
+            this.button36 = new System.Windows.Forms.Button();
+            this.button37 = new System.Windows.Forms.Button();
+            this.button38 = new System.Windows.Forms.Button();
+            this.button39 = new System.Windows.Forms.Button();
             this.button41 = new System.Windows.Forms.Button();
             this.button42 = new System.Windows.Forms.Button();
+            this.button56 = new System.Windows.Forms.Button();
+            this.button57 = new System.Windows.Forms.Button();
+            this.button58 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -164,6 +194,7 @@
             this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSearchedProducts)).BeginInit();
             this.tabPage9.SuspendLayout();
             this.tabControl4.SuspendLayout();
             this.tabPage14.SuspendLayout();
@@ -178,6 +209,9 @@
             this.tabPage12.SuspendLayout();
             this.tabPage13.SuspendLayout();
             this.tabPage11.SuspendLayout();
+            this.tabPage17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -190,6 +224,7 @@
             this.tabControl1.Controls.Add(this.tabPage9);
             this.tabControl1.Controls.Add(this.tabPage10);
             this.tabControl1.Controls.Add(this.tabPage11);
+            this.tabControl1.Controls.Add(this.tabPage17);
             this.tabControl1.ItemSize = new System.Drawing.Size(40, 20);
             this.tabControl1.Location = new System.Drawing.Point(9, 9);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
@@ -213,6 +248,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -231,7 +267,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.OliveDrab;
+            this.label14.ForeColor = System.Drawing.Color.ForestGreen;
             this.label14.Location = new System.Drawing.Point(145, 125);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(221, 65);
@@ -312,6 +348,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button59);
             this.panel2.Controls.Add(this.btnAdminPanel);
             this.panel2.Controls.Add(this.btnRapor);
             this.panel2.Controls.Add(this.label16);
@@ -326,6 +363,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(496, 865);
             this.panel2.TabIndex = 5;
+            // 
+            // button59
+            // 
+            this.button59.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button59.Location = new System.Drawing.Point(34, 564);
+            this.button59.Margin = new System.Windows.Forms.Padding(2);
+            this.button59.Name = "button59";
+            this.button59.Size = new System.Drawing.Size(430, 60);
+            this.button59.TabIndex = 17;
+            this.button59.Text = "Favori Listeleri";
+            this.button59.UseVisualStyleBackColor = true;
+            this.button59.Click += new System.EventHandler(this.button59_Click);
             // 
             // btnAdminPanel
             // 
@@ -345,7 +394,7 @@
             // 
             this.btnRapor.BackColor = System.Drawing.Color.LightGreen;
             this.btnRapor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRapor.Location = new System.Drawing.Point(33, 570);
+            this.btnRapor.Location = new System.Drawing.Point(34, 640);
             this.btnRapor.Margin = new System.Windows.Forms.Padding(2);
             this.btnRapor.Name = "btnRapor";
             this.btnRapor.Size = new System.Drawing.Size(430, 60);
@@ -366,20 +415,6 @@
             this.label16.TabIndex = 14;
             this.label16.Text = "Ana Sayfa";
             // 
-            // button18
-            // 
-            this.button18.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
-            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button18.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button18.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button18.Location = new System.Drawing.Point(415, 10);
-            this.button18.Margin = new System.Windows.Forms.Padding(2);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(75, 75);
-            this.button18.TabIndex = 5;
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
-            // 
             // button14
             // 
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -391,19 +426,6 @@
             this.button14.Text = "Arama Geçmişi";
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button14_Click);
-            // 
-            // button13
-            // 
-            this.button13.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button13.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button13.Location = new System.Drawing.Point(10, 10);
-            this.button13.Margin = new System.Windows.Forms.Padding(2);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 75);
-            this.button13.TabIndex = 3;
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button15
             // 
@@ -440,7 +462,6 @@
             this.button17.TabIndex = 4;
             this.button17.Text = "Barkod Okuma";
             this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // tabPage3
             // 
@@ -471,19 +492,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(502, 871);
             this.panelMenu.TabIndex = 2;
-            // 
-            // button19
-            // 
-            this.button19.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
-            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button19.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button19.Location = new System.Drawing.Point(415, 10);
-            this.button19.Margin = new System.Windows.Forms.Padding(2);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(75, 75);
-            this.button19.TabIndex = 10;
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button12
             // 
@@ -612,6 +620,9 @@
             this.panel3.Controls.Add(this.button20);
             this.panel3.Controls.Add(this.button21);
             this.panel3.Controls.Add(this.button23);
+            this.panel3.Controls.Add(this.rtbUrunDetay);
+            this.panel3.Controls.Add(this.cbBrand);
+            this.panel3.Controls.Add(this.cbCategories);
             this.panel3.Location = new System.Drawing.Point(4, 4);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
@@ -631,33 +642,91 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.tbCategory);
+            this.groupBox2.Controls.Add(this.tbBrand);
+            this.groupBox2.Controls.Add(this.button62);
+            this.groupBox2.Controls.Add(this.listBox2);
+            this.groupBox2.Controls.Add(this.button61);
+            this.groupBox2.Controls.Add(this.button60);
+            this.groupBox2.Controls.Add(this.cbUserConsent);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.button26);
             this.groupBox2.Controls.Add(this.button27);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.rtbUrunDetay);
             this.groupBox2.Controls.Add(this.txtBarkod);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.cbBrand);
             this.groupBox2.Controls.Add(this.button22);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txtUrunAdi);
             this.groupBox2.Controls.Add(this.button24);
-            this.groupBox2.Controls.Add(this.cbCategories);
             this.groupBox2.Controls.Add(this.button25);
             this.groupBox2.Location = new System.Drawing.Point(25, 90);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(451, 685);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            // 
+            // button62
+            // 
+            this.button62.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button62.Location = new System.Drawing.Point(186, 357);
+            this.button62.Margin = new System.Windows.Forms.Padding(2);
+            this.button62.Name = "button62";
+            this.button62.Size = new System.Drawing.Size(231, 34);
+            this.button62.TabIndex = 23;
+            this.button62.Text = "Ürün İçeriğini Düzenle";
+            this.button62.UseVisualStyleBackColor = true;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(6, 357);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(138, 121);
+            this.listBox2.TabIndex = 22;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
+            // 
+            // button61
+            // 
+            this.button61.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button61.Location = new System.Drawing.Point(314, 246);
+            this.button61.Margin = new System.Windows.Forms.Padding(2);
+            this.button61.Name = "button61";
+            this.button61.Size = new System.Drawing.Size(122, 63);
+            this.button61.TabIndex = 21;
+            this.button61.Text = "Kategori Seç";
+            this.button61.UseVisualStyleBackColor = true;
+            this.button61.Click += new System.EventHandler(this.button61_Click);
+            // 
+            // button60
+            // 
+            this.button60.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button60.Location = new System.Drawing.Point(314, 155);
+            this.button60.Margin = new System.Windows.Forms.Padding(2);
+            this.button60.Name = "button60";
+            this.button60.Size = new System.Drawing.Size(122, 65);
+            this.button60.TabIndex = 20;
+            this.button60.Text = "Marka Seç";
+            this.button60.UseVisualStyleBackColor = true;
+            this.button60.Click += new System.EventHandler(this.button60_Click);
+            // 
+            // cbUserConsent
+            // 
+            this.cbUserConsent.AutoSize = true;
+            this.cbUserConsent.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbUserConsent.Location = new System.Drawing.Point(15, 574);
+            this.cbUserConsent.Name = "cbUserConsent";
+            this.cbUserConsent.Size = new System.Drawing.Size(430, 52);
+            this.cbUserConsent.TabIndex = 19;
+            this.cbUserConsent.Text = "Gönderdiğim ürünün sayfasında kullanıcı adımın\r\ngörüntülenmesini onaylıyorum.";
+            this.cbUserConsent.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(14, 32);
+            this.label5.Location = new System.Drawing.Point(14, 21);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 24);
@@ -668,61 +737,52 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(14, 385);
+            this.label7.Location = new System.Drawing.Point(14, 327);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 48);
+            this.label7.Size = new System.Drawing.Size(118, 24);
             this.label7.TabIndex = 18;
-            this.label7.Text = "Ürün \r\nDetayları";
+            this.label7.Text = "Ürün İçeriği\r\n";
             // 
             // button26
             // 
             this.button26.Enabled = false;
             this.button26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button26.Location = new System.Drawing.Point(126, 73);
+            this.button26.Location = new System.Drawing.Point(176, 49);
             this.button26.Margin = new System.Windows.Forms.Padding(2);
             this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(275, 41);
+            this.button26.Size = new System.Drawing.Size(180, 41);
             this.button26.TabIndex = 4;
             this.button26.Text = "Barkod Oku";
             this.button26.UseVisualStyleBackColor = true;
             // 
             // button27
             // 
-            this.button27.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button27.Location = new System.Drawing.Point(220, 528);
+            this.button27.Enabled = false;
+            this.button27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button27.Location = new System.Drawing.Point(230, 489);
             this.button27.Margin = new System.Windows.Forms.Padding(2);
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(197, 67);
             this.button27.TabIndex = 13;
-            this.button27.Text = "Ürünün Arka Yüzü\r\nFotoğraf Ekle";
+            this.button27.Text = "Arka Yüz\r\nFotoğrafı Ekle";
             this.button27.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(14, 150);
+            this.label6.Location = new System.Drawing.Point(14, 114);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(92, 24);
             this.label6.TabIndex = 17;
             this.label6.Text = "Ürün Adı";
             // 
-            // rtbUrunDetay
-            // 
-            this.rtbUrunDetay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rtbUrunDetay.Location = new System.Drawing.Point(126, 372);
-            this.rtbUrunDetay.Margin = new System.Windows.Forms.Padding(2);
-            this.rtbUrunDetay.Name = "rtbUrunDetay";
-            this.rtbUrunDetay.Size = new System.Drawing.Size(275, 61);
-            this.rtbUrunDetay.TabIndex = 12;
-            this.rtbUrunDetay.Text = "";
-            // 
             // txtBarkod
             // 
             this.txtBarkod.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBarkod.Location = new System.Drawing.Point(126, 27);
+            this.txtBarkod.Location = new System.Drawing.Point(126, 16);
             this.txtBarkod.Margin = new System.Windows.Forms.Padding(2);
             this.txtBarkod.Name = "txtBarkod";
             this.txtBarkod.Size = new System.Drawing.Size(275, 29);
@@ -733,7 +793,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(14, 300);
+            this.label3.Location = new System.Drawing.Point(14, 265);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 24);
@@ -745,19 +805,19 @@
             this.cbBrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbBrand.FormattingEnabled = true;
-            this.cbBrand.Location = new System.Drawing.Point(126, 217);
+            this.cbBrand.Location = new System.Drawing.Point(116, 823);
             this.cbBrand.Margin = new System.Windows.Forms.Padding(2);
             this.cbBrand.Name = "cbBrand";
-            this.cbBrand.Size = new System.Drawing.Size(275, 32);
+            this.cbBrand.Size = new System.Drawing.Size(171, 32);
             this.cbBrand.TabIndex = 9;
             // 
             // button22
             // 
             this.button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button22.Location = new System.Drawing.Point(91, 618);
+            this.button22.Location = new System.Drawing.Point(91, 631);
             this.button22.Margin = new System.Windows.Forms.Padding(2);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(250, 62);
+            this.button22.Size = new System.Drawing.Size(250, 49);
             this.button22.TabIndex = 7;
             this.button22.Text = "GÖNDER";
             this.button22.UseVisualStyleBackColor = true;
@@ -767,7 +827,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(14, 220);
+            this.label4.Location = new System.Drawing.Point(14, 175);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 24);
@@ -777,7 +837,7 @@
             // txtUrunAdi
             // 
             this.txtUrunAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunAdi.Location = new System.Drawing.Point(126, 145);
+            this.txtUrunAdi.Location = new System.Drawing.Point(126, 109);
             this.txtUrunAdi.Margin = new System.Windows.Forms.Padding(2);
             this.txtUrunAdi.Name = "txtUrunAdi";
             this.txtUrunAdi.Size = new System.Drawing.Size(275, 29);
@@ -785,13 +845,14 @@
             // 
             // button24
             // 
-            this.button24.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button24.Location = new System.Drawing.Point(34, 528);
+            this.button24.Enabled = false;
+            this.button24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button24.Location = new System.Drawing.Point(28, 489);
             this.button24.Margin = new System.Windows.Forms.Padding(2);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(182, 67);
             this.button24.TabIndex = 6;
-            this.button24.Text = "Ürünün Ön Yüzü\r\nFotoğraf Ekle";
+            this.button24.Text = "Ön Yüz\r\nFotoğrafı Ekle";
             this.button24.UseVisualStyleBackColor = true;
             // 
             // cbCategories
@@ -799,63 +860,33 @@
             this.cbCategories.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbCategories.FormattingEnabled = true;
-            this.cbCategories.Location = new System.Drawing.Point(126, 297);
+            this.cbCategories.Location = new System.Drawing.Point(305, 823);
             this.cbCategories.Margin = new System.Windows.Forms.Padding(2);
             this.cbCategories.Name = "cbCategories";
-            this.cbCategories.Size = new System.Drawing.Size(275, 32);
+            this.cbCategories.Size = new System.Drawing.Size(171, 32);
             this.cbCategories.TabIndex = 10;
             // 
             // button25
             // 
-            this.button25.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button25.Location = new System.Drawing.Point(126, 451);
+            this.button25.Enabled = false;
+            this.button25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button25.Location = new System.Drawing.Point(186, 411);
             this.button25.Margin = new System.Windows.Forms.Padding(2);
             this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(275, 57);
+            this.button25.Size = new System.Drawing.Size(231, 57);
             this.button25.TabIndex = 5;
             this.button25.Text = "Ürün İçeriği\r\nFotoğraf Ekle\r\n";
             this.button25.UseVisualStyleBackColor = true;
             // 
-            // button20
+            // rtbUrunDetay
             // 
-            this.button20.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
-            this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button20.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button20.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button20.Location = new System.Drawing.Point(415, 10);
-            this.button20.Margin = new System.Windows.Forms.Padding(2);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(75, 75);
-            this.button20.TabIndex = 5;
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
-            // 
-            // button21
-            // 
-            this.button21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button21.BackgroundImage")));
-            this.button21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button21.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button21.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button21.Location = new System.Drawing.Point(10, 780);
-            this.button21.Margin = new System.Windows.Forms.Padding(2);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(75, 75);
-            this.button21.TabIndex = 2;
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
-            // 
-            // button23
-            // 
-            this.button23.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
-            this.button23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button23.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button23.Location = new System.Drawing.Point(10, 10);
-            this.button23.Margin = new System.Windows.Forms.Padding(2);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(75, 75);
-            this.button23.TabIndex = 3;
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.button23_Click);
+            this.rtbUrunDetay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rtbUrunDetay.Location = new System.Drawing.Point(167, 780);
+            this.rtbUrunDetay.Margin = new System.Windows.Forms.Padding(2);
+            this.rtbUrunDetay.Name = "rtbUrunDetay";
+            this.rtbUrunDetay.Size = new System.Drawing.Size(275, 61);
+            this.rtbUrunDetay.TabIndex = 12;
+            this.rtbUrunDetay.Text = "";
             // 
             // tabPage5
             // 
@@ -892,7 +923,7 @@
             this.tabControl2.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(490, 200);
+            this.tabControl2.Size = new System.Drawing.Size(490, 669);
             this.tabControl2.TabIndex = 11;
             // 
             // tabPage6
@@ -903,7 +934,7 @@
             this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage6.Size = new System.Drawing.Size(482, 174);
+            this.tabPage6.Size = new System.Drawing.Size(482, 643);
             this.tabPage6.TabIndex = 0;
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
@@ -927,7 +958,7 @@
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(430, 60);
             this.button31.TabIndex = 10;
-            this.button31.Text = "Ürün Adı ile Arama";
+            this.button31.Text = "Ürün Arama";
             this.button31.UseVisualStyleBackColor = true;
             this.button31.Click += new System.EventHandler(this.button31_Click);
             // 
@@ -939,14 +970,14 @@
             this.tabPage7.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage7.Size = new System.Drawing.Size(482, 174);
+            this.tabPage7.Size = new System.Drawing.Size(482, 643);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // button33
             // 
             this.button33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button33.Location = new System.Drawing.Point(205, 107);
+            this.button33.Location = new System.Drawing.Point(198, 112);
             this.button33.Margin = new System.Windows.Forms.Padding(2);
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(92, 32);
@@ -958,7 +989,7 @@
             // txtBarkodSearch
             // 
             this.txtBarkodSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBarkodSearch.Location = new System.Drawing.Point(80, 68);
+            this.txtBarkodSearch.Location = new System.Drawing.Point(73, 74);
             this.txtBarkodSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtBarkodSearch.Name = "txtBarkodSearch";
             this.txtBarkodSearch.Size = new System.Drawing.Size(351, 26);
@@ -966,15 +997,26 @@
             // 
             // tabPage8
             // 
+            this.tabPage8.Controls.Add(this.dgvSearchedProducts);
             this.tabPage8.Controls.Add(this.button47);
             this.tabPage8.Controls.Add(this.txtProductSearch);
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage8.Size = new System.Drawing.Size(482, 174);
+            this.tabPage8.Size = new System.Drawing.Size(482, 643);
             this.tabPage8.TabIndex = 2;
             this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // dgvSearchedProducts
+            // 
+            this.dgvSearchedProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSearchedProducts.Location = new System.Drawing.Point(5, 167);
+            this.dgvSearchedProducts.Name = "dgvSearchedProducts";
+            this.dgvSearchedProducts.ReadOnly = true;
+            this.dgvSearchedProducts.Size = new System.Drawing.Size(471, 471);
+            this.dgvSearchedProducts.TabIndex = 4;
+            this.dgvSearchedProducts.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSearchedProducts_CellContentDoubleClick);
             // 
             // button47
             // 
@@ -996,47 +1038,6 @@
             this.txtProductSearch.Name = "txtProductSearch";
             this.txtProductSearch.Size = new System.Drawing.Size(351, 26);
             this.txtProductSearch.TabIndex = 2;
-            // 
-            // button28
-            // 
-            this.button28.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
-            this.button28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button28.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button28.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button28.Location = new System.Drawing.Point(415, 10);
-            this.button28.Margin = new System.Windows.Forms.Padding(2);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(75, 75);
-            this.button28.TabIndex = 8;
-            this.button28.UseVisualStyleBackColor = true;
-            this.button28.Click += new System.EventHandler(this.button28_Click);
-            // 
-            // button29
-            // 
-            this.button29.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button29.BackgroundImage")));
-            this.button29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button29.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button29.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button29.Location = new System.Drawing.Point(10, 780);
-            this.button29.Margin = new System.Windows.Forms.Padding(2);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(75, 75);
-            this.button29.TabIndex = 6;
-            this.button29.UseVisualStyleBackColor = true;
-            this.button29.Click += new System.EventHandler(this.button29_Click);
-            // 
-            // button30
-            // 
-            this.button30.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
-            this.button30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button30.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button30.Location = new System.Drawing.Point(10, 10);
-            this.button30.Margin = new System.Windows.Forms.Padding(2);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(75, 75);
-            this.button30.TabIndex = 7;
-            this.button30.UseVisualStyleBackColor = true;
-            this.button30.Click += new System.EventHandler(this.button30_Click);
             // 
             // tabPage9
             // 
@@ -1203,45 +1204,6 @@
             this.button54.TabIndex = 18;
             this.button54.Text = "Seçili Alerjeni \r\nKara Liste\'den Çıkar";
             this.button54.UseVisualStyleBackColor = true;
-            // 
-            // button34
-            // 
-            this.button34.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
-            this.button34.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button34.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button34.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button34.Location = new System.Drawing.Point(415, 10);
-            this.button34.Margin = new System.Windows.Forms.Padding(2);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(75, 75);
-            this.button34.TabIndex = 11;
-            this.button34.UseVisualStyleBackColor = true;
-            this.button34.Click += new System.EventHandler(this.button34_Click);
-            // 
-            // button35
-            // 
-            this.button35.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button35.BackgroundImage")));
-            this.button35.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button35.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button35.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button35.Location = new System.Drawing.Point(10, 780);
-            this.button35.Margin = new System.Windows.Forms.Padding(2);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(75, 75);
-            this.button35.TabIndex = 9;
-            this.button35.UseVisualStyleBackColor = true;
-            // 
-            // button36
-            // 
-            this.button36.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
-            this.button36.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button36.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button36.Location = new System.Drawing.Point(10, 10);
-            this.button36.Margin = new System.Windows.Forms.Padding(2);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(75, 75);
-            this.button36.TabIndex = 10;
-            this.button36.UseVisualStyleBackColor = true;
             // 
             // tabPage10
             // 
@@ -1442,6 +1404,501 @@
             this.label12.TabIndex = 6;
             this.label12.Text = "Yeni Şifre:";
             // 
+            // tabPage11
+            // 
+            this.tabPage11.Controls.Add(this.lbAddedProducts);
+            this.tabPage11.Controls.Add(this.button55);
+            this.tabPage11.Controls.Add(this.label20);
+            this.tabPage11.Controls.Add(this.lblUsername);
+            this.tabPage11.Controls.Add(this.label8);
+            this.tabPage11.Controls.Add(this.button46);
+            this.tabPage11.Controls.Add(this.button40);
+            this.tabPage11.Controls.Add(this.button43);
+            this.tabPage11.Controls.Add(this.button44);
+            this.tabPage11.Controls.Add(this.button45);
+            this.tabPage11.Controls.Add(this.button41);
+            this.tabPage11.Controls.Add(this.button42);
+            this.tabPage11.Location = new System.Drawing.Point(4, 24);
+            this.tabPage11.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Size = new System.Drawing.Size(506, 873);
+            this.tabPage11.TabIndex = 7;
+            this.tabPage11.UseVisualStyleBackColor = true;
+            // 
+            // button55
+            // 
+            this.button55.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button55.Location = new System.Drawing.Point(45, 570);
+            this.button55.Margin = new System.Windows.Forms.Padding(2);
+            this.button55.Name = "button55";
+            this.button55.Size = new System.Drawing.Size(430, 60);
+            this.button55.TabIndex = 19;
+            this.button55.Text = "Arama Geçmişini Temizle";
+            this.button55.UseVisualStyleBackColor = true;
+            this.button55.Click += new System.EventHandler(this.button55_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label20.Location = new System.Drawing.Point(119, 33);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(267, 42);
+            this.label20.TabIndex = 18;
+            this.label20.Text = "Kullanıcı Profil";
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUsername.Location = new System.Drawing.Point(257, 161);
+            this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(18, 25);
+            this.lblUsername.TabIndex = 17;
+            this.lblUsername.Text = "i";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(45, 161);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(189, 25);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "Mevcut kullanıcı:";
+            // 
+            // button46
+            // 
+            this.button46.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button46.Location = new System.Drawing.Point(45, 650);
+            this.button46.Margin = new System.Windows.Forms.Padding(2);
+            this.button46.Name = "button46";
+            this.button46.Size = new System.Drawing.Size(430, 60);
+            this.button46.TabIndex = 15;
+            this.button46.Text = "Çıkış Yap";
+            this.button46.UseVisualStyleBackColor = true;
+            this.button46.Click += new System.EventHandler(this.button46_Click);
+            // 
+            // button40
+            // 
+            this.button40.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button40.Location = new System.Drawing.Point(45, 490);
+            this.button40.Margin = new System.Windows.Forms.Padding(2);
+            this.button40.Name = "button40";
+            this.button40.Size = new System.Drawing.Size(430, 60);
+            this.button40.TabIndex = 14;
+            this.button40.Text = "Kara Liste";
+            this.button40.UseVisualStyleBackColor = true;
+            this.button40.Click += new System.EventHandler(this.button40_Click);
+            // 
+            // button43
+            // 
+            this.button43.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button43.Location = new System.Drawing.Point(45, 410);
+            this.button43.Margin = new System.Windows.Forms.Padding(2);
+            this.button43.Name = "button43";
+            this.button43.Size = new System.Drawing.Size(430, 60);
+            this.button43.TabIndex = 13;
+            this.button43.Text = "Favori Listeleri";
+            this.button43.UseVisualStyleBackColor = true;
+            this.button43.Click += new System.EventHandler(this.button43_Click);
+            // 
+            // button44
+            // 
+            this.button44.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button44.Location = new System.Drawing.Point(45, 330);
+            this.button44.Margin = new System.Windows.Forms.Padding(2);
+            this.button44.Name = "button44";
+            this.button44.Size = new System.Drawing.Size(430, 60);
+            this.button44.TabIndex = 12;
+            this.button44.Text = "Şifre Değiştir";
+            this.button44.UseVisualStyleBackColor = true;
+            this.button44.Click += new System.EventHandler(this.button44_Click);
+            // 
+            // button45
+            // 
+            this.button45.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button45.Location = new System.Drawing.Point(45, 250);
+            this.button45.Margin = new System.Windows.Forms.Padding(2);
+            this.button45.Name = "button45";
+            this.button45.Size = new System.Drawing.Size(430, 60);
+            this.button45.TabIndex = 11;
+            this.button45.Text = "Kullanıcı Adı Değiştir";
+            this.button45.UseVisualStyleBackColor = true;
+            this.button45.Click += new System.EventHandler(this.button45_Click);
+            // 
+            // tabPage17
+            // 
+            this.tabPage17.Controls.Add(this.button63);
+            this.tabPage17.Controls.Add(this.label25);
+            this.tabPage17.Controls.Add(this.button56);
+            this.tabPage17.Controls.Add(this.button57);
+            this.tabPage17.Controls.Add(this.button58);
+            this.tabPage17.Controls.Add(this.lbIngredients);
+            this.tabPage17.Controls.Add(this.label24);
+            this.tabPage17.Controls.Add(this.lbUserWhoPosted);
+            this.tabPage17.Controls.Add(this.label23);
+            this.tabPage17.Controls.Add(this.label22);
+            this.tabPage17.Controls.Add(this.label21);
+            this.tabPage17.Controls.Add(this.lbHighRiskIngredients);
+            this.tabPage17.Controls.Add(this.lbBlacklistIngredients);
+            this.tabPage17.Controls.Add(this.lbProductName);
+            this.tabPage17.Controls.Add(this.lbBrandName);
+            this.tabPage17.Controls.Add(this.lbCategoryName);
+            this.tabPage17.Controls.Add(this.pictureBox1);
+            this.tabPage17.Location = new System.Drawing.Point(4, 24);
+            this.tabPage17.Name = "tabPage17";
+            this.tabPage17.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage17.Size = new System.Drawing.Size(506, 873);
+            this.tabPage17.TabIndex = 8;
+            this.tabPage17.UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label25.Location = new System.Drawing.Point(109, 30);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(297, 37);
+            this.label25.TabIndex = 21;
+            this.label25.Text = "Ürün Görüntüleme";
+            // 
+            // lbIngredients
+            // 
+            this.lbIngredients.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIngredients.FormattingEnabled = true;
+            this.lbIngredients.ItemHeight = 24;
+            this.lbIngredients.Items.AddRange(new object[] {
+            "! BHT",
+            "POLYQUATERNIUM-10",
+            "COCAMIDOPROPYL BETAINE",
+            "SODIUM BENZOATE",
+            "PERFUME",
+            "AQUA"});
+            this.lbIngredients.Location = new System.Drawing.Point(88, 486);
+            this.lbIngredients.Name = "lbIngredients";
+            this.lbIngredients.Size = new System.Drawing.Size(339, 268);
+            this.lbIngredients.TabIndex = 11;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(207, 451);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(120, 24);
+            this.label24.TabIndex = 10;
+            this.label24.Text = "Ürün Bileşimi";
+            // 
+            // lbUserWhoPosted
+            // 
+            this.lbUserWhoPosted.AutoSize = true;
+            this.lbUserWhoPosted.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUserWhoPosted.Location = new System.Drawing.Point(30, 389);
+            this.lbUserWhoPosted.Name = "lbUserWhoPosted";
+            this.lbUserWhoPosted.Size = new System.Drawing.Size(430, 48);
+            this.lbUserWhoPosted.TabIndex = 9;
+            this.lbUserWhoPosted.Text = "Görüntülediğiniz ürün bilgileri «User» isimli üyemiz\r\ntarafından sağlanmıştır.\r\n";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(254, 336);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(112, 20);
+            this.label23.TabIndex = 8;
+            this.label23.Text = "Temiz içerikler ";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(254, 306);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(119, 20);
+            this.label22.TabIndex = 7;
+            this.label22.Text = "Az riskli içerikler";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(254, 276);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(131, 20);
+            this.label21.TabIndex = 6;
+            this.label21.Text = "Orta riskli içerikler";
+            // 
+            // lbHighRiskIngredients
+            // 
+            this.lbHighRiskIngredients.AutoSize = true;
+            this.lbHighRiskIngredients.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHighRiskIngredients.Location = new System.Drawing.Point(254, 246);
+            this.lbHighRiskIngredients.Name = "lbHighRiskIngredients";
+            this.lbHighRiskIngredients.Size = new System.Drawing.Size(103, 20);
+            this.lbHighRiskIngredients.TabIndex = 5;
+            this.lbHighRiskIngredients.Text = "Riskli içerikler";
+            // 
+            // lbBlacklistIngredients
+            // 
+            this.lbBlacklistIngredients.AutoSize = true;
+            this.lbBlacklistIngredients.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBlacklistIngredients.Location = new System.Drawing.Point(254, 216);
+            this.lbBlacklistIngredients.Name = "lbBlacklistIngredients";
+            this.lbBlacklistIngredients.Size = new System.Drawing.Size(160, 20);
+            this.lbBlacklistIngredients.TabIndex = 4;
+            this.lbBlacklistIngredients.Text = "Kara listedeki içerikler";
+            // 
+            // lbProductName
+            // 
+            this.lbProductName.AutoSize = true;
+            this.lbProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbProductName.Location = new System.Drawing.Point(254, 175);
+            this.lbProductName.Name = "lbProductName";
+            this.lbProductName.Size = new System.Drawing.Size(131, 24);
+            this.lbProductName.TabIndex = 3;
+            this.lbProductName.Text = "Product Name";
+            // 
+            // lbBrandName
+            // 
+            this.lbBrandName.AutoSize = true;
+            this.lbBrandName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBrandName.Location = new System.Drawing.Point(254, 139);
+            this.lbBrandName.Name = "lbBrandName";
+            this.lbBrandName.Size = new System.Drawing.Size(116, 24);
+            this.lbBrandName.TabIndex = 2;
+            this.lbBrandName.Text = "Brand Name";
+            // 
+            // lbCategoryName
+            // 
+            this.lbCategoryName.AutoSize = true;
+            this.lbCategoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCategoryName.Location = new System.Drawing.Point(254, 103);
+            this.lbCategoryName.Name = "lbCategoryName";
+            this.lbCategoryName.Size = new System.Drawing.Size(141, 24);
+            this.lbCategoryName.TabIndex = 1;
+            this.lbCategoryName.Text = "Category Name";
+            // 
+            // button63
+            // 
+            this.button63.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button63.Location = new System.Drawing.Point(356, 449);
+            this.button63.Name = "button63";
+            this.button63.Size = new System.Drawing.Size(76, 31);
+            this.button63.TabIndex = 22;
+            this.button63.Text = "Sırala";
+            this.button63.UseVisualStyleBackColor = true;
+            this.button63.Click += new System.EventHandler(this.button63_Click);
+            // 
+            // lbAddedProducts
+            // 
+            this.lbAddedProducts.AutoSize = true;
+            this.lbAddedProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbAddedProducts.Location = new System.Drawing.Point(45, 203);
+            this.lbAddedProducts.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbAddedProducts.Name = "lbAddedProducts";
+            this.lbAddedProducts.Size = new System.Drawing.Size(238, 25);
+            this.lbAddedProducts.TabIndex = 20;
+            this.lbAddedProducts.Text = "Eklediği Ürün Sayısı: ";
+            // 
+            // tbBrand
+            // 
+            this.tbBrand.Enabled = false;
+            this.tbBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbBrand.Location = new System.Drawing.Point(126, 172);
+            this.tbBrand.Margin = new System.Windows.Forms.Padding(2);
+            this.tbBrand.Name = "tbBrand";
+            this.tbBrand.ReadOnly = true;
+            this.tbBrand.Size = new System.Drawing.Size(168, 29);
+            this.tbBrand.TabIndex = 24;
+            // 
+            // tbCategory
+            // 
+            this.tbCategory.Enabled = false;
+            this.tbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbCategory.Location = new System.Drawing.Point(126, 262);
+            this.tbCategory.Margin = new System.Windows.Forms.Padding(2);
+            this.tbCategory.Name = "tbCategory";
+            this.tbCategory.ReadOnly = true;
+            this.tbCategory.Size = new System.Drawing.Size(168, 29);
+            this.tbCategory.TabIndex = 25;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Image = global::YesilEvAppYigit.WinUI.Properties.Resources.icons8_leaf_windows_11_color_70;
+            this.pictureBox2.Location = new System.Drawing.Point(220, 54);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(70, 68);
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
+            // button18
+            // 
+            this.button18.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
+            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button18.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button18.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button18.Location = new System.Drawing.Point(415, 10);
+            this.button18.Margin = new System.Windows.Forms.Padding(2);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(75, 75);
+            this.button18.TabIndex = 5;
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // button13
+            // 
+            this.button13.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button13.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button13.Location = new System.Drawing.Point(10, 10);
+            this.button13.Margin = new System.Windows.Forms.Padding(2);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(75, 75);
+            this.button13.TabIndex = 3;
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button19
+            // 
+            this.button19.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
+            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button19.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button19.Location = new System.Drawing.Point(415, 10);
+            this.button19.Margin = new System.Windows.Forms.Padding(2);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(75, 75);
+            this.button19.TabIndex = 10;
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // button20
+            // 
+            this.button20.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
+            this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button20.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button20.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button20.Location = new System.Drawing.Point(415, 10);
+            this.button20.Margin = new System.Windows.Forms.Padding(2);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(75, 75);
+            this.button20.TabIndex = 5;
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // button21
+            // 
+            this.button21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button21.BackgroundImage")));
+            this.button21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button21.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button21.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button21.Location = new System.Drawing.Point(10, 780);
+            this.button21.Margin = new System.Windows.Forms.Padding(2);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(75, 75);
+            this.button21.TabIndex = 2;
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // button23
+            // 
+            this.button23.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
+            this.button23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button23.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button23.Location = new System.Drawing.Point(10, 10);
+            this.button23.Margin = new System.Windows.Forms.Padding(2);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(75, 75);
+            this.button23.TabIndex = 3;
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
+            // 
+            // button28
+            // 
+            this.button28.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
+            this.button28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button28.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button28.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button28.Location = new System.Drawing.Point(415, 10);
+            this.button28.Margin = new System.Windows.Forms.Padding(2);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(75, 75);
+            this.button28.TabIndex = 8;
+            this.button28.UseVisualStyleBackColor = true;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
+            // 
+            // button29
+            // 
+            this.button29.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button29.BackgroundImage")));
+            this.button29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button29.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button29.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button29.Location = new System.Drawing.Point(10, 780);
+            this.button29.Margin = new System.Windows.Forms.Padding(2);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(75, 75);
+            this.button29.TabIndex = 6;
+            this.button29.UseVisualStyleBackColor = true;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
+            // 
+            // button30
+            // 
+            this.button30.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
+            this.button30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button30.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button30.Location = new System.Drawing.Point(10, 10);
+            this.button30.Margin = new System.Windows.Forms.Padding(2);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(75, 75);
+            this.button30.TabIndex = 7;
+            this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
+            // 
+            // button34
+            // 
+            this.button34.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
+            this.button34.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button34.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button34.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button34.Location = new System.Drawing.Point(415, 10);
+            this.button34.Margin = new System.Windows.Forms.Padding(2);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(75, 75);
+            this.button34.TabIndex = 11;
+            this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.button34_Click);
+            // 
+            // button35
+            // 
+            this.button35.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button35.BackgroundImage")));
+            this.button35.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button35.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button35.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button35.Location = new System.Drawing.Point(10, 780);
+            this.button35.Margin = new System.Windows.Forms.Padding(2);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(75, 75);
+            this.button35.TabIndex = 9;
+            this.button35.UseVisualStyleBackColor = true;
+            // 
+            // button36
+            // 
+            this.button36.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
+            this.button36.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button36.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button36.Location = new System.Drawing.Point(10, 10);
+            this.button36.Margin = new System.Windows.Forms.Padding(2);
+            this.button36.Name = "button36";
+            this.button36.Size = new System.Drawing.Size(75, 75);
+            this.button36.TabIndex = 10;
+            this.button36.UseVisualStyleBackColor = true;
+            // 
             // button37
             // 
             this.button37.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
@@ -1481,118 +1938,6 @@
             this.button39.TabIndex = 10;
             this.button39.UseVisualStyleBackColor = true;
             // 
-            // tabPage11
-            // 
-            this.tabPage11.Controls.Add(this.label20);
-            this.tabPage11.Controls.Add(this.lblUsername);
-            this.tabPage11.Controls.Add(this.label8);
-            this.tabPage11.Controls.Add(this.button46);
-            this.tabPage11.Controls.Add(this.button40);
-            this.tabPage11.Controls.Add(this.button43);
-            this.tabPage11.Controls.Add(this.button44);
-            this.tabPage11.Controls.Add(this.button45);
-            this.tabPage11.Controls.Add(this.button41);
-            this.tabPage11.Controls.Add(this.button42);
-            this.tabPage11.Location = new System.Drawing.Point(4, 24);
-            this.tabPage11.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Size = new System.Drawing.Size(506, 873);
-            this.tabPage11.TabIndex = 7;
-            this.tabPage11.UseVisualStyleBackColor = true;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label20.Location = new System.Drawing.Point(119, 33);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(267, 42);
-            this.label20.TabIndex = 18;
-            this.label20.Text = "Kullanıcı Profil";
-            // 
-            // lblUsername
-            // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUsername.Location = new System.Drawing.Point(252, 190);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(18, 25);
-            this.lblUsername.TabIndex = 17;
-            this.lblUsername.Text = "i";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(40, 190);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(189, 25);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Mevcut kullanıcı:";
-            // 
-            // button46
-            // 
-            this.button46.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button46.Location = new System.Drawing.Point(45, 574);
-            this.button46.Margin = new System.Windows.Forms.Padding(2);
-            this.button46.Name = "button46";
-            this.button46.Size = new System.Drawing.Size(430, 60);
-            this.button46.TabIndex = 15;
-            this.button46.Text = "Çıkış Yap";
-            this.button46.UseVisualStyleBackColor = true;
-            this.button46.Click += new System.EventHandler(this.button46_Click);
-            // 
-            // button40
-            // 
-            this.button40.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button40.Location = new System.Drawing.Point(45, 493);
-            this.button40.Margin = new System.Windows.Forms.Padding(2);
-            this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(430, 60);
-            this.button40.TabIndex = 14;
-            this.button40.Text = "Kara Liste";
-            this.button40.UseVisualStyleBackColor = true;
-            this.button40.Click += new System.EventHandler(this.button40_Click);
-            // 
-            // button43
-            // 
-            this.button43.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button43.Location = new System.Drawing.Point(45, 412);
-            this.button43.Margin = new System.Windows.Forms.Padding(2);
-            this.button43.Name = "button43";
-            this.button43.Size = new System.Drawing.Size(430, 60);
-            this.button43.TabIndex = 13;
-            this.button43.Text = "Favori Listeleri";
-            this.button43.UseVisualStyleBackColor = true;
-            this.button43.Click += new System.EventHandler(this.button43_Click);
-            // 
-            // button44
-            // 
-            this.button44.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button44.Location = new System.Drawing.Point(45, 331);
-            this.button44.Margin = new System.Windows.Forms.Padding(2);
-            this.button44.Name = "button44";
-            this.button44.Size = new System.Drawing.Size(430, 60);
-            this.button44.TabIndex = 12;
-            this.button44.Text = "Şifre Değiştir";
-            this.button44.UseVisualStyleBackColor = true;
-            this.button44.Click += new System.EventHandler(this.button44_Click);
-            // 
-            // button45
-            // 
-            this.button45.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button45.Location = new System.Drawing.Point(45, 250);
-            this.button45.Margin = new System.Windows.Forms.Padding(2);
-            this.button45.Name = "button45";
-            this.button45.Size = new System.Drawing.Size(430, 60);
-            this.button45.TabIndex = 11;
-            this.button45.Text = "Kullanıcı Adı Değiştir";
-            this.button45.UseVisualStyleBackColor = true;
-            this.button45.Click += new System.EventHandler(this.button45_Click);
-            // 
             // button41
             // 
             this.button41.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button41.BackgroundImage")));
@@ -1620,17 +1965,64 @@
             this.button42.UseVisualStyleBackColor = true;
             this.button42.Click += new System.EventHandler(this.button42_Click);
             // 
-            // Form1
+            // button56
+            // 
+            this.button56.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
+            this.button56.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button56.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button56.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button56.Location = new System.Drawing.Point(418, 14);
+            this.button56.Margin = new System.Windows.Forms.Padding(2);
+            this.button56.Name = "button56";
+            this.button56.Size = new System.Drawing.Size(75, 75);
+            this.button56.TabIndex = 16;
+            this.button56.UseVisualStyleBackColor = true;
+            // 
+            // button57
+            // 
+            this.button57.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button57.BackgroundImage")));
+            this.button57.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button57.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button57.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button57.Location = new System.Drawing.Point(13, 784);
+            this.button57.Margin = new System.Windows.Forms.Padding(2);
+            this.button57.Name = "button57";
+            this.button57.Size = new System.Drawing.Size(75, 75);
+            this.button57.TabIndex = 14;
+            this.button57.UseVisualStyleBackColor = true;
+            // 
+            // button58
+            // 
+            this.button58.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
+            this.button58.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button58.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button58.Location = new System.Drawing.Point(13, 14);
+            this.button58.Margin = new System.Windows.Forms.Padding(2);
+            this.button58.Name = "button58";
+            this.button58.Size = new System.Drawing.Size(75, 75);
+            this.button58.TabIndex = 15;
+            this.button58.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(34, 110);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 246);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(524, 921);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(540, 960);
             this.MinimumSize = new System.Drawing.Size(540, 960);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Yeşil Ev";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1656,6 +2048,7 @@
             this.tabPage7.PerformLayout();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSearchedProducts)).EndInit();
             this.tabPage9.ResumeLayout(false);
             this.tabPage9.PerformLayout();
             this.tabControl4.ResumeLayout(false);
@@ -1676,6 +2069,10 @@
             this.tabPage13.PerformLayout();
             this.tabPage11.ResumeLayout(false);
             this.tabPage11.PerformLayout();
+            this.tabPage17.ResumeLayout(false);
+            this.tabPage17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1802,5 +2199,35 @@
         private System.Windows.Forms.Button button54;
         private System.Windows.Forms.Button btnRapor;
         private System.Windows.Forms.Button btnAdminPanel;
+        private System.Windows.Forms.Button button55;
+        private System.Windows.Forms.TabPage tabPage17;
+        private System.Windows.Forms.ListBox lbIngredients;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label lbUserWhoPosted;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lbHighRiskIngredients;
+        private System.Windows.Forms.Label lbBlacklistIngredients;
+        private System.Windows.Forms.Label lbProductName;
+        private System.Windows.Forms.Label lbBrandName;
+        private System.Windows.Forms.Label lbCategoryName;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button button56;
+        private System.Windows.Forms.Button button57;
+        private System.Windows.Forms.Button button58;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DataGridView dgvSearchedProducts;
+        private System.Windows.Forms.Button button59;
+        private System.Windows.Forms.Button button61;
+        private System.Windows.Forms.Button button60;
+        private System.Windows.Forms.CheckBox cbUserConsent;
+        private System.Windows.Forms.Button button62;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Button button63;
+        private System.Windows.Forms.Label lbAddedProducts;
+        private System.Windows.Forms.TextBox tbCategory;
+        private System.Windows.Forms.TextBox tbBrand;
     }
 }

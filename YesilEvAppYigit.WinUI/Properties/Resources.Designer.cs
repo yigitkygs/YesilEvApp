@@ -79,5 +79,15 @@ namespace YesilEvAppYigit.WinUI.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_leaf_windows_11_color_70 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-leaf-windows-11-color-70", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

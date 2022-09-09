@@ -24,7 +24,7 @@ namespace YesilEvAppYigit.DTO
         public string ProductName { get; set; }
 
         [Required]
-        public int KategoriID { get; set; }
+        public int CategoryID { get; set; }
         public string ProductIngredientsText { get; set; }
 
         [Browsable(false)]
@@ -36,6 +36,7 @@ namespace YesilEvAppYigit.DTO
         [Browsable(false)]
         public byte[] BackImg { get; set; }
         public bool? IsActive { get; set; }
+        public bool? DoesUserConsent { get; set; }
         public DateTime? CreateDate { get; set; }
         public int AddedBy { get; set; }
 

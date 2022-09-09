@@ -48,6 +48,7 @@ namespace YesilEvAppYigit.Core
         public int AddedBy { get; set; }
 
         public bool? IsApproved { get; set; }
+        public bool? DoesUserConsent { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FavoriteProduct> FavoriteProducts { get; set; }

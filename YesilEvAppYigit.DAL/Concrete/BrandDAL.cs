@@ -18,11 +18,24 @@ namespace YesilEvAppYigit.DAL.Concrete
             List<BrandDTO> dto = new List<BrandDTO>();
             try
             {
+                dto = MyMapper.ListBrandToListBrandDTO(new BrandDAL().GetAll().Where(a=>a.IsActive==true).ToList());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: GetAllBrands");
+            }
+            return dto;
+        }
+        public List<BrandDTO> GetAllBrandsAdmin()
+        {
+            List<BrandDTO> dto = new List<BrandDTO>();
+            try
+            {
                 dto = MyMapper.ListBrandToListBrandDTO(new BrandDAL().GetAll());
             }
             catch (Exception e)
             {
-                Console.WriteLine("Hata: MarkalariGetir");
+                Console.WriteLine("Hata: GetAllBrandsAdmin");
             }
             return dto;
         }
@@ -35,7 +48,7 @@ namespace YesilEvAppYigit.DAL.Concrete
             }
             catch (Exception e)
             {
-                Console.WriteLine("Hata: MarkaGetir");
+                Console.WriteLine("Hata: GetBrandFromID");
             }
             return gonderilecek;
         }

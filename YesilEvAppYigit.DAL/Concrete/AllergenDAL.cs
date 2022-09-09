@@ -13,15 +13,20 @@ namespace YesilEvAppYigit.DAL.Concrete
 {
     public class AllergenDAL : RepoBase<YesilEvDbContext, Allergen>
     {
-        public AllergenDAL()
-        {
-        }
-
-        public AllergenDAL(YesilEvDbContext db) : base(db)
-        {
-        }
-
         public List<AllergenDTO> GetAllAllergens()
+        {
+            List<AllergenDTO> dto = new List<AllergenDTO>();
+            try
+            {
+                dto = MyMapper.ListAllergenToListAllergenDTO(new AllergenDAL().GetAll().Where(a => a.IsActive == true).ToList());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: GetAllAllergens");
+            }
+            return dto;
+        }
+        public List<AllergenDTO> GetAllAllergensAdmin()
         {
             List<AllergenDTO> dto = new List<AllergenDTO>();
             try
@@ -30,7 +35,7 @@ namespace YesilEvAppYigit.DAL.Concrete
             }
             catch (Exception e)
             {
-                Console.WriteLine("Hata: GetAllAllergens");
+                Console.WriteLine("Hata: GetAllAllergensAdmin");
             }
             return dto;
         }

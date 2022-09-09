@@ -17,11 +17,24 @@ namespace YesilEvAppYigit.DAL.Concrete
             List<SearchDTO> dto = new List<SearchDTO>();
             try
             {
-                dto = MyMapper.ListSearchToListSearchDTO(new SearchDAL().GetAll());
+                dto = MyMapper.ListSearchToListSearchDTO(new SearchDAL().GetAll().Where(a => a.IsDeleted == false).ToList());
             }
             catch (Exception e)
             {
                 Console.WriteLine("Hata: GetAllSearches");
+            }
+            return dto;
+        }
+        public List<SearchDTO> GetAllSearchesAdmin()
+        {
+            List<SearchDTO> dto = new List<SearchDTO>();
+            try
+            {
+                dto = MyMapper.ListSearchToListSearchDTO(new SearchDAL().GetAll());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: GetAllSearchesAdmin");
             }
             return dto;
         }
@@ -73,7 +86,7 @@ namespace YesilEvAppYigit.DAL.Concrete
             try
             {
                 SearchDAL dal = new SearchDAL();
-                dal.Update(MyMapper.SearchDTOToSearch(dto));
+                dal.Update(MyMapper.SearchDTOToSearch(dto),dto.SearchID);
                 dal.MySaveChanges();
             }
             catch (Exception e)
@@ -87,7 +100,7 @@ namespace YesilEvAppYigit.DAL.Concrete
             {
                 SearchDAL dal = new SearchDAL();
                 dto.IsDeleted = true;
-                dal.Update(MyMapper.SearchDTOToSearch(dto));
+                dal.Update(MyMapper.SearchDTOToSearch(dto), dto.SearchID);
                 dal.MySaveChanges();
             }
             catch (Exception e)
@@ -101,7 +114,7 @@ namespace YesilEvAppYigit.DAL.Concrete
             {
                 SearchDAL dal = new SearchDAL();
                 dto.IsDeleted = false;
-                dal.Update(MyMapper.SearchDTOToSearch(dto));
+                dal.Update(MyMapper.SearchDTOToSearch(dto), dto.SearchID);
                 dal.MySaveChanges();
             }
             catch (Exception e)

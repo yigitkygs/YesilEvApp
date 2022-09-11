@@ -47,39 +47,32 @@ namespace YesilEvAppYigit.WinUI
         ProductDTO currentProduct;
         bool userApproved = false;
         bool isSearchHistory = false;
+        bool orderByAsc = false;
         List<FavoriteDTO> favoriteDTOs = null;
         List<BlacklistUserPageDTO> blacklistAllergensDTOs = null;
         List<List<FavoriteProductDTO>> favoriteProductDTOs = null;
+        List<ProductAllergenDTO> currentProductAllergens = null;
         int usersAddedProductCount = 0;
         #endregion
 
-        //önemliler ( önem sırasına göre)
 
-        //todo bütün dal'lar foreign key ile birleşecek
 
         //todo validation eklenecek
 
-        //todo mevcut kullanıcının karalistesindeki alerjenlerin olduğu ürünleri listelerken renklendir vs
 
         //todo ürün sayfasından yıldız veya kalp simgesine basılarak favorilere eklenmiş ürünler görülebilecek.
 
         //todo  Eğer alanlardan biri boş bırakılırsa bir uyarı mesajı ile doldurulması istenecek. Doğru şekilde doldurulduysa
         //onaya gönderildiğine dair bir teşekkür mesajı belirecek ve ardından otomatik olarak ana sayfaya dönecek.
 
-        //todo Kullanıcını gönderdiği tüm ürünleri liste halinde görebilecek ve tıkladığpında düzenleme menüsü açılacak
 
         //todo Alerjenin detay sayfasında mevcut olduğu ürün sayısı belirtilecek ve dokunulduğunda bu ürünler listelenecek.
 
-        //todo admin paneli yeni row ekleme düzelt
 
         //todo test eklenecek
 
         //önemsizler
 
-        //todo İçeriğin bilgileri kopyalanamaz şekilde görüntülenecek.
-        //todo Sadece ilk açılışta «Kullanım Koşulları» görüntülenebilir. Altına bir daha gösterme seçeneği default olarak seçili olacak.
-        //todo Kullanıcının kara listeye eklediği içerikler kırmızı olmasa bile en üstte yer alacaklar.
-        //todo Eğer kara listede yer alan bir içerik ise bir uyarı olacak. Yoksa hiçbir şey yazmayacak. 
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -99,8 +92,7 @@ namespace YesilEvAppYigit.WinUI
             bool userExists = false;
             //şifreler db'de md5 hash'i olarak tutulacağından ayrıca db'de şifrelemeye şimdilik gerek yok
 
-            //primary key single or defauklt
-
+            //primary key single or default
             foreach (UserDTO user in getUsers())
             {
                 if (user.Username == u && user.Password == getMD5Hash(p))
@@ -119,6 +111,7 @@ namespace YesilEvAppYigit.WinUI
                     }
                     currentUser = user;
                     countUsersAddedProducts();
+                    LoadCurrentUsersAllergens();
                 }
             }
             if (!userExists)
@@ -153,9 +146,13 @@ namespace YesilEvAppYigit.WinUI
         }
 
         private void button13_Click(object sender, EventArgs e) => ShowMenu();
+
         private void button19_Click(object sender, EventArgs e) => ShowLastPage();
+
         private void button23_Click(object sender, EventArgs e) => ShowMenu();
+
         private void button21_Click(object sender, EventArgs e) => ShowMain();
+
         private void button2_Click(object sender, EventArgs e)
         {
             if (txtUsername.Text != null && txtSifre.Text != null)
@@ -196,29 +193,23 @@ namespace YesilEvAppYigit.WinUI
             {
                 tabControl2.SelectedTab = tabPage6;
             }
-
         }
 
         void ShowMenu() => tabControl1.SelectedTab = tabPage3;
 
         void ShowMain() => tabControl1.SelectedTab = tabPage2;
+
         void ShowProduct() => tabControl1.SelectedTab = tabPage4;
+
+        void ShowViewProduct() => tabControl1.SelectedTab = tabPage17;
+
         void ShowLastPage() => tabControl1.SelectedTab = currentPage;
+
         void ShowUser()
         {
-            tabControl1.SelectedTab = tabPage11;            
+            tabControl1.SelectedTab = tabPage11;
             countUsersAddedProducts();
-            lbAddedProducts.Text = "Eklediği Ürün Sayısı: "+usersAddedProductCount;
-        }
-
-        private void loadBrands()
-        {
-            cbBrand.Items.Clear();
-            foreach (BrandDTO brand in getBrands())
-            {
-                if ((bool)brand.IsActive)
-                    cbBrand.Items.Add(brand);
-            }
+            lbAddedProducts.Text = "Eklediği Ürün Sayısı: " + usersAddedProductCount;
         }
 
         private List<BrandDTO> getBrands()
@@ -226,7 +217,6 @@ namespace YesilEvAppYigit.WinUI
             return new BrandDAL().GetAllBrands();
         }
 
-       
         private void loadUpperCategories()
         {
             lbUpperCategory.Items.Clear();
@@ -249,11 +239,37 @@ namespace YesilEvAppYigit.WinUI
         }
         private List<CategoryDTO> getAllSubCategories()
         {
-            return new CategoryDAL().GetAllCategories().Where(a=> a.UpperCategoryID != a.CategoryID).ToList();
+            return new CategoryDAL().GetAllCategories().Where(a => a.UpperCategoryID != a.CategoryID).ToList();
         }
         private List<CategoryDTO> getSubCategories(int ID)
         {
             return new CategoryDAL().GetAllCategories().Where(a => a.UpperCategoryID == ID && a.UpperCategoryID != a.CategoryID).ToList();
+        }
+        private List<UserDTO> getAllUsers()
+        {
+            return new UserDAL().GetAllUsers();
+        }
+        private string getUsername(int ID)
+        {
+            return new UserDAL().GetUserFromID(ID).Username;
+        }
+
+        private void LoadCurrentUsersAllergens()
+        {
+            blacklistAllergensDTOs = new BlacklistAllergenDAL().GetAllBlacklistAllergensFromUserID(currentUser.UserID).Select(a => new BlacklistUserPageDTO()
+            {
+                UserID = a.UserID,
+                AllergenName = a.Allergen.AllergenName,
+                BlacklistAllergenID = a.BlacklistAllergenID,
+                BlacklistID = a.BlacklistID,
+                CreateDate = a.CreateDate,
+                AllergenID = a.AllergenID
+            }).ToList();
+        }
+
+        void LoadCurrentProductsIngredients()
+        {
+            currentProductAllergens = new ProductAllergenDAL().GetProductAllergenFromProductID(currentProduct.ProductID);
         }
 
         private void button16_Click(object sender, EventArgs e)
@@ -267,7 +283,8 @@ namespace YesilEvAppYigit.WinUI
 
         private void button32_Click(object sender, EventArgs e) => tabControl2.SelectedTab = tabPage7;
 
-        private void button31_Click(object sender, EventArgs e) {
+        private void button31_Click(object sender, EventArgs e)
+        {
             loadUpperCategories();
             tabControl2.SelectedTab = tabPage8;
         }
@@ -297,14 +314,10 @@ namespace YesilEvAppYigit.WinUI
             {
                 ProductDAL dal = new ProductDAL() { };
                 ProductDTO dto = new ProductDTO();
-                BrandDTO brandDTO = (BrandDTO)cbBrand.SelectedItem;
-                CategoryDTO categoryDTO = (CategoryDTO)cbCategories.SelectedItem;
-                //Ana kategoriyle ürün girilmez
                 dto.ProductName = txtUrunAdi.Text;
                 dto.BarcodeNo = txtBarkod.Text;
-                if (rtbUrunDetay.Text != "") dto.ProductIngredientsText = rtbUrunDetay.Text;
-                if (cbBrand.SelectedItem != null) dto.BrandID = MyMapper.BrandToBrandDTO(new BrandDAL().GetBy(a => a.BrandName == brandDTO.BrandName).FirstOrDefault()).BrandID;
-                if (cbCategories.SelectedItem != null) dto.CategoryID = MyMapper.CategoryToCategoryDTO(new CategoryDAL().GetBy(a => a.CategoryName == categoryDTO.CategoryName).FirstOrDefault()).CategoryID;
+                dto.BrandID = new BrandDAL().GetBrandFromID(1).BrandID;
+                dto.CategoryID = new CategoryDAL().GetCategoryFromID(1).CategoryID;
                 dto.AddedBy = currentUser.UserID;
                 dto.DoesUserConsent = cbUserConsent.Checked;
                 bool eklendi = dal.AddNewProduct(dto);
@@ -331,30 +344,61 @@ namespace YesilEvAppYigit.WinUI
             new SearchDAL().AddNewSearch(search);
             if (currentProduct != null)
             {
-                LoadProductPage(currentProduct);
+                LoadNewProductPage(currentProduct);
                 ShowProduct();
             }
             else
             {
-                currentProduct = new ProductDTO() { BarcodeNo=txtBarkodSearch.Text };
-                LoadProductPage(currentProduct);
-                ShowProduct();                
+                currentProduct = new ProductDTO() { BarcodeNo = txtBarkodSearch.Text };
+                LoadNewProductPage(currentProduct);
+                ShowProduct();
                 txtBarkodSearch.Text = String.Empty;
             }
         }
 
-        public void LoadProductPage(ProductDTO p)
+        public void LoadNewProductPage(ProductDTO p)
         {
             txtBarkod.Text = p.BarcodeNo;
             txtUrunAdi.Text = p.ProductName;
             var brandDTO = new BrandDAL().GetBrandFromID(p.BrandID);
             var categoryDTO = new CategoryDAL().GetCategoryFromID(p.CategoryID);
-            if(brandDTO != null)
-            tbBrand.Text = brandDTO.BrandName;
-            if(categoryDTO != null)
-            tbCategory.Text = categoryDTO.CategoryName;
-            if (p.ProductIngredientsText !=null) 
-            rtbUrunDetay.Text = p.ProductIngredientsText;
+            if (brandDTO != null)
+                tbBrand.Text = brandDTO.BrandName;
+            if (categoryDTO != null)
+                tbCategory.Text = categoryDTO.CategoryName;
+            if (currentProductAllergens != null)
+                currentProductAllergens.ForEach(a => listCurrentIngredients.Items.Add(a));
+        }
+
+        public void LoadViewProductPage(ProductDTO p)
+        {
+            lbIngredients.Items.Clear();
+            txtBarkod.Text = p.BarcodeNo;
+            lbProductName.Text = p.ProductName;
+            var brandDTO = new BrandDAL().GetBrandFromID(p.BrandID);
+            var categoryDTO = new CategoryDAL().GetCategoryFromID(p.CategoryID);
+            if (brandDTO != null)
+                lbBrandName.Text = brandDTO.BrandName;
+            if (categoryDTO != null)
+                lbCategoryName.Text = categoryDTO.CategoryName;
+            if (currentProductAllergens.Count > 0)
+                currentProductAllergens.ForEach(a => lbIngredients.Items.Add(a));
+            if ((bool)p.DoesUserConsent)
+            {
+                lbUserWhoPosted.Text = "Görüntülediğiniz ürün bilgileri " + getUsername(p.AddedBy) + "\nkullanıcı adlı üyemiz tarafından sağlanmıştır.";
+            }
+            else lbUserWhoPosted.Text = "Görüntülediğiniz ürün bilgileri anonim \nüyemiz tarafından sağlanmıştır.";
+
+            int howManyItemsAreInBlacklistInThisProduct = currentProductAllergens.Join(blacklistAllergensDTOs, a => a.AllergenID, b => b.AllergenID, (a, b) => (a, b)).Count();
+            lbBlacklistIngredients.Text = "Kara listedeki içerikler " + howManyItemsAreInBlacklistInThisProduct;
+            lbHighRiskIngredients.Text = "Riskli içerikler " + currentProductAllergens.Where(a => a.Allergen.RiskID == 4).Count();
+            lbMidLevelRiskIngredients.Text = "Orta riskli içerikler " + currentProductAllergens.Where(a => a.Allergen.RiskID == 3).Count();
+            lbLowRiskIngredients.Text = "Az Riskli içerikler " + currentProductAllergens.Where(a => a.Allergen.RiskID == 2).Count();
+            lbNoRiskIngredients.Text = "Temiz içerikler " + currentProductAllergens.Where(a => a.Allergen.RiskID == 1).Count();
+
+            if (howManyItemsAreInBlacklistInThisProduct > 0) lbProductIsInBlacklist.Visible = true;
+            else lbProductIsInBlacklist.Visible = false;
+
         }
 
         private void button47_Click(object sender, EventArgs e)
@@ -392,12 +436,6 @@ namespace YesilEvAppYigit.WinUI
                     {
                         productUserPageDTOs = MyMapper.ListProductDTOToListProductUserPageDTO(new ProductDAL()
                             .GetProductsBy(a => subCategory.CategoryID == a.CategoryID).ToList());
-                        SearchDTO search = new SearchDTO();
-                        search.SearchDate = DateTime.Now;
-                        search.UserID = currentUser.UserID;
-                        search.SearchKeyword = txtProductSearch.Text;
-                        search.IsDeleted = false;
-                        new SearchDAL().AddNewSearch(search);
                         if (productUserPageDTOs.Count > 1)
                         {
                             dgvSearchedProducts.DataSource = productUserPageDTOs;
@@ -415,7 +453,7 @@ namespace YesilEvAppYigit.WinUI
                     if (txtProductSearch.Text != "")
                     {
                         productUserPageDTOs = MyMapper.ListProductDTOToListProductUserPageDTO(new ProductDAL()
-                            .GetProductsBy(a => a.ProductName.Contains(txtProductSearch.Text) && getAllSubCategories().Exists(x=> upperCategory.CategoryID == x.UpperCategoryID && a.CategoryID==x.CategoryID)).ToList());
+                            .GetProductsBy(a => a.ProductName.Contains(txtProductSearch.Text) && getAllSubCategories().Exists(x => upperCategory.CategoryID == x.UpperCategoryID && a.CategoryID == x.CategoryID)).ToList());
                         SearchDTO search = new SearchDTO();
                         search.SearchDate = DateTime.Now;
                         search.UserID = currentUser.UserID;
@@ -436,13 +474,7 @@ namespace YesilEvAppYigit.WinUI
                     else
                     {
                         productUserPageDTOs = MyMapper.ListProductDTOToListProductUserPageDTO(new ProductDAL().
-                            GetProductsBy(a=> getAllSubCategories().Exists(x => upperCategory.CategoryID == x.UpperCategoryID && a.CategoryID == x.CategoryID)).ToList());
-                        SearchDTO search = new SearchDTO();
-                        search.SearchDate = DateTime.Now;
-                        search.UserID = currentUser.UserID;
-                        search.SearchKeyword = txtProductSearch.Text;
-                        search.IsDeleted = false;
-                        new SearchDAL().AddNewSearch(search);
+                            GetProductsBy(a => getAllSubCategories().Exists(x => upperCategory.CategoryID == x.UpperCategoryID && a.CategoryID == x.CategoryID)).ToList());
                         if (productUserPageDTOs.Count > 1)
                         {
                             dgvSearchedProducts.DataSource = productUserPageDTOs;
@@ -456,16 +488,15 @@ namespace YesilEvAppYigit.WinUI
                     }
                 }
             }
-            else 
+            else
             {
-                 productUserPageDTOs = MyMapper.ListProductDTOToListProductUserPageDTO(new ProductDAL().GetProductsBy(a => a.ProductName.Contains(txtProductSearch.Text)).ToList());
+                productUserPageDTOs = MyMapper.ListProductDTOToListProductUserPageDTO(new ProductDAL().GetProductsBy(a => a.ProductName.Contains(txtProductSearch.Text)).ToList());
                 SearchDTO search = new SearchDTO();
                 search.SearchDate = DateTime.Now;
                 search.UserID = currentUser.UserID;
                 search.SearchKeyword = txtProductSearch.Text;
                 search.IsDeleted = false;
                 new SearchDAL().AddNewSearch(search);
-
                 if (productUserPageDTOs.Count > 1)
                 {
                     dgvSearchedProducts.DataSource = productUserPageDTOs;
@@ -473,7 +504,7 @@ namespace YesilEvAppYigit.WinUI
                 else if (productUserPageDTOs.Count == 1)
                 {
                     currentProduct = MyMapper.ProductUserPageDTOToProductDTO(productUserPageDTOs[0]);
-                    LoadProductPage(currentProduct);
+                    LoadNewProductPage(currentProduct);
                     ShowProduct();
                 }
                 else
@@ -527,7 +558,7 @@ namespace YesilEvAppYigit.WinUI
             if (txtNewUsername.Text.Length > 3)
             {
                 if (txtNewUsername.Text != currentUser.Username &&
-                    new UserDAL().GetBy(a => a.Username == txtNewUsername.Text).First() == null) // Ayrıca diğer kullanıcı adlarıyla kıyasla
+                    new UserDAL().GetBy(a => a.Username == txtNewUsername.Text).First() == null)
                 {
                     UserDTO newUsername = currentUser;
                     newUsername.Username = txtNewUsername.Text;
@@ -584,25 +615,19 @@ namespace YesilEvAppYigit.WinUI
 
         private void button40_Click(object sender, EventArgs e)
         {
+            LoadUserBlacklistAllergens();
+        }
+
+        private void LoadUserBlacklistAllergens()
+        {
             tabControl1.SelectedTab = tabPage9;
             lblArama.Text = "Kara Liste";
             tabControl4.SelectedTab = tabPage16;
-            blacklistAllergensDTOs = new BlacklistDAL().GetAllBlacklistsFKWithUserID(currentUser.UserID).Select(a => new BlacklistUserPageDTO()
-            {
-                UserID = a.UserID,
-                AllergenName=a.BlacklistAllergens.Select(b=>b.Allergen.AllergenName).FirstOrDefault(),
-                BlacklistID = a.BlacklistID,
-                CreateDate = a.CreateDate
-            }).ToList();
+            dgvBlacklist.DataSource = blacklistAllergensDTOs;
         }
 
         private void button43_Click(object sender, EventArgs e)
         {
-
-            //dgvFavorite.Columns[0].HeaderText = "Aranan Kelime/Barkod";
-            //dgvFavorite.Columns[0].Width = 200;
-            // dgvFavorite.Columns[1].HeaderText = "Arama Tarihi";
-
             ShowUsersFavoriteLists();
         }
 
@@ -617,7 +642,15 @@ namespace YesilEvAppYigit.WinUI
             favoriteProductDTOs = new List<List<FavoriteProductDTO>>();
             favoriteDTOs.ForEach(a =>
             {
-                favoriteProductDTOs.Add(new FavoriteProductDAL().GetFavoriteProductListsFromFavoriID(a.FavoriteID));
+                favoriteProductDTOs.Add(new FavoriteProductDAL().GetFavoriteProductListsFromFavoriID(a.FavoriteID).Select(x => new FavoriteProductDTO()
+                {
+                    FavoriteID = x.FavoriteID,
+                    IsActive = x.IsActive,
+                    CreateDate = x.CreateDate,
+                    FavoriteProductID = x.FavoriteProductID,
+                    ProductID = x.ProductID,
+                    ProductName = new ProductDAL().GetProductByID(x.ProductID).ProductName
+                }).ToList());
                 cbFavori.Items.Add(a.FavoriteName);
             });
 
@@ -655,7 +688,7 @@ namespace YesilEvAppYigit.WinUI
         {
             if (dgvSearch.CurrentRow != null)
             {
-               // new FavoriteDAL().((SearchDTO)dgvSearch.CurrentRow.DataBoundItem);
+                // new FavoriteDAL().((SearchDTO)dgvSearch.CurrentRow.DataBoundItem);
                 GetUsersSearches();
             }
 
@@ -685,7 +718,8 @@ namespace YesilEvAppYigit.WinUI
             {
                 ProductUserPageDTO temp = (ProductUserPageDTO)dgvSearchedProducts.CurrentRow.DataBoundItem;
                 currentProduct = new ProductDAL().GetProductByID(temp.ProductID);
-                LoadProductPage(currentProduct);
+                LoadCurrentProductsIngredients();
+                LoadViewProductPage(currentProduct);
                 ShowProduct();
             }
         }
@@ -702,6 +736,14 @@ namespace YesilEvAppYigit.WinUI
 
         private void button63_Click(object sender, EventArgs e)
         {
+            if (orderByAsc)
+                currentProductAllergens = currentProductAllergens.OrderBy(a => a.Allergen.AllergenName).ToList();
+            else
+                currentProductAllergens = currentProductAllergens.OrderByDescending(a => a.Allergen.AllergenName).ToList();
+
+            orderByAsc = !orderByAsc;
+            lbIngredients.Items.Clear();
+            currentProductAllergens.ForEach(x => lbIngredients.Items.Add(x));
         }
 
         private void button61_Click(object sender, EventArgs e)
@@ -745,7 +787,90 @@ namespace YesilEvAppYigit.WinUI
                 CategoryDTO upperCategory = (CategoryDTO)lbUpperCategory.SelectedItem;
                 loadSubCategories(upperCategory.CategoryID);
             }
+        }
 
+        private void dgvAddedProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvAddedProducts.CurrentRow != null)
+            {
+                ProductUserPageDTO temp = (ProductUserPageDTO)dgvAddedProducts.CurrentRow.DataBoundItem;
+                currentProduct = new ProductDAL().GetProductByID(temp.ProductID);
+                LoadCurrentProductsIngredients();
+                LoadViewProductPage(currentProduct);
+                ShowViewProduct();
+            }
+        }
+
+        private void button54_Click(object sender, EventArgs e)
+        {
+            if (dgvBlacklist.CurrentRow != null)
+            {
+                BlacklistUserPageDTO temp = (BlacklistUserPageDTO)dgvBlacklist.CurrentRow.DataBoundItem;
+                new BlacklistAllergenDAL().SoftDeleteBlacklistAllergen(temp.BlacklistAllergenID);
+                LoadUserBlacklistAllergens();
+            }
+        }
+
+        private void dgvFavorite_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvFavorite.CurrentRow != null)
+            {
+                FavoriteProductDTO temp = (FavoriteProductDTO)dgvFavorite.CurrentRow.DataBoundItem;
+                currentProduct = new ProductDAL().GetProductByID(temp.ProductID);
+                LoadCurrentProductsIngredients();
+                LoadViewProductPage(currentProduct);
+                ShowViewProduct();
+            }
+        }
+
+        private void button36_Click(object sender, EventArgs e)
+        {
+            ShowMenu();
+        }
+
+        private void button39_Click(object sender, EventArgs e)
+        {
+            ShowMenu();
+        }
+
+        private void button58_Click(object sender, EventArgs e)
+        {
+            ShowMenu();
+        }
+
+        private void button66_Click(object sender, EventArgs e)
+        {
+            ShowMenu();
+        }
+
+        private void button56_Click(object sender, EventArgs e)
+        {
+            ShowUser();
+        }
+
+        private void button64_Click(object sender, EventArgs e)
+        {
+            ShowUser();
+        }
+
+        private void button35_Click(object sender, EventArgs e)
+        {
+            ShowMain();
+        }
+
+        private void button38_Click(object sender, EventArgs e)
+        {
+            ShowMain();
+        }
+
+        private void button57_Click(object sender, EventArgs e)
+        {
+            ShowMain();
+        }
+
+        private void button65_Click(object sender, EventArgs e)
+        {
+            ShowMain();
         }
     }
 }

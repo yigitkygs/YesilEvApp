@@ -25,6 +25,7 @@ namespace YesilEvAppYigit.DTO
 
         [Required]
         public int CategoryID { get; set; }
+        [Browsable(false)]
         public string ProductIngredientsText { get; set; }
 
         [Browsable(false)]

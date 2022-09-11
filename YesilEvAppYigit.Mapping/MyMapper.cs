@@ -81,7 +81,7 @@ namespace YesilEvAppYigit.Mapping
                 .ForMember(dest => dest.Searches, opt => opt.Ignore())
                 .ForMember(dest => dest.Blacklists, opt => opt.Ignore());
                 cfg.CreateMap<BlacklistAllergen, BlacklistAllergenDTO>()
-                .ForMember(dest => dest.Allergen, opt => opt.Ignore())
+                //.ForMember(dest => dest.Allergen, opt => opt.Ignore())
                 .ForMember(dest => dest.Blacklist, opt => opt.Ignore());
                 cfg.AllowNullCollections = true;
             });

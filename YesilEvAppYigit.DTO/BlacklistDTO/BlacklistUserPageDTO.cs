@@ -11,10 +11,16 @@ namespace YesilEvAppYigit.DTO
     {
         [Browsable(false)]
         public int BlacklistID { get; set; }
+        [Browsable(false)]
+        public int BlacklistAllergenID { get; set; }
+        [Browsable(false)]
+        public int AllergenID { get; set; }
+        [DisplayName("Alerjen Adı")]
         public string AllergenName { get; set; }
         [Browsable(false)]
         public int UserID { get; set; }
 
+        [DisplayName("Ekleme Tarihi")]
         public DateTime? CreateDate { get; set; }
     }
 }

@@ -79,6 +79,34 @@ namespace YesilEvAppYigit.DAL.Concrete
             {
                 Console.WriteLine("Hata: UpdateAllergen");
             }
+        } 
+        public void SoftDeleteAllergen(AllergenDTO dto)
+        {
+            try
+            {
+                AllergenDAL dal = new AllergenDAL();
+                dto.IsActive = false;
+                dal.Update(MyMapper.AllergenDTOToAllergen(dto), dto.AllergenID);
+                dal.MySaveChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: SoftDeleteAllergen");
+            }
+        }
+        public void RevertSoftDeleteAllergen(AllergenDTO dto)
+        {
+            try
+            {
+                AllergenDAL dal = new AllergenDAL();
+                dto.IsActive = true;
+                dal.Update(MyMapper.AllergenDTOToAllergen(dto), dto.AllergenID);
+                dal.MySaveChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: RevertSoftDeleteAllergen");
+            }
         }
         public bool HardDeleteAllergen(AllergenDTO dto)
         {
@@ -94,5 +122,7 @@ namespace YesilEvAppYigit.DAL.Concrete
             }
             return false;
         }
+
+       
     }
 }

@@ -56,7 +56,7 @@ namespace YesilEvAppYigit.DAL.Concrete
                         Blacklist = a.Blacklist,
                         Allergen = a.Allergen
 
-                    }).Where(a => a.UserID == ID).ToList();
+                    }).Where(a => a.UserID == ID&&a.IsActive==true).ToList();
             }
             catch (Exception e)
             {
@@ -98,7 +98,7 @@ namespace YesilEvAppYigit.DAL.Concrete
             try
             {
                 BlacklistAllergenDAL dal = new BlacklistAllergenDAL();
-                dal.Update(MyMapper.BlacklistAllergenDTOToBlacklistAllergen(dto));
+                dal.Update(MyMapper.BlacklistAllergenDTOToBlacklistAllergen(dto), dto.BlacklistAllergenID);
                 dal.MySaveChanges();
             }
             catch (Exception e)
@@ -106,13 +106,14 @@ namespace YesilEvAppYigit.DAL.Concrete
                 Console.WriteLine("Hata: UpdateBlacklistAllergen");
             }
         }
-        public void SoftDeleteBlacklistAllergen(BlacklistAllergenDTO dto)
+        public void SoftDeleteBlacklistAllergen(int ID)
         {
             try
             {
                 BlacklistAllergenDAL dal = new BlacklistAllergenDAL();
+                BlacklistAllergenDTO dto = dal.GetBlacklistAllergenFromID(ID);
                 dto.IsActive = false;
-                dal.Update(MyMapper.BlacklistAllergenDTOToBlacklistAllergen(dto));
+                dal.Update(MyMapper.BlacklistAllergenDTOToBlacklistAllergen(dto),dto.BlacklistAllergenID);
                 dal.MySaveChanges();
             }
             catch (Exception e)
@@ -120,13 +121,14 @@ namespace YesilEvAppYigit.DAL.Concrete
                 Console.WriteLine("Hata: SoftDeleteBlacklistAllergen");
             }
         }
-        public void RevertSoftDeleteBlacklistAllergen(BlacklistAllergenDTO dto)
+        public void RevertSoftDeleteBlacklistAllergen(int ID)
         {
             try
             {
                 BlacklistAllergenDAL dal = new BlacklistAllergenDAL();
+                BlacklistAllergenDTO dto = dal.GetBlacklistAllergenFromID(ID);
                 dto.IsActive = true;
-                dal.Update(MyMapper.BlacklistAllergenDTOToBlacklistAllergen(dto));
+                dal.Update(MyMapper.BlacklistAllergenDTOToBlacklistAllergen(dto), dto.BlacklistAllergenID);
                 dal.MySaveChanges();
             }
             catch (Exception e)

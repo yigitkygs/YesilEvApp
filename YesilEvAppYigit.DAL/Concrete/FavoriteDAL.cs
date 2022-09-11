@@ -109,5 +109,34 @@ namespace YesilEvAppYigit.DAL.Concrete
             }
             return false;
         }
+
+        public void SoftDeleteFavorite(FavoriteDTO dto)
+        {
+            try
+            {
+                FavoriteDAL dal = new FavoriteDAL();
+                dto.IsActive = false;
+                dal.Update(MyMapper.FavoriteDTOToFavorite(dto), dto.UserID);
+                dal.MySaveChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: SoftDeleteFavorite");
+            }
+        }
+        public void RevertSoftDeleteFavorite(FavoriteDTO dto)
+        {
+            try
+            {
+                FavoriteDAL dal = new FavoriteDAL();
+                dto.IsActive = true;
+                dal.Update(MyMapper.FavoriteDTOToFavorite(dto), dto.UserID);
+                dal.MySaveChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: RevertSoftDeleteFavorite");
+            }
+        }
     }
 }

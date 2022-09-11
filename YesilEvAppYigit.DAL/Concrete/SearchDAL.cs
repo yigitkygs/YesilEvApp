@@ -108,7 +108,7 @@ namespace YesilEvAppYigit.DAL.Concrete
                 Console.WriteLine("Hata: SoftDeleteSearch");
             }
         }
-        public void RevertSoftDeleteBrand(SearchDTO dto)
+        public void RevertSoftDeleteSearch(SearchDTO dto)
         {
             try
             {
@@ -119,7 +119,7 @@ namespace YesilEvAppYigit.DAL.Concrete
             }
             catch (Exception e)
             {
-                Console.WriteLine("Hata: RevertSoftDeleteBrand");
+                Console.WriteLine("Hata: RevertSoftDeleteSearch");
             }
         }
         public bool HardDeleteSearch(SearchDTO dto)

@@ -28,68 +28,84 @@ namespace YesilEvAppYigit.WinUI
         List<CategoryDTO> categories = null;
         List<AllergenDTO> allergens = null;
         List<SearchDTO> searches = null;
-
         List<ProductAllergenDTO> productAllergens = null;
         List<BlacklistAllergenDTO> blacklistAllergens = null;
         List<FavoriteProductDTO> favoriteProducts = null;
 
-
-
+        private void EnableEditing()
+        {
+            dgvAdminPanel.ReadOnly = false;
+        }
+        private void DisableEditing()
+        {
+            dgvAdminPanel.ReadOnly = true;
+        }
         private void GetUsersToTable()
         {
             users = new UserDAL().GetAllUsers();
             dgvAdminPanel.DataSource = users;
         }
+
         private void GetProductsToTable()
         {
             products = new ProductDAL().GetAllProducts();
             dgvAdminPanel.DataSource = products;
         }
+
         private void GetBrandsToTable()
         {
             brands = new BrandDAL().GetAllBrands();
             dgvAdminPanel.DataSource = brands;
         }
+
         private void GetManufacturersToTable()
         {
             manufacturers = new ManufacturerDAL().GetAllManufacturers();
             dgvAdminPanel.DataSource = manufacturers;
         }
+
         private void GetFavoritesToTable()
         {
             favorites = new FavoriteDAL().GetAllFavorites();
             dgvAdminPanel.DataSource = favorites;
         }
+
         private void GetBlacklistsToTable()
         {
             blacklists = new BlacklistDAL().GetAllBlacklists();
             dgvAdminPanel.DataSource = blacklists;
         }
+
         private void GetCategoriesToTable()
         {
             categories = new CategoryDAL().GetAllCategories();
             dgvAdminPanel.DataSource = categories;
         }
+
         private void GetAllergensToTable()
         {
             allergens = new AllergenDAL().GetAllAllergens();
             dgvAdminPanel.DataSource = allergens;
         }
+
         private void GetSearchesToTable()
         {
             searches = new SearchDAL().GetAllSearches();
             dgvAdminPanel.DataSource = searches;
         }
+
         private void GetProductAllergensToTable()
         {
             productAllergens = new ProductAllergenDAL().GetAllProductAllergens();
             dgvAdminPanel.DataSource = productAllergens;
         }
+
         private void GetBlacklistAllergensToTable()
         {
             blacklistAllergens = new BlacklistAllergenDAL().GetAllBlacklistAllergens();
             dgvAdminPanel.DataSource = blacklistAllergens;
         }
+
         private void GetFavoriteProductsToTable()
         {
             favoriteProducts = new FavoriteProductDAL().GetAllFavoriteProducts();
@@ -102,6 +118,7 @@ namespace YesilEvAppYigit.WinUI
             dgvAdminPanel.ReadOnly = true;
             tabControl1.SelectedTab = tabPage1;
         }
+
         private void ürünlerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             GetProductsToTable();
@@ -178,6 +195,7 @@ namespace YesilEvAppYigit.WinUI
             dgvAdminPanel.ReadOnly = true;
             tabControl1.SelectedTab = tabPage12;
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (dgvAdminPanel.CurrentRow != null)
@@ -196,24 +214,11 @@ namespace YesilEvAppYigit.WinUI
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < dgvAdminPanel.Rows.Count; i++)
-            {
-                new UserDAL().UpdateUser((UserDTO)dgvAdminPanel.Rows[i].DataBoundItem);
-            }
-            GetUsersToTable();
-            btnKaydet.Enabled = false;
-            dgvAdminPanel.ReadOnly = true;
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
-            btnKaydet.Enabled = true;
-            dgvAdminPanel.ReadOnly = false;
+            EnableEditing();
+            btnSaveUser.Enabled = true;
         }
-
-
 
         private void button3_Click_1(object sender, EventArgs e)
         {
@@ -235,8 +240,8 @@ namespace YesilEvAppYigit.WinUI
 
         private void button5_Click(object sender, EventArgs e)
         {
-            btnKaydet.Enabled = true;
-            dgvAdminPanel.ReadOnly = false;
+            EnableEditing();
+            btnSaveProduct.Enabled = true;
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -246,8 +251,8 @@ namespace YesilEvAppYigit.WinUI
                 new ProductDAL().UpdateProduct((ProductDTO)dgvAdminPanel.Rows[i].DataBoundItem);
             }
             GetProductsToTable();
-            btnKaydet.Enabled = false;
-            dgvAdminPanel.ReadOnly = true;
+            btnSaveProduct.Enabled = false;
+            DisableEditing();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -272,7 +277,6 @@ namespace YesilEvAppYigit.WinUI
             }
         }
 
-
         private void button12_Click(object sender, EventArgs e)
         {
             if (dgvAdminPanel.CurrentRow != null)
@@ -284,8 +288,8 @@ namespace YesilEvAppYigit.WinUI
 
         private void button10_Click(object sender, EventArgs e)
         {
-            btnKaydet.Enabled = true;
-            dgvAdminPanel.ReadOnly = false;
+            EnableEditing();
+            btnSaveBrand.Enabled = true;
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -295,10 +299,352 @@ namespace YesilEvAppYigit.WinUI
                 new BrandDAL().UpdateBrand((BrandDTO)dgvAdminPanel.Rows[i].DataBoundItem);
             }
             GetBrandsToTable();
-            btnKaydet.Enabled = false;
-            dgvAdminPanel.ReadOnly = true;
+            btnSaveBrand.Enabled = false;
+            DisableEditing();
         }
 
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            if (dgvAdminPanel.CurrentRow != null)
+            {
+                new ManufacturerDAL().SoftDeleteManufacturer((ManufacturerDTO)dgvAdminPanel.CurrentRow.DataBoundItem);
+                GetManufacturersToTable();
+            }
+        }
 
+        private void button16_Click(object sender, EventArgs e)
+        {
+            if (dgvAdminPanel.CurrentRow != null)
+            {
+                new ManufacturerDAL().RevertSoftDeleteManufacturer((ManufacturerDTO)dgvAdminPanel.CurrentRow.DataBoundItem);
+                GetManufacturersToTable();
+            }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            EnableEditing();
+            btnSaveManufacturer.Enabled = true;
+        }
+
+        private void btnSaveUser_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvAdminPanel.Rows.Count; i++)
+            {
+                new UserDAL().UpdateUser((UserDTO)dgvAdminPanel.Rows[i].DataBoundItem);
+            }
+            GetUsersToTable();
+            btnSaveUser.Enabled = false;
+            DisableEditing();
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            EnableEditing();
+            btnSaveFavorite.Enabled = true;
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            EnableEditing();
+            btnSaveBlacklist.Enabled = true;
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            EnableEditing();
+            btnSaveCategory.Enabled = true;
+        }
+
+        private void button30_Click(object sender, EventArgs e)
+        {
+            EnableEditing();
+            btnSaveAllergen.Enabled = true;
+        }
+
+        private void button34_Click(object sender, EventArgs e)
+        {
+            EnableEditing();
+            btnSaveSearch.Enabled = true;
+        }
+
+        private void button38_Click(object sender, EventArgs e)
+        {
+            EnableEditing();
+            btnSaveProductAllergen.Enabled = true;
+        }
+
+        private void button42_Click(object sender, EventArgs e)
+        {
+            EnableEditing();
+            btnSaveBlacklistAllergen.Enabled = true;
+        }
+
+        private void button46_Click(object sender, EventArgs e)
+        {
+            EnableEditing();
+            btnSaveFavoriteProduct.Enabled = true;
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            products = new ProductDAL().GetProductsBy(a=>a.IsApproved==false);
+            dgvAdminPanel.DataSource = products;
+        }
+
+        private void btnSaveManufacturer_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvAdminPanel.Rows.Count; i++)
+            {
+                new ManufacturerDAL().UpdateManufacturer((ManufacturerDTO)dgvAdminPanel.Rows[i].DataBoundItem);
+            }
+            GetManufacturersToTable();
+            btnSaveManufacturer.Enabled = false;
+            DisableEditing();
+        }
+
+        private void btnSaveFavorite_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvAdminPanel.Rows.Count; i++)
+            {
+                new FavoriteDAL().UpdateFavorite((FavoriteDTO)dgvAdminPanel.Rows[i].DataBoundItem);
+            }
+            GetFavoritesToTable();
+            btnSaveFavorite.Enabled = false;
+            DisableEditing();
+        }
+
+        private void btnSaveBlacklist_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvAdminPanel.Rows.Count; i++)
+            {
+                new BlacklistDAL().UpdateBlacklist((BlacklistDTO)dgvAdminPanel.Rows[i].DataBoundItem);
+            }
+            GetBlacklistsToTable();
+            btnSaveBlacklist.Enabled = false;
+            DisableEditing();
+        }
+
+        private void btnSaveCategory_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvAdminPanel.Rows.Count; i++)
+            {
+                new CategoryDAL().UpdateCategory((CategoryDTO)dgvAdminPanel.Rows[i].DataBoundItem);
+            }
+            GetCategoriesToTable();
+            btnSaveCategory.Enabled = false;
+            DisableEditing();
+        }
+
+        private void btnSaveAllergen_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvAdminPanel.Rows.Count; i++)
+            {
+                new AllergenDAL().UpdateAllergen((AllergenDTO)dgvAdminPanel.Rows[i].DataBoundItem);
+            }
+            GetAllergensToTable();
+            btnSaveAllergen.Enabled = false;
+            DisableEditing();
+        }
+
+        private void btnSaveSearch_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvAdminPanel.Rows.Count; i++)
+            {
+                new SearchDAL().UpdateSearch((SearchDTO)dgvAdminPanel.Rows[i].DataBoundItem);
+            }
+            GetSearchesToTable();
+            btnSaveSearch.Enabled = false;
+            DisableEditing();
+        }
+
+        private void btnSaveProductAllergen_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvAdminPanel.Rows.Count; i++)
+            {
+                new ProductAllergenDAL().UpdateProductAllergen((ProductAllergenDTO)dgvAdminPanel.Rows[i].DataBoundItem);
+            }
+            GetProductAllergensToTable();
+            btnSaveProductAllergen.Enabled = false;
+            DisableEditing();
+        }
+
+        private void btnSaveBlacklistAllergen_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvAdminPanel.Rows.Count; i++)
+            {
+                new BlacklistAllergenDAL().UpdateBlacklistAllergen((BlacklistAllergenDTO)dgvAdminPanel.Rows[i].DataBoundItem);
+            }
+            GetBlacklistAllergensToTable();
+            btnSaveBlacklistAllergen.Enabled = false;
+            DisableEditing();
+        }
+
+        private void btnSaveFavoriteProduct_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dgvAdminPanel.Rows.Count; i++)
+            {
+                new FavoriteProductDAL().UpdateFavoriteProduct((FavoriteProductDTO)dgvAdminPanel.Rows[i].DataBoundItem);
+            }
+            GetFavoriteProductsToTable();
+            btnSaveFavoriteProduct.Enabled = false;
+            DisableEditing();
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            if (dgvAdminPanel.CurrentRow != null)
+            {
+                new FavoriteDAL().SoftDeleteFavorite((FavoriteDTO)dgvAdminPanel.CurrentRow.DataBoundItem);
+                GetFavoritesToTable();
+            }
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            if (dgvAdminPanel.CurrentRow != null)
+            {
+                new BlacklistDAL().SoftDeleteBlacklist((BlacklistDTO)dgvAdminPanel.CurrentRow.DataBoundItem);
+                GetBlacklistsToTable();
+            }
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            if (dgvAdminPanel.CurrentRow != null)
+            {
+                new CategoryDAL().SoftDeleteCategory((CategoryDTO)dgvAdminPanel.CurrentRow.DataBoundItem);
+                GetCategoriesToTable();
+            }
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+            if (dgvAdminPanel.CurrentRow != null)
+            {
+                new AllergenDAL().SoftDeleteAllergen((AllergenDTO)dgvAdminPanel.CurrentRow.DataBoundItem);
+                GetAllergensToTable();
+            }
+        }
+
+        private void button33_Click(object sender, EventArgs e)
+        {
+            if (dgvAdminPanel.CurrentRow != null)
+            {
+                new SearchDAL().SoftDeleteSearch((SearchDTO)dgvAdminPanel.CurrentRow.DataBoundItem);
+                GetSearchesToTable();
+            }
+        }
+
+        private void button37_Click(object sender, EventArgs e)
+        {
+            if (dgvAdminPanel.CurrentRow != null)
+            {
+                new ProductAllergenDAL().SoftDeleteProductAllergen((ProductAllergenDTO)dgvAdminPanel.CurrentRow.DataBoundItem);
+                GetProductAllergensToTable();
+            }
+        }
+
+        private void button41_Click(object sender, EventArgs e)
+        {
+            if (dgvAdminPanel.CurrentRow != null)
+            {
+                BlacklistAllergenDTO temp = (BlacklistAllergenDTO)dgvAdminPanel.CurrentRow.DataBoundItem;
+                new BlacklistAllergenDAL().SoftDeleteBlacklistAllergen(temp.BlacklistAllergenID);
+                GetBlacklistAllergensToTable();
+            }
+        }
+
+        private void button45_Click(object sender, EventArgs e)
+        {
+            if (dgvAdminPanel.CurrentRow != null)
+            {
+                new FavoriteProductDAL().RevertSoftDeleteFavoriteProduct((FavoriteProductDTO)dgvAdminPanel.CurrentRow.DataBoundItem);
+                GetFavoriteProductsToTable();
+            }
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            if (dgvAdminPanel.CurrentRow != null)
+            {
+                new FavoriteDAL().RevertSoftDeleteFavorite((FavoriteDTO)dgvAdminPanel.CurrentRow.DataBoundItem);
+                GetFavoritesToTable();
+            }
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            if (dgvAdminPanel.CurrentRow != null)
+            {
+                new BlacklistDAL().RevertSoftDeleteBlacklist((BlacklistDTO)dgvAdminPanel.CurrentRow.DataBoundItem);
+                GetBlacklistsToTable();
+            }
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            if (dgvAdminPanel.CurrentRow != null)
+            {
+                new CategoryDAL().RevertSoftDeleteCategory((CategoryDTO)dgvAdminPanel.CurrentRow.DataBoundItem);
+                GetCategoriesToTable();
+            }
+        }
+
+        private void button32_Click(object sender, EventArgs e)
+        {
+            if (dgvAdminPanel.CurrentRow != null)
+            {
+                new AllergenDAL().RevertSoftDeleteAllergen((AllergenDTO)dgvAdminPanel.CurrentRow.DataBoundItem);
+                GetAllergensToTable();
+            }
+        }
+
+        private void button36_Click(object sender, EventArgs e)
+        {
+            if (dgvAdminPanel.CurrentRow != null)
+            {
+                new SearchDAL().RevertSoftDeleteSearch((SearchDTO)dgvAdminPanel.CurrentRow.DataBoundItem);
+                GetSearchesToTable();
+            }
+        }
+
+        private void button40_Click(object sender, EventArgs e)
+        {
+            if (dgvAdminPanel.CurrentRow != null)
+            {
+                new ProductAllergenDAL().RevertSoftDeleteProductAllergen((ProductAllergenDTO)dgvAdminPanel.CurrentRow.DataBoundItem);
+                GetProductAllergensToTable();
+            }
+        }
+
+        private void button44_Click(object sender, EventArgs e)
+        {
+            if (dgvAdminPanel.CurrentRow != null)
+            {
+                BlacklistAllergenDTO temp = (BlacklistAllergenDTO)dgvAdminPanel.CurrentRow.DataBoundItem;
+                new BlacklistAllergenDAL().RevertSoftDeleteBlacklistAllergen(temp.BlacklistAllergenID);
+                GetBlacklistAllergensToTable();
+            }
+        }
+
+        private void button48_Click(object sender, EventArgs e)
+        {
+            if (dgvAdminPanel.CurrentRow != null)
+            {
+                new FavoriteProductDAL().RevertSoftDeleteFavoriteProduct((FavoriteProductDTO)dgvAdminPanel.CurrentRow.DataBoundItem);
+                GetFavoriteProductsToTable();
+            }
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            if (dgvAdminPanel.CurrentRow != null)
+            {
+                ProductDTO productDTO = (ProductDTO)dgvAdminPanel.CurrentRow.DataBoundItem;
+                new ProductDAL().ApproveProduct(productDTO.ProductID);
+                GetProductsToTable();
+            }
+        }
     }
 }

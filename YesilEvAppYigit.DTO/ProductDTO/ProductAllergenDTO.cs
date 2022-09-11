@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,15 @@ namespace YesilEvAppYigit.DTO
         [Required]
         public int AllergenID { get; set; }
         public DateTime? CreateDate { get; set; }
+        [Browsable(false)]
 
         public AllergenDTO Allergen { get; set; }
+        [Browsable(false)]
 
         public ProductDTO Product { get; set; }
+        public override string ToString()
+        {
+            return Allergen.AllergenName;
+        }
     }
 }

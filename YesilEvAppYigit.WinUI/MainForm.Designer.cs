@@ -72,7 +72,7 @@
             this.tbCategory = new System.Windows.Forms.TextBox();
             this.tbBrand = new System.Windows.Forms.TextBox();
             this.button62 = new System.Windows.Forms.Button();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listCurrentIngredients = new System.Windows.Forms.ListBox();
             this.button61 = new System.Windows.Forms.Button();
             this.button60 = new System.Windows.Forms.Button();
             this.cbUserConsent = new System.Windows.Forms.CheckBox();
@@ -91,9 +91,6 @@
             this.button20 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
-            this.rtbUrunDetay = new System.Windows.Forms.RichTextBox();
-            this.cbBrand = new System.Windows.Forms.ComboBox();
-            this.cbCategories = new System.Windows.Forms.ComboBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.label18 = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -174,9 +171,9 @@
             this.lbIngredients = new System.Windows.Forms.ListBox();
             this.label24 = new System.Windows.Forms.Label();
             this.lbUserWhoPosted = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.lbNoRiskIngredients = new System.Windows.Forms.Label();
+            this.lbLowRiskIngredients = new System.Windows.Forms.Label();
+            this.lbMidLevelRiskIngredients = new System.Windows.Forms.Label();
             this.lbHighRiskIngredients = new System.Windows.Forms.Label();
             this.lbBlacklistIngredients = new System.Windows.Forms.Label();
             this.lbProductName = new System.Windows.Forms.Label();
@@ -185,10 +182,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage18 = new System.Windows.Forms.TabPage();
             this.label19 = new System.Windows.Forms.Label();
+            this.dgvAddedProducts = new System.Windows.Forms.DataGridView();
             this.button64 = new System.Windows.Forms.Button();
             this.button65 = new System.Windows.Forms.Button();
             this.button66 = new System.Windows.Forms.Button();
-            this.dgvAddedProducts = new System.Windows.Forms.DataGridView();
+            this.lbProductIsInBlacklist = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -684,9 +682,6 @@
             this.panel3.Controls.Add(this.button20);
             this.panel3.Controls.Add(this.button21);
             this.panel3.Controls.Add(this.button23);
-            this.panel3.Controls.Add(this.rtbUrunDetay);
-            this.panel3.Controls.Add(this.cbBrand);
-            this.panel3.Controls.Add(this.cbCategories);
             this.panel3.Location = new System.Drawing.Point(4, 4);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
@@ -709,7 +704,7 @@
             this.groupBox2.Controls.Add(this.tbCategory);
             this.groupBox2.Controls.Add(this.tbBrand);
             this.groupBox2.Controls.Add(this.button62);
-            this.groupBox2.Controls.Add(this.listBox2);
+            this.groupBox2.Controls.Add(this.listCurrentIngredients);
             this.groupBox2.Controls.Add(this.button61);
             this.groupBox2.Controls.Add(this.button60);
             this.groupBox2.Controls.Add(this.cbUserConsent);
@@ -765,14 +760,14 @@
             this.button62.UseVisualStyleBackColor = true;
             this.button62.Click += new System.EventHandler(this.button62_Click);
             // 
-            // listBox2
+            // listCurrentIngredients
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(6, 357);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(138, 121);
-            this.listBox2.TabIndex = 22;
-            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
+            this.listCurrentIngredients.FormattingEnabled = true;
+            this.listCurrentIngredients.Location = new System.Drawing.Point(6, 357);
+            this.listCurrentIngredients.Name = "listCurrentIngredients";
+            this.listCurrentIngredients.Size = new System.Drawing.Size(138, 121);
+            this.listCurrentIngredients.TabIndex = 22;
+            this.listCurrentIngredients.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // button61
             // 
@@ -984,38 +979,6 @@
             this.button23.UseVisualStyleBackColor = true;
             this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
-            // rtbUrunDetay
-            // 
-            this.rtbUrunDetay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rtbUrunDetay.Location = new System.Drawing.Point(167, 780);
-            this.rtbUrunDetay.Margin = new System.Windows.Forms.Padding(2);
-            this.rtbUrunDetay.Name = "rtbUrunDetay";
-            this.rtbUrunDetay.Size = new System.Drawing.Size(275, 61);
-            this.rtbUrunDetay.TabIndex = 12;
-            this.rtbUrunDetay.Text = "";
-            // 
-            // cbBrand
-            // 
-            this.cbBrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbBrand.FormattingEnabled = true;
-            this.cbBrand.Location = new System.Drawing.Point(116, 823);
-            this.cbBrand.Margin = new System.Windows.Forms.Padding(2);
-            this.cbBrand.Name = "cbBrand";
-            this.cbBrand.Size = new System.Drawing.Size(171, 32);
-            this.cbBrand.TabIndex = 9;
-            // 
-            // cbCategories
-            // 
-            this.cbCategories.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbCategories.FormattingEnabled = true;
-            this.cbCategories.Location = new System.Drawing.Point(305, 823);
-            this.cbCategories.Margin = new System.Windows.Forms.Padding(2);
-            this.cbCategories.Name = "cbCategories";
-            this.cbCategories.Size = new System.Drawing.Size(171, 32);
-            this.cbCategories.TabIndex = 10;
-            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.label18);
@@ -1047,6 +1010,7 @@
             this.tabControl2.Controls.Add(this.tabPage6);
             this.tabControl2.Controls.Add(this.tabPage7);
             this.tabControl2.Controls.Add(this.tabPage8);
+            this.tabControl2.ItemSize = new System.Drawing.Size(1, 1);
             this.tabControl2.Location = new System.Drawing.Point(10, 107);
             this.tabControl2.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl2.Name = "tabControl2";
@@ -1130,11 +1094,11 @@
             this.tabPage8.Controls.Add(this.dgvSearchedProducts);
             this.tabPage8.Controls.Add(this.button47);
             this.tabPage8.Controls.Add(this.txtProductSearch);
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Location = new System.Drawing.Point(4, 5);
             this.tabPage8.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage8.Size = new System.Drawing.Size(482, 643);
+            this.tabPage8.Size = new System.Drawing.Size(482, 660);
             this.tabPage8.TabIndex = 2;
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
@@ -1261,6 +1225,7 @@
             this.tabControl4.Controls.Add(this.tabPage14);
             this.tabControl4.Controls.Add(this.tabPage15);
             this.tabControl4.Controls.Add(this.tabPage16);
+            this.tabControl4.ItemSize = new System.Drawing.Size(1, 1);
             this.tabControl4.Location = new System.Drawing.Point(10, 104);
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.SelectedIndex = 0;
@@ -1271,28 +1236,29 @@
             // 
             this.tabPage14.Controls.Add(this.dgvSearch);
             this.tabPage14.Controls.Add(this.button52);
-            this.tabPage14.Location = new System.Drawing.Point(4, 22);
+            this.tabPage14.Location = new System.Drawing.Point(4, 5);
             this.tabPage14.Name = "tabPage14";
             this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage14.Size = new System.Drawing.Size(481, 565);
+            this.tabPage14.Size = new System.Drawing.Size(481, 582);
             this.tabPage14.TabIndex = 0;
-            this.tabPage14.Text = "tabPage14";
             this.tabPage14.UseVisualStyleBackColor = true;
             // 
             // dgvSearch
             // 
             this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearch.Location = new System.Drawing.Point(5, 65);
+            this.dgvSearch.Location = new System.Drawing.Point(5, 105);
             this.dgvSearch.Margin = new System.Windows.Forms.Padding(2);
             this.dgvSearch.Name = "dgvSearch";
+            this.dgvSearch.ReadOnly = true;
             this.dgvSearch.RowHeadersWidth = 51;
             this.dgvSearch.RowTemplate.Height = 24;
-            this.dgvSearch.Size = new System.Drawing.Size(471, 282);
+            this.dgvSearch.Size = new System.Drawing.Size(471, 340);
             this.dgvSearch.TabIndex = 15;
             // 
             // button52
             // 
-            this.button52.Location = new System.Drawing.Point(168, 380);
+            this.button52.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button52.Location = new System.Drawing.Point(162, 487);
             this.button52.Name = "button52";
             this.button52.Size = new System.Drawing.Size(162, 39);
             this.button52.TabIndex = 14;
@@ -1310,7 +1276,6 @@
             this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage15.Size = new System.Drawing.Size(481, 565);
             this.tabPage15.TabIndex = 1;
-            this.tabPage15.Text = "tabPage15";
             this.tabPage15.UseVisualStyleBackColor = true;
             // 
             // dgvFavorite
@@ -1319,10 +1284,12 @@
             this.dgvFavorite.Location = new System.Drawing.Point(5, 105);
             this.dgvFavorite.Margin = new System.Windows.Forms.Padding(2);
             this.dgvFavorite.Name = "dgvFavorite";
+            this.dgvFavorite.ReadOnly = true;
             this.dgvFavorite.RowHeadersWidth = 51;
             this.dgvFavorite.RowTemplate.Height = 24;
-            this.dgvFavorite.Size = new System.Drawing.Size(471, 282);
+            this.dgvFavorite.Size = new System.Drawing.Size(470, 340);
             this.dgvFavorite.TabIndex = 17;
+            this.dgvFavorite.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFavorite_CellContentClick);
             // 
             // groupBox1
             // 
@@ -1333,7 +1300,6 @@
             this.groupBox1.Size = new System.Drawing.Size(241, 54);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // cbFavori
             // 
@@ -1356,7 +1322,8 @@
             // 
             // button53
             // 
-            this.button53.Location = new System.Drawing.Point(168, 420);
+            this.button53.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button53.Location = new System.Drawing.Point(159, 479);
             this.button53.Name = "button53";
             this.button53.Size = new System.Drawing.Size(162, 39);
             this.button53.TabIndex = 16;
@@ -1373,29 +1340,30 @@
             this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage16.Size = new System.Drawing.Size(481, 565);
             this.tabPage16.TabIndex = 2;
-            this.tabPage16.Text = "tabPage16";
             this.tabPage16.UseVisualStyleBackColor = true;
             // 
             // dgvBlacklist
             // 
             this.dgvBlacklist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBlacklist.Location = new System.Drawing.Point(5, 23);
+            this.dgvBlacklist.Location = new System.Drawing.Point(5, 105);
             this.dgvBlacklist.Margin = new System.Windows.Forms.Padding(2);
             this.dgvBlacklist.Name = "dgvBlacklist";
+            this.dgvBlacklist.ReadOnly = true;
             this.dgvBlacklist.RowHeadersWidth = 51;
             this.dgvBlacklist.RowTemplate.Height = 24;
-            this.dgvBlacklist.Size = new System.Drawing.Size(471, 282);
+            this.dgvBlacklist.Size = new System.Drawing.Size(471, 340);
             this.dgvBlacklist.TabIndex = 19;
             // 
             // button54
             // 
             this.button54.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button54.Location = new System.Drawing.Point(127, 340);
+            this.button54.Location = new System.Drawing.Point(120, 470);
             this.button54.Name = "button54";
             this.button54.Size = new System.Drawing.Size(233, 69);
             this.button54.TabIndex = 18;
             this.button54.Text = "Seçili Alerjeni \r\nKara Liste\'den Çıkar";
             this.button54.UseVisualStyleBackColor = true;
+            this.button54.Click += new System.EventHandler(this.button54_Click);
             // 
             // button34
             // 
@@ -1423,6 +1391,7 @@
             this.button35.Size = new System.Drawing.Size(75, 75);
             this.button35.TabIndex = 9;
             this.button35.UseVisualStyleBackColor = true;
+            this.button35.Click += new System.EventHandler(this.button35_Click);
             // 
             // button36
             // 
@@ -1435,6 +1404,7 @@
             this.button36.Size = new System.Drawing.Size(75, 75);
             this.button36.TabIndex = 10;
             this.button36.UseVisualStyleBackColor = true;
+            this.button36.Click += new System.EventHandler(this.button36_Click);
             // 
             // tabPage10
             // 
@@ -1465,6 +1435,7 @@
             // 
             this.tabControl3.Controls.Add(this.tabPage12);
             this.tabControl3.Controls.Add(this.tabPage13);
+            this.tabControl3.ItemSize = new System.Drawing.Size(1, 1);
             this.tabControl3.Location = new System.Drawing.Point(10, 116);
             this.tabControl3.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl3.Name = "tabControl3";
@@ -1480,13 +1451,12 @@
             this.tabPage12.Controls.Add(this.label10);
             this.tabPage12.Controls.Add(this.txtCurrentUsername);
             this.tabPage12.Controls.Add(this.label9);
-            this.tabPage12.Location = new System.Drawing.Point(4, 22);
+            this.tabPage12.Location = new System.Drawing.Point(4, 5);
             this.tabPage12.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage12.Name = "tabPage12";
             this.tabPage12.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage12.Size = new System.Drawing.Size(482, 621);
+            this.tabPage12.Size = new System.Drawing.Size(482, 638);
             this.tabPage12.TabIndex = 0;
-            this.tabPage12.Text = "tabPage12";
             this.tabPage12.UseVisualStyleBackColor = true;
             // 
             // button49
@@ -1495,7 +1465,7 @@
             this.button49.Location = new System.Drawing.Point(261, 292);
             this.button49.Margin = new System.Windows.Forms.Padding(2);
             this.button49.Name = "button49";
-            this.button49.Size = new System.Drawing.Size(180, 59);
+            this.button49.Size = new System.Drawing.Size(180, 60);
             this.button49.TabIndex = 5;
             this.button49.Text = "DEĞİŞTİR";
             this.button49.UseVisualStyleBackColor = true;
@@ -1507,7 +1477,7 @@
             this.button48.Location = new System.Drawing.Point(25, 292);
             this.button48.Margin = new System.Windows.Forms.Padding(2);
             this.button48.Name = "button48";
-            this.button48.Size = new System.Drawing.Size(180, 59);
+            this.button48.Size = new System.Drawing.Size(180, 60);
             this.button48.TabIndex = 4;
             this.button48.Text = "VAZGEÇ";
             this.button48.UseVisualStyleBackColor = true;
@@ -1567,16 +1537,15 @@
             this.tabPage13.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage13.Size = new System.Drawing.Size(482, 621);
             this.tabPage13.TabIndex = 1;
-            this.tabPage13.Text = "tabPage13";
             this.tabPage13.UseVisualStyleBackColor = true;
             // 
             // button50
             // 
             this.button50.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button50.Location = new System.Drawing.Point(230, 279);
+            this.button50.Location = new System.Drawing.Point(269, 271);
             this.button50.Margin = new System.Windows.Forms.Padding(2);
             this.button50.Name = "button50";
-            this.button50.Size = new System.Drawing.Size(125, 47);
+            this.button50.Size = new System.Drawing.Size(180, 60);
             this.button50.TabIndex = 11;
             this.button50.Text = "DEĞİŞTİR";
             this.button50.UseVisualStyleBackColor = true;
@@ -1585,10 +1554,10 @@
             // button51
             // 
             this.button51.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button51.Location = new System.Drawing.Point(104, 279);
+            this.button51.Location = new System.Drawing.Point(34, 271);
             this.button51.Margin = new System.Windows.Forms.Padding(2);
             this.button51.Name = "button51";
-            this.button51.Size = new System.Drawing.Size(119, 47);
+            this.button51.Size = new System.Drawing.Size(180, 60);
             this.button51.TabIndex = 10;
             this.button51.Text = "VAZGEÇ";
             this.button51.UseVisualStyleBackColor = true;
@@ -1661,6 +1630,7 @@
             this.button38.Size = new System.Drawing.Size(75, 75);
             this.button38.TabIndex = 9;
             this.button38.UseVisualStyleBackColor = true;
+            this.button38.Click += new System.EventHandler(this.button38_Click);
             // 
             // button39
             // 
@@ -1673,6 +1643,7 @@
             this.button39.Size = new System.Drawing.Size(75, 75);
             this.button39.TabIndex = 10;
             this.button39.UseVisualStyleBackColor = true;
+            this.button39.Click += new System.EventHandler(this.button39_Click);
             // 
             // tabPage11
             // 
@@ -1841,6 +1812,7 @@
             // 
             // tabPage17
             // 
+            this.tabPage17.Controls.Add(this.lbProductIsInBlacklist);
             this.tabPage17.Controls.Add(this.lbFavori);
             this.tabPage17.Controls.Add(this.pbFavorite);
             this.tabPage17.Controls.Add(this.button63);
@@ -1851,9 +1823,9 @@
             this.tabPage17.Controls.Add(this.lbIngredients);
             this.tabPage17.Controls.Add(this.label24);
             this.tabPage17.Controls.Add(this.lbUserWhoPosted);
-            this.tabPage17.Controls.Add(this.label23);
-            this.tabPage17.Controls.Add(this.label22);
-            this.tabPage17.Controls.Add(this.label21);
+            this.tabPage17.Controls.Add(this.lbNoRiskIngredients);
+            this.tabPage17.Controls.Add(this.lbLowRiskIngredients);
+            this.tabPage17.Controls.Add(this.lbMidLevelRiskIngredients);
             this.tabPage17.Controls.Add(this.lbHighRiskIngredients);
             this.tabPage17.Controls.Add(this.lbBlacklistIngredients);
             this.tabPage17.Controls.Add(this.lbProductName);
@@ -1876,6 +1848,7 @@
             this.lbFavori.Size = new System.Drawing.Size(103, 20);
             this.lbFavori.TabIndex = 24;
             this.lbFavori.Text = "Favoriye Ekle";
+            this.lbFavori.Visible = false;
             // 
             // pbFavorite
             // 
@@ -1885,6 +1858,7 @@
             this.pbFavorite.Size = new System.Drawing.Size(50, 50);
             this.pbFavorite.TabIndex = 23;
             this.pbFavorite.TabStop = false;
+            this.pbFavorite.Visible = false;
             this.pbFavorite.Click += new System.EventHandler(this.pbFavorite_Click);
             // 
             // button63
@@ -1921,6 +1895,7 @@
             this.button56.Size = new System.Drawing.Size(75, 75);
             this.button56.TabIndex = 16;
             this.button56.UseVisualStyleBackColor = true;
+            this.button56.Click += new System.EventHandler(this.button56_Click);
             // 
             // button57
             // 
@@ -1934,6 +1909,7 @@
             this.button57.Size = new System.Drawing.Size(75, 75);
             this.button57.TabIndex = 14;
             this.button57.UseVisualStyleBackColor = true;
+            this.button57.Click += new System.EventHandler(this.button57_Click);
             // 
             // button58
             // 
@@ -1946,6 +1922,7 @@
             this.button58.Size = new System.Drawing.Size(75, 75);
             this.button58.TabIndex = 15;
             this.button58.UseVisualStyleBackColor = true;
+            this.button58.Click += new System.EventHandler(this.button58_Click);
             // 
             // lbIngredients
             // 
@@ -1984,53 +1961,57 @@
             this.lbUserWhoPosted.TabIndex = 9;
             this.lbUserWhoPosted.Text = "Görüntülediğiniz ürün bilgileri «User» isimli üyemiz\r\ntarafından sağlanmıştır.\r\n";
             // 
-            // label23
+            // lbNoRiskIngredients
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(254, 336);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(112, 20);
-            this.label23.TabIndex = 8;
-            this.label23.Text = "Temiz içerikler ";
+            this.lbNoRiskIngredients.AutoSize = true;
+            this.lbNoRiskIngredients.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNoRiskIngredients.ForeColor = System.Drawing.Color.LimeGreen;
+            this.lbNoRiskIngredients.Location = new System.Drawing.Point(254, 355);
+            this.lbNoRiskIngredients.Name = "lbNoRiskIngredients";
+            this.lbNoRiskIngredients.Size = new System.Drawing.Size(128, 20);
+            this.lbNoRiskIngredients.TabIndex = 8;
+            this.lbNoRiskIngredients.Text = "Temiz içerikler ";
             // 
-            // label22
+            // lbLowRiskIngredients
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(254, 306);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(119, 20);
-            this.label22.TabIndex = 7;
-            this.label22.Text = "Az riskli içerikler";
+            this.lbLowRiskIngredients.AutoSize = true;
+            this.lbLowRiskIngredients.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLowRiskIngredients.ForeColor = System.Drawing.Color.Gold;
+            this.lbLowRiskIngredients.Location = new System.Drawing.Point(254, 325);
+            this.lbLowRiskIngredients.Name = "lbLowRiskIngredients";
+            this.lbLowRiskIngredients.Size = new System.Drawing.Size(138, 20);
+            this.lbLowRiskIngredients.TabIndex = 7;
+            this.lbLowRiskIngredients.Text = "Az riskli içerikler";
             // 
-            // label21
+            // lbMidLevelRiskIngredients
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(254, 276);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(131, 20);
-            this.label21.TabIndex = 6;
-            this.label21.Text = "Orta riskli içerikler";
+            this.lbMidLevelRiskIngredients.AutoSize = true;
+            this.lbMidLevelRiskIngredients.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMidLevelRiskIngredients.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lbMidLevelRiskIngredients.Location = new System.Drawing.Point(254, 295);
+            this.lbMidLevelRiskIngredients.Name = "lbMidLevelRiskIngredients";
+            this.lbMidLevelRiskIngredients.Size = new System.Drawing.Size(152, 20);
+            this.lbMidLevelRiskIngredients.TabIndex = 6;
+            this.lbMidLevelRiskIngredients.Text = "Orta riskli içerikler";
             // 
             // lbHighRiskIngredients
             // 
             this.lbHighRiskIngredients.AutoSize = true;
-            this.lbHighRiskIngredients.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHighRiskIngredients.Location = new System.Drawing.Point(254, 246);
+            this.lbHighRiskIngredients.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHighRiskIngredients.ForeColor = System.Drawing.Color.Red;
+            this.lbHighRiskIngredients.Location = new System.Drawing.Point(254, 265);
             this.lbHighRiskIngredients.Name = "lbHighRiskIngredients";
-            this.lbHighRiskIngredients.Size = new System.Drawing.Size(103, 20);
+            this.lbHighRiskIngredients.Size = new System.Drawing.Size(119, 20);
             this.lbHighRiskIngredients.TabIndex = 5;
             this.lbHighRiskIngredients.Text = "Riskli içerikler";
             // 
             // lbBlacklistIngredients
             // 
             this.lbBlacklistIngredients.AutoSize = true;
-            this.lbBlacklistIngredients.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBlacklistIngredients.Location = new System.Drawing.Point(254, 216);
+            this.lbBlacklistIngredients.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBlacklistIngredients.Location = new System.Drawing.Point(254, 235);
             this.lbBlacklistIngredients.Name = "lbBlacklistIngredients";
-            this.lbBlacklistIngredients.Size = new System.Drawing.Size(160, 20);
+            this.lbBlacklistIngredients.Size = new System.Drawing.Size(184, 20);
             this.lbBlacklistIngredients.TabIndex = 4;
             this.lbBlacklistIngredients.Text = "Kara listedeki içerikler";
             // 
@@ -2038,7 +2019,7 @@
             // 
             this.lbProductName.AutoSize = true;
             this.lbProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbProductName.Location = new System.Drawing.Point(254, 175);
+            this.lbProductName.Location = new System.Drawing.Point(254, 197);
             this.lbProductName.Name = "lbProductName";
             this.lbProductName.Size = new System.Drawing.Size(131, 24);
             this.lbProductName.TabIndex = 3;
@@ -2048,7 +2029,7 @@
             // 
             this.lbBrandName.AutoSize = true;
             this.lbBrandName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBrandName.Location = new System.Drawing.Point(254, 139);
+            this.lbBrandName.Location = new System.Drawing.Point(254, 161);
             this.lbBrandName.Name = "lbBrandName";
             this.lbBrandName.Size = new System.Drawing.Size(116, 24);
             this.lbBrandName.TabIndex = 2;
@@ -2058,7 +2039,7 @@
             // 
             this.lbCategoryName.AutoSize = true;
             this.lbCategoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCategoryName.Location = new System.Drawing.Point(254, 103);
+            this.lbCategoryName.Location = new System.Drawing.Point(254, 125);
             this.lbCategoryName.Name = "lbCategoryName";
             this.lbCategoryName.Size = new System.Drawing.Size(141, 24);
             this.lbCategoryName.TabIndex = 1;
@@ -2066,25 +2047,29 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(34, 110);
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = global::YesilEvAppYigit.WinUI.Properties.Resources.images;
+            this.pictureBox1.InitialImage = global::YesilEvAppYigit.WinUI.Properties.Resources.images;
+            this.pictureBox1.Location = new System.Drawing.Point(34, 121);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(174, 246);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // tabPage18
             // 
             this.tabPage18.Controls.Add(this.label19);
+            this.tabPage18.Controls.Add(this.dgvAddedProducts);
             this.tabPage18.Controls.Add(this.button64);
             this.tabPage18.Controls.Add(this.button65);
             this.tabPage18.Controls.Add(this.button66);
-            this.tabPage18.Controls.Add(this.dgvAddedProducts);
             this.tabPage18.Location = new System.Drawing.Point(4, 24);
             this.tabPage18.Name = "tabPage18";
             this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage18.Size = new System.Drawing.Size(506, 873);
             this.tabPage18.TabIndex = 9;
-            this.tabPage18.Text = "tabPage18";
             this.tabPage18.UseVisualStyleBackColor = true;
             // 
             // label19
@@ -2098,6 +2083,16 @@
             this.label19.TabIndex = 25;
             this.label19.Text = "Eklenilen Ürünler";
             // 
+            // dgvAddedProducts
+            // 
+            this.dgvAddedProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAddedProducts.Location = new System.Drawing.Point(17, 114);
+            this.dgvAddedProducts.Name = "dgvAddedProducts";
+            this.dgvAddedProducts.ReadOnly = true;
+            this.dgvAddedProducts.Size = new System.Drawing.Size(471, 552);
+            this.dgvAddedProducts.TabIndex = 5;
+            this.dgvAddedProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAddedProducts_CellContentClick);
+            // 
             // button64
             // 
             this.button64.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
@@ -2110,6 +2105,7 @@
             this.button64.Size = new System.Drawing.Size(75, 75);
             this.button64.TabIndex = 24;
             this.button64.UseVisualStyleBackColor = true;
+            this.button64.Click += new System.EventHandler(this.button64_Click);
             // 
             // button65
             // 
@@ -2123,6 +2119,7 @@
             this.button65.Size = new System.Drawing.Size(75, 75);
             this.button65.TabIndex = 22;
             this.button65.UseVisualStyleBackColor = true;
+            this.button65.Click += new System.EventHandler(this.button65_Click);
             // 
             // button66
             // 
@@ -2135,15 +2132,18 @@
             this.button66.Size = new System.Drawing.Size(75, 75);
             this.button66.TabIndex = 23;
             this.button66.UseVisualStyleBackColor = true;
+            this.button66.Click += new System.EventHandler(this.button66_Click);
             // 
-            // dgvAddedProducts
+            // lbProductIsInBlacklist
             // 
-            this.dgvAddedProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAddedProducts.Location = new System.Drawing.Point(17, 114);
-            this.dgvAddedProducts.Name = "dgvAddedProducts";
-            this.dgvAddedProducts.ReadOnly = true;
-            this.dgvAddedProducts.Size = new System.Drawing.Size(471, 552);
-            this.dgvAddedProducts.TabIndex = 5;
+            this.lbProductIsInBlacklist.AutoSize = true;
+            this.lbProductIsInBlacklist.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbProductIsInBlacklist.Location = new System.Drawing.Point(84, 91);
+            this.lbProductIsInBlacklist.Name = "lbProductIsInBlacklist";
+            this.lbProductIsInBlacklist.Size = new System.Drawing.Size(337, 24);
+            this.lbProductIsInBlacklist.TabIndex = 25;
+            this.lbProductIsInBlacklist.Text = "BU İÇERİK KARA LİSTENİZDEDİR!!";
+            this.lbProductIsInBlacklist.Visible = false;
             // 
             // MainForm
             // 
@@ -2250,10 +2250,7 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.RichTextBox rtbUrunDetay;
         private System.Windows.Forms.TextBox txtUrunAdi;
-        private System.Windows.Forms.ComboBox cbCategories;
-        private System.Windows.Forms.ComboBox cbBrand;
         private System.Windows.Forms.TextBox txtBarkod;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button21;
@@ -2342,9 +2339,9 @@
         private System.Windows.Forms.ListBox lbIngredients;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label lbUserWhoPosted;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lbNoRiskIngredients;
+        private System.Windows.Forms.Label lbLowRiskIngredients;
+        private System.Windows.Forms.Label lbMidLevelRiskIngredients;
         private System.Windows.Forms.Label lbHighRiskIngredients;
         private System.Windows.Forms.Label lbBlacklistIngredients;
         private System.Windows.Forms.Label lbProductName;
@@ -2362,7 +2359,7 @@
         private System.Windows.Forms.Button button60;
         private System.Windows.Forms.CheckBox cbUserConsent;
         private System.Windows.Forms.Button button62;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listCurrentIngredients;
         private System.Windows.Forms.Button button63;
         private System.Windows.Forms.Label lbAddedProducts;
         private System.Windows.Forms.TextBox tbCategory;
@@ -2377,5 +2374,6 @@
         private System.Windows.Forms.Button button65;
         private System.Windows.Forms.Button button66;
         private System.Windows.Forms.DataGridView dgvAddedProducts;
+        private System.Windows.Forms.Label lbProductIsInBlacklist;
     }
 }

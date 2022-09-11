@@ -84,7 +84,40 @@ namespace YesilEvAppYigit.DAL.Concrete
                 Console.WriteLine("Hata: UpdateCategory");
             }
         }
-        public bool DeleteCategory(CategoryDTO dto)
+        
+
+        public void SoftDeleteCategory(CategoryDTO dto)
+        {
+            try
+            {
+                CategoryDAL dal = new CategoryDAL();
+                dto.IsActive = false;
+                dal.Update(MyMapper.CategoryDTOToCategory(dto), dto.CategoryID);
+                dal.MySaveChanges();
+            }
+
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: UpdateCategory");
+            }
+        }
+        public void RevertSoftDeleteCategory(CategoryDTO dto)
+        {
+            try
+            {
+                CategoryDAL dal = new CategoryDAL();
+                dto.IsActive = true;
+                dal.Update(MyMapper.CategoryDTOToCategory(dto), dto.CategoryID);
+                dal.MySaveChanges();
+            }
+
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: RevertSoftDeleteCategory");
+            }
+        }
+
+        public bool HardDeleteCategory(CategoryDTO dto)
         {
             try
             {
@@ -94,7 +127,7 @@ namespace YesilEvAppYigit.DAL.Concrete
             }
             catch (Exception e)
             {
-                Console.WriteLine("Hata: DeleteCategory");
+                Console.WriteLine("Hata: HardDeleteCategory");
             }
             return false;
         }

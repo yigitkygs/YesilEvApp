@@ -38,6 +38,20 @@ namespace YesilEvAppYigit.DAL.Concrete
             }
             return dto;
         }
+
+        public List<ProductAllergenDTO> GetProductAllergensBy(Func<ProductAllergen, bool> cond)
+        {
+            List<ProductAllergenDTO> dto = new List<ProductAllergenDTO>();
+            try
+            {
+                dto = MyMapper.ListProductAllergenToListProductAllergenDTO(new ProductAllergenDAL().GetBy(cond));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: GetProductAllergensBy");
+            }
+            return dto;
+        }
         public ProductAllergenDTO GetProductAllergenFromID(object ID)
         {
             ProductAllergenDTO gonderilecek = new ProductAllergenDTO();
@@ -50,6 +64,29 @@ namespace YesilEvAppYigit.DAL.Concrete
                 Console.WriteLine("Hata: GetProductAllergenFromID");
             }
             return gonderilecek;
+        }
+        public List<ProductAllergenDTO> GetProductAllergenFromProductID(object ID)
+        {
+            List<ProductAllergenDTO> dto = new List<ProductAllergenDTO>();
+            try
+            {
+                dto = new ProductAllergenDAL().GetProductAllergensBy(a => a.ProductID == (int)ID && a.IsActive == true)
+                    .Join(new AllergenDAL()
+                    .GetAllAllergens(), a => a.AllergenID, b => b.AllergenID, (a, b) => new ProductAllergenDTO()
+                    {
+                        AllergenID = a.AllergenID,
+                        IsActive = a.IsActive,
+                        ProductID = a.ProductID,
+                        CreateDate = a.CreateDate,
+                        Allergen = b,
+                        ProductAllergenID=a.ProductAllergenID
+                    }).ToList();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: GetProductAllergenFromID");
+            }
+            return dto;
         }
         public bool AddNewProductAllergen(ProductAllergenDTO dto)
         {
@@ -72,7 +109,7 @@ namespace YesilEvAppYigit.DAL.Concrete
             try
             {
                 ProductAllergenDAL dal = new ProductAllergenDAL();
-                dal.Update(MyMapper.ProductAllergenDTOToProductAllergen(dto));
+                dal.Update(MyMapper.ProductAllergenDTOToProductAllergen(dto),dto.ProductAllergenID);
                 dal.MySaveChanges();
             }
             catch (Exception e)

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -17,7 +18,10 @@ namespace YesilEvAppYigit.DTO
 
         public bool? IsActive { get; set; }
 
+        [Browsable(false)]
+
         public UserDTO User { get; set; }
+        [Browsable(false)]
 
         public List<FavoriteProductDTO> FavoriteProduct { get; set; }
 

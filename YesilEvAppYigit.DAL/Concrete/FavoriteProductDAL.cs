@@ -40,6 +40,19 @@ namespace YesilEvAppYigit.DAL.Concrete
             }
             return dto;
         }
+        public List<FavoriteProductDTO> GetAllFavoriteProductsBy(Func<FavoriteProduct, bool> cond)
+        {
+            List<FavoriteProductDTO> dto = new List<FavoriteProductDTO>();
+            try
+            {
+                dto = MyMapper.ListFavoriteProductToListFavoriteProductDTO(new FavoriteProductDAL().GetBy(cond));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: GetAllFavoriteProductsBy");
+            }
+            return dto;
+        }
         public FavoriteProductDTO GetFavoriteProduct(int ID)
         {
             FavoriteProductDTO gonderilecek = null;
@@ -108,6 +121,11 @@ namespace YesilEvAppYigit.DAL.Concrete
                 Console.WriteLine("Hata: DeleteFavoriteProduct");
             }
             return false;
+        }
+
+        public void RevertSoftDeleteFavoriteProduct(FavoriteProductDTO dto)
+        {
+            throw new NotImplementedException();
         }
     }
 }

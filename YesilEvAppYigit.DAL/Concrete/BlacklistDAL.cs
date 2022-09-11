@@ -40,7 +40,7 @@ namespace YesilEvAppYigit.DAL.Concrete
             }
             return dto;
         }
-        public List<BlacklistDTO> GetAllBlacklistsWithFK()
+        public List<BlacklistDTO> GetAllBlacklistsFKWithUserID(int ID)
         {
             List<BlacklistDTO> dto = new List<BlacklistDTO>();
             try
@@ -67,8 +67,9 @@ namespace YesilEvAppYigit.DAL.Concrete
                     }).ToList();
                     temp.ForEach(a => a.BlacklistAllergens=(db.BlacklistAllergens.Where(b => b.BlacklistID == a.BlacklistID).ToList()));
                 }
-                dto = MyMapper.ListBlacklistToListBlacklistDTO(temp);
+                dto = MyMapper.ListBlacklistToListBlacklistDTO(temp).Where(a=>a.UserID==ID).ToList();
             }
+
             catch (Exception e)
             {
                 Console.WriteLine("Hata: GetAllBlacklists");

@@ -13,6 +13,9 @@
     <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ProductIngedientsPopUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Reporting.cs">
       <SubType>Form</SubType>
     </Compile>

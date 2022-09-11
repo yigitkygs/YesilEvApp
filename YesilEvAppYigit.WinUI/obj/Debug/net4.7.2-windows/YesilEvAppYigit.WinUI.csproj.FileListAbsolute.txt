@@ -61,3 +61,4 @@ C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.WinUI\obj\Debug\net4.
 C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.WinUI\obj\Debug\net4.7.2-windows\YesilEvAppYigit.WinUI.Reporting.resources
 C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.WinUI\obj\Debug\net4.7.2-windows\YesilEvAppYigit.WinUI.CategoryPopUpForm.resources
 C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.WinUI\obj\Debug\net4.7.2-windows\YesilEvAppYigit.WinUI.BrandPopUpForm.resources
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.WinUI\obj\Debug\net4.7.2-windows\YesilEvAppYigit.WinUI.ProductIngedientsPopUpForm.resources

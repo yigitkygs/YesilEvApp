@@ -15,10 +15,13 @@ namespace YesilEvAppYigit.DTO
         [Browsable(false)]
         public int ProductID { get; set; }
 
+        [DisplayName("Barkod No")]
         public string BarcodeNo { get; set; }
 
+        [DisplayName("Ürün Adı")]
         public string ProductName { get; set; }
 
+        [DisplayName("Eklenme Tarihi")]
         public DateTime? CreateDate { get; set; }
 
         public override string ToString()

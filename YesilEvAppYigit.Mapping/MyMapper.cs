@@ -54,8 +54,8 @@ namespace YesilEvAppYigit.Mapping
             obj.ForEach(a => dto.Add(AllergenToAllergenDTO(a)));
             return dto;
         }
-        #endregion        
-        
+        #endregion
+
         #region Blacklist Mapper
         public static Blacklist BlacklistDTOToBlacklist(BlacklistDTO dto)
         {
@@ -75,10 +75,15 @@ namespace YesilEvAppYigit.Mapping
         {
             var mapperConfig = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<Blacklist, BlacklistDTO>()
-                .ForMember(dest => dest.BlacklistAllergens, opt => opt.Ignore());
+                cfg.CreateMap<Blacklist, BlacklistDTO>();
+                cfg.CreateMap<User, UserDTO>()
+                .ForMember(dest => dest.Favorites, opt => opt.Ignore())
+                .ForMember(dest => dest.Searches, opt => opt.Ignore())
+                .ForMember(dest => dest.Blacklists, opt => opt.Ignore());
+                cfg.CreateMap<BlacklistAllergen, BlacklistAllergenDTO>()
+                .ForMember(dest => dest.Allergen, opt => opt.Ignore())
+                .ForMember(dest => dest.Blacklist, opt => opt.Ignore());
                 cfg.AllowNullCollections = true;
-                cfg.CreateMap<User, UserDTO>();
             });
             var mapper = new Mapper(mapperConfig);
             return mapper.Map<BlacklistDTO>(obj);

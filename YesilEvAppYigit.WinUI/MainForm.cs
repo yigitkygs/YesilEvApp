@@ -11,6 +11,7 @@ using YesilEvAppYigit.DAL.Concrete;
 using YesilEvAppYigit.Mapping;
 using System.Linq;
 using System.Drawing;
+using YesilEvAppYigit.WinUI.Properties;
 
 namespace YesilEvAppYigit.WinUI
 {
@@ -28,19 +29,12 @@ namespace YesilEvAppYigit.WinUI
         private void Form1_Load(object sender, EventArgs e)
         {
 #if DEBUG
-            //var sad = new ProductDAL().UrunEkle(new DTO.ProductDTO()
-            //{
-            //    KategoriID = 2,
-            //    UrunAdi = "Pro2",
-            //    BarkodNo = Guid.NewGuid().ToString().ToUpper()
-            //});
             //var sajdıjk = new ProductDAL().UrunleriGetir();
             //var hede = new ProductDAL().UrunGetir(1);
             //var asdsad = new BlacklistAllergenDAL().KullaniciBlacklistGetir(1);
-            var hede = new BlacklistDAL().GetAllBlacklistsWithFK();
-            txtUsername.Text = "admin";
-            txtSifre.Text = "password";
-
+            var hede = new BlacklistDAL().GetAllBlacklistsFKWithUserID(3);
+            //txtUsername.Text = "admin";
+            //txtSifre.Text = "password";
 #endif
             txtBarkod.Text = "Barkod no giriniz";
             txtBarkod.ForeColor = Color.Gray;
@@ -50,61 +44,46 @@ namespace YesilEvAppYigit.WinUI
         dynamic password;
         TabPage currentPage;
         UserDTO currentUser;
+        ProductDTO currentProduct;
         bool userApproved = false;
         bool isSearchHistory = false;
         List<FavoriteDTO> favoriteDTOs = null;
-        List<BlacklistAllergenDTO> blacklistAllergensDTOs = null;
-
+        List<BlacklistUserPageDTO> blacklistAllergensDTOs = null;
         List<List<FavoriteProductDTO>> favoriteProductDTOs = null;
+        int usersAddedProductCount = 0;
         #endregion
 
-        // todo mevcut kullanıcının karalistesindeki alerjenlerin olduğu ürünleri listelerken renklendir vs
+        //önemliler ( önem sırasına göre)
 
-        // todo ürün ekleme menüsüne ürün içerik ekleme için ayrı pop up form ekle
+        //todo bütün dal'lar foreign key ile birleşecek
 
-        //todo Sadece ilk açılışta «Kullanım Koşulları» görüntülenebilir. Altına bir daha gösterme seçeneği default olarak seçili olacak.
+        //todo validation eklenecek
 
-        //todo Taratılan barkod, veri tabanında eşleşirse direk olarak ilgili ürün sayfası ekrana gelecek. Eşleşmezse, yeni ürün
-        //ekleme sayfası gelecek ve doldurulması gereken formda barkod no hazır olarak gözükecek.
+        //todo mevcut kullanıcının karalistesindeki alerjenlerin olduğu ürünleri listelerken renklendir vs
 
         //todo ürün sayfasından yıldız veya kalp simgesine basılarak favorilere eklenmiş ürünler görülebilecek.
-
-        //todo Kullanıcının kara listeye eklediği içerikler kırmızı olmasa bile en üstte yer alacaklar.
-
-        //todo İçeriğin bilgileri kopyalanamaz şekilde görüntülenecek.
-
-        //todo Eğer kara listede yer alan bir içerik ise bir uyarı olacak. Yoksa hiçbir şey yazmayacak. 
-
-        //todo  Bu içeriğin mevcut olduğu ürün sayısı belirtilecek ve dokunulduğunda bu ürünler listelenecek.
 
         //todo  Eğer alanlardan biri boş bırakılırsa bir uyarı mesajı ile doldurulması istenecek. Doğru şekilde doldurulduysa
         //onaya gönderildiğine dair bir teşekkür mesajı belirecek ve ardından otomatik olarak ana sayfaya dönecek.
 
-        //todo Uygulamaya eklediği ürün sayısı yazısnın üzerine dokunulduğu zaman, kullanıcının eklediği ürünlerin listesi açılacak.
-
         //todo Kullanıcını gönderdiği tüm ürünleri liste halinde görebilecek ve tıkladığpında düzenleme menüsü açılacak
 
-        //todo Gönder butonun önce bir seçenek sunulacak. Kullanıcı buradaki onayı kaldırmazsa ürünün sayfasında bilgileri bu kullanıcının sağladığı gözükecek. 
-        // bunun için product'a user consent diye bir bool değeri atanacak.
-
-        //todo aynısı marka için yapılacak
-
-        //todo ürün arama sayfasında istenilirse önce üst kategori seçilip sonra alt kategori seçilerek, sadece üste kategori seçilerek veya ürün adı ile arama yapılabilecek
-
-        //todo ayrıca istenirse bir kategorideki tüm ürünler listenecek ( eğer textbox boş olursa)
+        //todo Alerjenin detay sayfasında mevcut olduğu ürün sayısı belirtilecek ve dokunulduğunda bu ürünler listelenecek.
 
         //todo admin paneli yeni row ekleme düzelt
 
-        //todo validation eklenecek
-
         //todo test eklenecek
 
-        //todo bütün dal'lar foreign key ile birleşecek
+        //önemsizler
+
+        //todo İçeriğin bilgileri kopyalanamaz şekilde görüntülenecek.
+        //todo Sadece ilk açılışta «Kullanım Koşulları» görüntülenebilir. Altına bir daha gösterme seçeneği default olarak seçili olacak.
+        //todo Kullanıcının kara listeye eklediği içerikler kırmızı olmasa bile en üstte yer alacaklar.
+        //todo Eğer kara listede yer alan bir içerik ise bir uyarı olacak. Yoksa hiçbir şey yazmayacak. 
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //check for nulls
             if (txtUsername.Text != null && txtSifre.Text != null)
             {
                 username = txtUsername.Text;
@@ -139,12 +118,18 @@ namespace YesilEvAppYigit.WinUI
                         btnAdminPanel.Visible = true;
                     }
                     currentUser = user;
+                    countUsersAddedProducts();
                 }
             }
             if (!userExists)
             {
                 MessageBox.Show("Kullanıcı adı veya Şifre Yanlış");
             }
+        }
+
+        private void countUsersAddedProducts()
+        {
+            usersAddedProductCount = new ProductDAL().GetProductsBy(a => a.AddedBy == currentUser.UserID).Count();
         }
 
         private List<UserDTO> getUsers()
@@ -207,11 +192,6 @@ namespace YesilEvAppYigit.WinUI
         {
 
             if (tabControl1.SelectedTab != tabPage3) currentPage = tabControl1.SelectedTab;
-            if (tabControl1.SelectedTab == tabPage4)
-            {
-                loadCategories();
-                loadBrands();
-            }
             if (tabControl1.SelectedTab == tabPage5)
             {
                 tabControl2.SelectedTab = tabPage6;
@@ -226,8 +206,9 @@ namespace YesilEvAppYigit.WinUI
         void ShowLastPage() => tabControl1.SelectedTab = currentPage;
         void ShowUser()
         {
-            tabControl1.SelectedTab = tabPage11;
-            lbAddedProducts.Text = "Eklediği Ürün Sayısı: ";
+            tabControl1.SelectedTab = tabPage11;            
+            countUsersAddedProducts();
+            lbAddedProducts.Text = "Eklediği Ürün Sayısı: "+usersAddedProductCount;
         }
 
         private void loadBrands()
@@ -245,19 +226,34 @@ namespace YesilEvAppYigit.WinUI
             return new BrandDAL().GetAllBrands();
         }
 
-        private void loadCategories()
+       
+        private void loadUpperCategories()
         {
-            cbCategories.Items.Clear();
-            foreach (CategoryDTO category in getCategories())
-            {
-                if ((bool)category.IsActive)
-                    cbCategories.Items.Add(category);
-            }
+            lbUpperCategory.Items.Clear();
+            getUpperCategories().ForEach(a => lbUpperCategory.Items.Add(a));
         }
 
-        private List<CategoryDTO> getCategories()
+        private List<CategoryDTO> getUpperCategories()
         {
-            return new CategoryDAL().GetAllCategories();
+            return new CategoryDAL().GetAllCategories().Where(a => a.UpperCategoryID == a.CategoryID).ToList();
+        }
+        private void loadSubCategories()
+        {
+            lbSubCategory.Items.Clear();
+            getAllSubCategories().ForEach(a => lbSubCategory.Items.Add(a));
+        }
+        private void loadSubCategories(int ID)
+        {
+            lbSubCategory.Items.Clear();
+            getSubCategories(ID).ForEach(a => lbSubCategory.Items.Add(a));
+        }
+        private List<CategoryDTO> getAllSubCategories()
+        {
+            return new CategoryDAL().GetAllCategories().Where(a=> a.UpperCategoryID != a.CategoryID).ToList();
+        }
+        private List<CategoryDTO> getSubCategories(int ID)
+        {
+            return new CategoryDAL().GetAllCategories().Where(a => a.UpperCategoryID == ID && a.UpperCategoryID != a.CategoryID).ToList();
         }
 
         private void button16_Click(object sender, EventArgs e)
@@ -271,7 +267,10 @@ namespace YesilEvAppYigit.WinUI
 
         private void button32_Click(object sender, EventArgs e) => tabControl2.SelectedTab = tabPage7;
 
-        private void button31_Click(object sender, EventArgs e) => tabControl2.SelectedTab = tabPage8;
+        private void button31_Click(object sender, EventArgs e) {
+            loadUpperCategories();
+            tabControl2.SelectedTab = tabPage8;
+        }
 
         private void button18_Click(object sender, EventArgs e) => ShowUser();
 
@@ -323,61 +322,166 @@ namespace YesilEvAppYigit.WinUI
 
         private void button33_Click(object sender, EventArgs e)
         {
-            ProductDTO productDTO = MyMapper.ProductToProductDTO(new ProductDAL().GetBy(a => a.BarcodeNo == txtBarkodSearch.Text).FirstOrDefault());
+            currentProduct = MyMapper.ProductToProductDTO(new ProductDAL().GetBy(a => a.BarcodeNo == txtBarkodSearch.Text).FirstOrDefault());
             SearchDTO search = new SearchDTO();
             search.SearchDate = DateTime.Now;
             search.UserID = currentUser.UserID;
             search.SearchKeyword = txtBarkodSearch.Text;
             search.IsDeleted = false;
             new SearchDAL().AddNewSearch(search);
-            if (productDTO != null)
+            if (currentProduct != null)
             {
-                LoadProductPage(productDTO);
+                LoadProductPage(currentProduct);
                 ShowProduct();
             }
             else
             {
-                MessageBox.Show("Aradığınız ürün bulunamadı.");
+                currentProduct = new ProductDTO() { BarcodeNo=txtBarkodSearch.Text };
+                LoadProductPage(currentProduct);
+                ShowProduct();                
                 txtBarkodSearch.Text = String.Empty;
             }
         }
 
         public void LoadProductPage(ProductDTO p)
         {
-            loadCategories();
-            loadBrands();
             txtBarkod.Text = p.BarcodeNo;
             txtUrunAdi.Text = p.ProductName;
             var brandDTO = new BrandDAL().GetBrandFromID(p.BrandID);
             var categoryDTO = new CategoryDAL().GetCategoryFromID(p.CategoryID);
-            tbBrand.Text = brandDTO.ToString();
-            tbCategory.Text = categoryDTO.ToString();
+            if(brandDTO != null)
+            tbBrand.Text = brandDTO.BrandName;
+            if(categoryDTO != null)
+            tbCategory.Text = categoryDTO.CategoryName;
+            if (p.ProductIngredientsText !=null) 
             rtbUrunDetay.Text = p.ProductIngredientsText;
         }
 
         private void button47_Click(object sender, EventArgs e)
         {
-            List<ProductUserPageDTO> productUserPageDTOs = MyMapper.ListProductDTOToListProductUserPageDTO(new ProductDAL().GetProductsBy(a => a.ProductName.Contains(txtProductSearch.Text)).ToList());
-            SearchDTO search = new SearchDTO();
-            search.SearchDate = DateTime.Now;
-            search.UserID = currentUser.UserID;
-            search.SearchKeyword = txtProductSearch.Text;
-            search.IsDeleted = false;
-            new SearchDAL().AddNewSearch(search);
+            List<ProductUserPageDTO> productUserPageDTOs = new List<ProductUserPageDTO>();
+            if (lbUpperCategory.SelectedItem != null)
+            {
+                CategoryDTO upperCategory = (CategoryDTO)lbUpperCategory.SelectedItem;
+                if (lbSubCategory.SelectedItem != null)
+                {
+                    CategoryDTO subCategory = (CategoryDTO)lbSubCategory.SelectedItem;
 
-            if (productUserPageDTOs.Count > 1)
-            {
-                dgvSearchedProducts.DataSource = productUserPageDTOs;
+                    if (txtProductSearch.Text != "")
+                    {
+                        productUserPageDTOs = MyMapper.ListProductDTOToListProductUserPageDTO(new ProductDAL()
+                            .GetProductsBy(a => a.ProductName.Contains(txtProductSearch.Text) && subCategory.CategoryID == a.CategoryID).ToList());
+                        SearchDTO search = new SearchDTO();
+                        search.SearchDate = DateTime.Now;
+                        search.UserID = currentUser.UserID;
+                        search.SearchKeyword = txtProductSearch.Text;
+                        search.IsDeleted = false;
+                        new SearchDAL().AddNewSearch(search);
+                        if (productUserPageDTOs.Count > 1)
+                        {
+                            dgvSearchedProducts.DataSource = productUserPageDTOs;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Aradığınız ürün bulunamadı.");
+                            dgvSearchedProducts.DataSource = null;
+                            txtProductSearch.Text = String.Empty;
+                        }
+                    }
+                    else
+                    {
+                        productUserPageDTOs = MyMapper.ListProductDTOToListProductUserPageDTO(new ProductDAL()
+                            .GetProductsBy(a => subCategory.CategoryID == a.CategoryID).ToList());
+                        SearchDTO search = new SearchDTO();
+                        search.SearchDate = DateTime.Now;
+                        search.UserID = currentUser.UserID;
+                        search.SearchKeyword = txtProductSearch.Text;
+                        search.IsDeleted = false;
+                        new SearchDAL().AddNewSearch(search);
+                        if (productUserPageDTOs.Count > 1)
+                        {
+                            dgvSearchedProducts.DataSource = productUserPageDTOs;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Aradığınız ürün bulunamadı.");
+                            dgvSearchedProducts.DataSource = null;
+                            txtProductSearch.Text = String.Empty;
+                        }
+                    }
+                }
+                else
+                {
+                    if (txtProductSearch.Text != "")
+                    {
+                        productUserPageDTOs = MyMapper.ListProductDTOToListProductUserPageDTO(new ProductDAL()
+                            .GetProductsBy(a => a.ProductName.Contains(txtProductSearch.Text) && getAllSubCategories().Exists(x=> upperCategory.CategoryID == x.UpperCategoryID && a.CategoryID==x.CategoryID)).ToList());
+                        SearchDTO search = new SearchDTO();
+                        search.SearchDate = DateTime.Now;
+                        search.UserID = currentUser.UserID;
+                        search.SearchKeyword = txtProductSearch.Text;
+                        search.IsDeleted = false;
+                        new SearchDAL().AddNewSearch(search);
+                        if (productUserPageDTOs.Count > 1)
+                        {
+                            dgvSearchedProducts.DataSource = productUserPageDTOs;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Aradığınız ürün bulunamadı.");
+                            dgvSearchedProducts.DataSource = null;
+                            txtProductSearch.Text = String.Empty;
+                        }
+                    }
+                    else
+                    {
+                        productUserPageDTOs = MyMapper.ListProductDTOToListProductUserPageDTO(new ProductDAL().
+                            GetProductsBy(a=> getAllSubCategories().Exists(x => upperCategory.CategoryID == x.UpperCategoryID && a.CategoryID == x.CategoryID)).ToList());
+                        SearchDTO search = new SearchDTO();
+                        search.SearchDate = DateTime.Now;
+                        search.UserID = currentUser.UserID;
+                        search.SearchKeyword = txtProductSearch.Text;
+                        search.IsDeleted = false;
+                        new SearchDAL().AddNewSearch(search);
+                        if (productUserPageDTOs.Count > 1)
+                        {
+                            dgvSearchedProducts.DataSource = productUserPageDTOs;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Aradığınız ürün bulunamadı.");
+                            dgvSearchedProducts.DataSource = null;
+                            txtProductSearch.Text = String.Empty;
+                        }
+                    }
+                }
             }
-            else if (productUserPageDTOs.Count == 1)
+            else 
             {
-                LoadProductPage(MyMapper.ProductUserPageDTOToProductDTO(productUserPageDTOs[0]));
-                ShowProduct();
-            }
-            else
-            {
-                MessageBox.Show("Aradığınız ürün bulunamadı.");
-                txtProductSearch.Text = String.Empty;
+                 productUserPageDTOs = MyMapper.ListProductDTOToListProductUserPageDTO(new ProductDAL().GetProductsBy(a => a.ProductName.Contains(txtProductSearch.Text)).ToList());
+                SearchDTO search = new SearchDTO();
+                search.SearchDate = DateTime.Now;
+                search.UserID = currentUser.UserID;
+                search.SearchKeyword = txtProductSearch.Text;
+                search.IsDeleted = false;
+                new SearchDAL().AddNewSearch(search);
+
+                if (productUserPageDTOs.Count > 1)
+                {
+                    dgvSearchedProducts.DataSource = productUserPageDTOs;
+                }
+                else if (productUserPageDTOs.Count == 1)
+                {
+                    currentProduct = MyMapper.ProductUserPageDTOToProductDTO(productUserPageDTOs[0]);
+                    LoadProductPage(currentProduct);
+                    ShowProduct();
+                }
+                else
+                {
+                    MessageBox.Show("Aradığınız ürün bulunamadı.");
+                    dgvSearchedProducts.DataSource = null;
+                    txtProductSearch.Text = String.Empty;
+                }
             }
         }
 
@@ -483,9 +587,12 @@ namespace YesilEvAppYigit.WinUI
             tabControl1.SelectedTab = tabPage9;
             lblArama.Text = "Kara Liste";
             tabControl4.SelectedTab = tabPage16;
-            blacklistAllergensDTOs = new BlacklistDAL().GetAllBlacklistsWithFK().Where(a => a.UserID == currentUser.UserID).Select(a => new BlacklistAllergenDTO()
+            blacklistAllergensDTOs = new BlacklistDAL().GetAllBlacklistsFKWithUserID(currentUser.UserID).Select(a => new BlacklistUserPageDTO()
             {
-                UserID = a.UserID
+                UserID = a.UserID,
+                AllergenName=a.BlacklistAllergens.Select(b=>b.Allergen.AllergenName).FirstOrDefault(),
+                BlacklistID = a.BlacklistID,
+                CreateDate = a.CreateDate
             }).ToList();
         }
 
@@ -577,7 +684,8 @@ namespace YesilEvAppYigit.WinUI
             if (dgvSearchedProducts.CurrentRow != null)
             {
                 ProductUserPageDTO temp = (ProductUserPageDTO)dgvSearchedProducts.CurrentRow.DataBoundItem;
-                LoadProductPage(new ProductDAL().GetProductByID(temp.ProductID));
+                currentProduct = new ProductDAL().GetProductByID(temp.ProductID);
+                LoadProductPage(currentProduct);
                 ShowProduct();
             }
         }
@@ -606,6 +714,38 @@ namespace YesilEvAppYigit.WinUI
         {
             BrandPopUpForm brandPopUpForm = new BrandPopUpForm();
             brandPopUpForm.ShowDialog();
+        }
+
+        private void pbFavorite_Click(object sender, EventArgs e)
+        {
+            //todo if current product is in one of the users user's favorite lists favori listesi user listesi ve favorite product listelerini join ile birleştirip kontrol edilecek 
+
+            pbFavorite.Image = Resources.icons8_star_50__1_;
+        }
+
+        private void button62_Click(object sender, EventArgs e)
+        {
+            ProductIngedientsPopUpForm productIngedientsPopUpForm = new ProductIngedientsPopUpForm();
+            productIngedientsPopUpForm.ShowDialog();
+        }
+
+        private void lbAddedProducts_Click(object sender, EventArgs e)
+        {
+            List<ProductDTO> productDTOs = new ProductDAL().GetProductsBy(a => a.AddedBy == currentUser.UserID);
+            List<ProductUserPageDTO> productUserPageDTOs = new List<ProductUserPageDTO>();
+            productDTOs.ForEach(dto => productUserPageDTOs.Add(MyMapper.ProductDTOToProductUserPageDTO(dto)));
+            dgvAddedProducts.DataSource = productUserPageDTOs;
+            tabControl1.SelectedTab = tabPage18;
+        }
+
+        private void lbUpperCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbUpperCategory.SelectedItem != null)
+            {
+                CategoryDTO upperCategory = (CategoryDTO)lbUpperCategory.SelectedItem;
+                loadSubCategories(upperCategory.CategoryID);
+            }
+
         }
     }
 }

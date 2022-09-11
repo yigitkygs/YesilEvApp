@@ -10,3 +10,11 @@ C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.Validation\obj\Debug\
 C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.Validation\obj\Debug\YesilEvAppYigit.Validation.csproj.CoreCompileInputs.cache
 C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.Validation\obj\Debug\YesilEvAppYigit.Validation.dll
 C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.Validation\obj\Debug\YesilEvAppYigit.Validation.pdb
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.Validation\bin\Debug\YesilEvAppYigit.DTO.dll
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.Validation\bin\Debug\YesilEvAppYigit.Core.dll
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.Validation\bin\Debug\EntityFramework.dll
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.Validation\bin\Debug\YesilEvAppYigit.DTO.pdb
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.Validation\bin\Debug\YesilEvAppYigit.Core.pdb
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.Validation\bin\Debug\YesilEvAppYigit.Core.dll.config
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.Validation\bin\Debug\EntityFramework.xml
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.Validation\obj\Debug\YesilEvAppYigit.Validation.csproj.CopyComplete

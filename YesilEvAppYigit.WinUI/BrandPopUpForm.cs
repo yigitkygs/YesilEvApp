@@ -45,5 +45,14 @@ namespace YesilEvAppYigit.WinUI
             }
             tbSelectedCategory.Text = selectedBrand.BrandName;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if(selectedBrand != null)
+            {
+                //todo delegate ile selectedBrand'i gönder
+            }
+            else MessageBox.Show("Marka seçimi yapınız!");
+        }
     }
 }

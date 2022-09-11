@@ -32,6 +32,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -45,12 +46,15 @@
             this.btnAdminPanel = new System.Windows.Forms.Button();
             this.btnRapor = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
+            this.button18 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.button19 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
@@ -65,6 +69,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tbCategory = new System.Windows.Forms.TextBox();
+            this.tbBrand = new System.Windows.Forms.TextBox();
             this.button62 = new System.Windows.Forms.Button();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.button61 = new System.Windows.Forms.Button();
@@ -77,14 +83,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtBarkod = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbBrand = new System.Windows.Forms.ComboBox();
             this.button22 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtUrunAdi = new System.Windows.Forms.TextBox();
             this.button24 = new System.Windows.Forms.Button();
-            this.cbCategories = new System.Windows.Forms.ComboBox();
             this.button25 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button23 = new System.Windows.Forms.Button();
             this.rtbUrunDetay = new System.Windows.Forms.RichTextBox();
+            this.cbBrand = new System.Windows.Forms.ComboBox();
+            this.cbCategories = new System.Windows.Forms.ComboBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.label18 = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -95,9 +104,14 @@
             this.button33 = new System.Windows.Forms.Button();
             this.txtBarkodSearch = new System.Windows.Forms.TextBox();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.lbSubCategory = new System.Windows.Forms.ListBox();
+            this.lbUpperCategory = new System.Windows.Forms.ListBox();
             this.dgvSearchedProducts = new System.Windows.Forms.DataGridView();
             this.button47 = new System.Windows.Forms.Button();
             this.txtProductSearch = new System.Windows.Forms.TextBox();
+            this.button28 = new System.Windows.Forms.Button();
+            this.button29 = new System.Windows.Forms.Button();
+            this.button30 = new System.Windows.Forms.Button();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.lblArama = new System.Windows.Forms.Label();
             this.tabControl4 = new System.Windows.Forms.TabControl();
@@ -113,6 +127,9 @@
             this.tabPage16 = new System.Windows.Forms.TabPage();
             this.dgvBlacklist = new System.Windows.Forms.DataGridView();
             this.button54 = new System.Windows.Forms.Button();
+            this.button34 = new System.Windows.Forms.Button();
+            this.button35 = new System.Windows.Forms.Button();
+            this.button36 = new System.Windows.Forms.Button();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.label15 = new System.Windows.Forms.Label();
             this.tabControl3 = new System.Windows.Forms.TabControl();
@@ -130,7 +147,11 @@
             this.label11 = new System.Windows.Forms.Label();
             this.tbYeniSifre = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.button37 = new System.Windows.Forms.Button();
+            this.button38 = new System.Windows.Forms.Button();
+            this.button39 = new System.Windows.Forms.Button();
             this.tabPage11 = new System.Windows.Forms.TabPage();
+            this.lbAddedProducts = new System.Windows.Forms.Label();
             this.button55 = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
@@ -140,8 +161,16 @@
             this.button43 = new System.Windows.Forms.Button();
             this.button44 = new System.Windows.Forms.Button();
             this.button45 = new System.Windows.Forms.Button();
+            this.button41 = new System.Windows.Forms.Button();
+            this.button42 = new System.Windows.Forms.Button();
             this.tabPage17 = new System.Windows.Forms.TabPage();
+            this.lbFavori = new System.Windows.Forms.Label();
+            this.pbFavorite = new System.Windows.Forms.PictureBox();
+            this.button63 = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
+            this.button56 = new System.Windows.Forms.Button();
+            this.button57 = new System.Windows.Forms.Button();
+            this.button58 = new System.Windows.Forms.Button();
             this.lbIngredients = new System.Windows.Forms.ListBox();
             this.label24 = new System.Windows.Forms.Label();
             this.lbUserWhoPosted = new System.Windows.Forms.Label();
@@ -153,35 +182,17 @@
             this.lbProductName = new System.Windows.Forms.Label();
             this.lbBrandName = new System.Windows.Forms.Label();
             this.lbCategoryName = new System.Windows.Forms.Label();
-            this.button63 = new System.Windows.Forms.Button();
-            this.lbAddedProducts = new System.Windows.Forms.Label();
-            this.tbBrand = new System.Windows.Forms.TextBox();
-            this.tbCategory = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
-            this.button37 = new System.Windows.Forms.Button();
-            this.button38 = new System.Windows.Forms.Button();
-            this.button39 = new System.Windows.Forms.Button();
-            this.button41 = new System.Windows.Forms.Button();
-            this.button42 = new System.Windows.Forms.Button();
-            this.button56 = new System.Windows.Forms.Button();
-            this.button57 = new System.Windows.Forms.Button();
-            this.button58 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabPage18 = new System.Windows.Forms.TabPage();
+            this.label19 = new System.Windows.Forms.Label();
+            this.button64 = new System.Windows.Forms.Button();
+            this.button65 = new System.Windows.Forms.Button();
+            this.button66 = new System.Windows.Forms.Button();
+            this.dgvAddedProducts = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -210,8 +221,10 @@
             this.tabPage13.SuspendLayout();
             this.tabPage11.SuspendLayout();
             this.tabPage17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFavorite)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAddedProducts)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -225,6 +238,7 @@
             this.tabControl1.Controls.Add(this.tabPage10);
             this.tabControl1.Controls.Add(this.tabPage11);
             this.tabControl1.Controls.Add(this.tabPage17);
+            this.tabControl1.Controls.Add(this.tabPage18);
             this.tabControl1.ItemSize = new System.Drawing.Size(40, 20);
             this.tabControl1.Location = new System.Drawing.Point(9, 9);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
@@ -262,6 +276,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 867);
             this.panel1.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Image = global::YesilEvAppYigit.WinUI.Properties.Resources.icons8_leaf_windows_11_color_70;
+            this.pictureBox2.Location = new System.Drawing.Point(220, 54);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(70, 68);
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
             // 
             // label14
             // 
@@ -415,6 +439,20 @@
             this.label16.TabIndex = 14;
             this.label16.Text = "Ana Sayfa";
             // 
+            // button18
+            // 
+            this.button18.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
+            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button18.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button18.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button18.Location = new System.Drawing.Point(415, 10);
+            this.button18.Margin = new System.Windows.Forms.Padding(2);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(75, 75);
+            this.button18.TabIndex = 5;
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
             // button14
             // 
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -426,6 +464,19 @@
             this.button14.Text = "Arama Geçmişi";
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // button13
+            // 
+            this.button13.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button13.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button13.Location = new System.Drawing.Point(10, 10);
+            this.button13.Margin = new System.Windows.Forms.Padding(2);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(75, 75);
+            this.button13.TabIndex = 3;
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button15
             // 
@@ -492,6 +543,19 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(502, 871);
             this.panelMenu.TabIndex = 2;
+            // 
+            // button19
+            // 
+            this.button19.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
+            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button19.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button19.Location = new System.Drawing.Point(415, 10);
+            this.button19.Margin = new System.Windows.Forms.Padding(2);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(75, 75);
+            this.button19.TabIndex = 10;
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button12
             // 
@@ -667,6 +731,28 @@
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             // 
+            // tbCategory
+            // 
+            this.tbCategory.Enabled = false;
+            this.tbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbCategory.Location = new System.Drawing.Point(126, 262);
+            this.tbCategory.Margin = new System.Windows.Forms.Padding(2);
+            this.tbCategory.Name = "tbCategory";
+            this.tbCategory.ReadOnly = true;
+            this.tbCategory.Size = new System.Drawing.Size(168, 29);
+            this.tbCategory.TabIndex = 25;
+            // 
+            // tbBrand
+            // 
+            this.tbBrand.Enabled = false;
+            this.tbBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbBrand.Location = new System.Drawing.Point(126, 172);
+            this.tbBrand.Margin = new System.Windows.Forms.Padding(2);
+            this.tbBrand.Name = "tbBrand";
+            this.tbBrand.ReadOnly = true;
+            this.tbBrand.Size = new System.Drawing.Size(168, 29);
+            this.tbBrand.TabIndex = 24;
+            // 
             // button62
             // 
             this.button62.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -677,6 +763,7 @@
             this.button62.TabIndex = 23;
             this.button62.Text = "Ürün İçeriğini Düzenle";
             this.button62.UseVisualStyleBackColor = true;
+            this.button62.Click += new System.EventHandler(this.button62_Click);
             // 
             // listBox2
             // 
@@ -800,17 +887,6 @@
             this.label3.TabIndex = 14;
             this.label3.Text = "Kategori";
             // 
-            // cbBrand
-            // 
-            this.cbBrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbBrand.FormattingEnabled = true;
-            this.cbBrand.Location = new System.Drawing.Point(116, 823);
-            this.cbBrand.Margin = new System.Windows.Forms.Padding(2);
-            this.cbBrand.Name = "cbBrand";
-            this.cbBrand.Size = new System.Drawing.Size(171, 32);
-            this.cbBrand.TabIndex = 9;
-            // 
             // button22
             // 
             this.button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -855,17 +931,6 @@
             this.button24.Text = "Ön Yüz\r\nFotoğrafı Ekle";
             this.button24.UseVisualStyleBackColor = true;
             // 
-            // cbCategories
-            // 
-            this.cbCategories.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbCategories.FormattingEnabled = true;
-            this.cbCategories.Location = new System.Drawing.Point(305, 823);
-            this.cbCategories.Margin = new System.Windows.Forms.Padding(2);
-            this.cbCategories.Name = "cbCategories";
-            this.cbCategories.Size = new System.Drawing.Size(171, 32);
-            this.cbCategories.TabIndex = 10;
-            // 
             // button25
             // 
             this.button25.Enabled = false;
@@ -878,6 +943,47 @@
             this.button25.Text = "Ürün İçeriği\r\nFotoğraf Ekle\r\n";
             this.button25.UseVisualStyleBackColor = true;
             // 
+            // button20
+            // 
+            this.button20.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
+            this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button20.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button20.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button20.Location = new System.Drawing.Point(415, 10);
+            this.button20.Margin = new System.Windows.Forms.Padding(2);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(75, 75);
+            this.button20.TabIndex = 5;
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // button21
+            // 
+            this.button21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button21.BackgroundImage")));
+            this.button21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button21.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button21.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button21.Location = new System.Drawing.Point(10, 780);
+            this.button21.Margin = new System.Windows.Forms.Padding(2);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(75, 75);
+            this.button21.TabIndex = 2;
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // button23
+            // 
+            this.button23.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
+            this.button23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button23.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button23.Location = new System.Drawing.Point(10, 10);
+            this.button23.Margin = new System.Windows.Forms.Padding(2);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(75, 75);
+            this.button23.TabIndex = 3;
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
+            // 
             // rtbUrunDetay
             // 
             this.rtbUrunDetay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -887,6 +993,28 @@
             this.rtbUrunDetay.Size = new System.Drawing.Size(275, 61);
             this.rtbUrunDetay.TabIndex = 12;
             this.rtbUrunDetay.Text = "";
+            // 
+            // cbBrand
+            // 
+            this.cbBrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbBrand.FormattingEnabled = true;
+            this.cbBrand.Location = new System.Drawing.Point(116, 823);
+            this.cbBrand.Margin = new System.Windows.Forms.Padding(2);
+            this.cbBrand.Name = "cbBrand";
+            this.cbBrand.Size = new System.Drawing.Size(171, 32);
+            this.cbBrand.TabIndex = 9;
+            // 
+            // cbCategories
+            // 
+            this.cbCategories.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbCategories.FormattingEnabled = true;
+            this.cbCategories.Location = new System.Drawing.Point(305, 823);
+            this.cbCategories.Margin = new System.Windows.Forms.Padding(2);
+            this.cbCategories.Name = "cbCategories";
+            this.cbCategories.Size = new System.Drawing.Size(171, 32);
+            this.cbCategories.TabIndex = 10;
             // 
             // tabPage5
             // 
@@ -977,7 +1105,7 @@
             // button33
             // 
             this.button33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button33.Location = new System.Drawing.Point(198, 112);
+            this.button33.Location = new System.Drawing.Point(373, 177);
             this.button33.Margin = new System.Windows.Forms.Padding(2);
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(92, 32);
@@ -989,7 +1117,7 @@
             // txtBarkodSearch
             // 
             this.txtBarkodSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtBarkodSearch.Location = new System.Drawing.Point(73, 74);
+            this.txtBarkodSearch.Location = new System.Drawing.Point(11, 180);
             this.txtBarkodSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtBarkodSearch.Name = "txtBarkodSearch";
             this.txtBarkodSearch.Size = new System.Drawing.Size(351, 26);
@@ -997,6 +1125,8 @@
             // 
             // tabPage8
             // 
+            this.tabPage8.Controls.Add(this.lbSubCategory);
+            this.tabPage8.Controls.Add(this.lbUpperCategory);
             this.tabPage8.Controls.Add(this.dgvSearchedProducts);
             this.tabPage8.Controls.Add(this.button47);
             this.tabPage8.Controls.Add(this.txtProductSearch);
@@ -1008,20 +1138,41 @@
             this.tabPage8.TabIndex = 2;
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
+            // lbSubCategory
+            // 
+            this.lbSubCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSubCategory.FormattingEnabled = true;
+            this.lbSubCategory.ItemHeight = 20;
+            this.lbSubCategory.Location = new System.Drawing.Point(246, 32);
+            this.lbSubCategory.Name = "lbSubCategory";
+            this.lbSubCategory.Size = new System.Drawing.Size(224, 124);
+            this.lbSubCategory.TabIndex = 6;
+            // 
+            // lbUpperCategory
+            // 
+            this.lbUpperCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUpperCategory.FormattingEnabled = true;
+            this.lbUpperCategory.ItemHeight = 20;
+            this.lbUpperCategory.Location = new System.Drawing.Point(15, 32);
+            this.lbUpperCategory.Name = "lbUpperCategory";
+            this.lbUpperCategory.Size = new System.Drawing.Size(209, 124);
+            this.lbUpperCategory.TabIndex = 5;
+            this.lbUpperCategory.SelectedIndexChanged += new System.EventHandler(this.lbUpperCategory_SelectedIndexChanged);
+            // 
             // dgvSearchedProducts
             // 
             this.dgvSearchedProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearchedProducts.Location = new System.Drawing.Point(5, 167);
+            this.dgvSearchedProducts.Location = new System.Drawing.Point(5, 221);
             this.dgvSearchedProducts.Name = "dgvSearchedProducts";
             this.dgvSearchedProducts.ReadOnly = true;
-            this.dgvSearchedProducts.Size = new System.Drawing.Size(471, 471);
+            this.dgvSearchedProducts.Size = new System.Drawing.Size(471, 417);
             this.dgvSearchedProducts.TabIndex = 4;
             this.dgvSearchedProducts.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSearchedProducts_CellContentDoubleClick);
             // 
             // button47
             // 
             this.button47.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button47.Location = new System.Drawing.Point(198, 112);
+            this.button47.Location = new System.Drawing.Point(378, 184);
             this.button47.Margin = new System.Windows.Forms.Padding(2);
             this.button47.Name = "button47";
             this.button47.Size = new System.Drawing.Size(92, 32);
@@ -1033,11 +1184,52 @@
             // txtProductSearch
             // 
             this.txtProductSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtProductSearch.Location = new System.Drawing.Point(73, 74);
+            this.txtProductSearch.Location = new System.Drawing.Point(15, 187);
             this.txtProductSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductSearch.Name = "txtProductSearch";
             this.txtProductSearch.Size = new System.Drawing.Size(351, 26);
             this.txtProductSearch.TabIndex = 2;
+            // 
+            // button28
+            // 
+            this.button28.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
+            this.button28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button28.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button28.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button28.Location = new System.Drawing.Point(415, 10);
+            this.button28.Margin = new System.Windows.Forms.Padding(2);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(75, 75);
+            this.button28.TabIndex = 8;
+            this.button28.UseVisualStyleBackColor = true;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
+            // 
+            // button29
+            // 
+            this.button29.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button29.BackgroundImage")));
+            this.button29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button29.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button29.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button29.Location = new System.Drawing.Point(10, 780);
+            this.button29.Margin = new System.Windows.Forms.Padding(2);
+            this.button29.Name = "button29";
+            this.button29.Size = new System.Drawing.Size(75, 75);
+            this.button29.TabIndex = 6;
+            this.button29.UseVisualStyleBackColor = true;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
+            // 
+            // button30
+            // 
+            this.button30.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
+            this.button30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button30.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button30.Location = new System.Drawing.Point(10, 10);
+            this.button30.Margin = new System.Windows.Forms.Padding(2);
+            this.button30.Name = "button30";
+            this.button30.Size = new System.Drawing.Size(75, 75);
+            this.button30.TabIndex = 7;
+            this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
             // 
             // tabPage9
             // 
@@ -1204,6 +1396,45 @@
             this.button54.TabIndex = 18;
             this.button54.Text = "Seçili Alerjeni \r\nKara Liste\'den Çıkar";
             this.button54.UseVisualStyleBackColor = true;
+            // 
+            // button34
+            // 
+            this.button34.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
+            this.button34.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button34.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button34.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button34.Location = new System.Drawing.Point(415, 10);
+            this.button34.Margin = new System.Windows.Forms.Padding(2);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(75, 75);
+            this.button34.TabIndex = 11;
+            this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.button34_Click);
+            // 
+            // button35
+            // 
+            this.button35.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button35.BackgroundImage")));
+            this.button35.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button35.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button35.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button35.Location = new System.Drawing.Point(10, 780);
+            this.button35.Margin = new System.Windows.Forms.Padding(2);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(75, 75);
+            this.button35.TabIndex = 9;
+            this.button35.UseVisualStyleBackColor = true;
+            // 
+            // button36
+            // 
+            this.button36.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
+            this.button36.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button36.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button36.Location = new System.Drawing.Point(10, 10);
+            this.button36.Margin = new System.Windows.Forms.Padding(2);
+            this.button36.Name = "button36";
+            this.button36.Size = new System.Drawing.Size(75, 75);
+            this.button36.TabIndex = 10;
+            this.button36.UseVisualStyleBackColor = true;
             // 
             // tabPage10
             // 
@@ -1404,6 +1635,45 @@
             this.label12.TabIndex = 6;
             this.label12.Text = "Yeni Şifre:";
             // 
+            // button37
+            // 
+            this.button37.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
+            this.button37.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button37.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button37.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button37.Location = new System.Drawing.Point(415, 10);
+            this.button37.Margin = new System.Windows.Forms.Padding(2);
+            this.button37.Name = "button37";
+            this.button37.Size = new System.Drawing.Size(75, 75);
+            this.button37.TabIndex = 11;
+            this.button37.UseVisualStyleBackColor = true;
+            this.button37.Click += new System.EventHandler(this.button37_Click);
+            // 
+            // button38
+            // 
+            this.button38.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button38.BackgroundImage")));
+            this.button38.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button38.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button38.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button38.Location = new System.Drawing.Point(10, 780);
+            this.button38.Margin = new System.Windows.Forms.Padding(2);
+            this.button38.Name = "button38";
+            this.button38.Size = new System.Drawing.Size(75, 75);
+            this.button38.TabIndex = 9;
+            this.button38.UseVisualStyleBackColor = true;
+            // 
+            // button39
+            // 
+            this.button39.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
+            this.button39.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button39.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button39.Location = new System.Drawing.Point(10, 10);
+            this.button39.Margin = new System.Windows.Forms.Padding(2);
+            this.button39.Name = "button39";
+            this.button39.Size = new System.Drawing.Size(75, 75);
+            this.button39.TabIndex = 10;
+            this.button39.UseVisualStyleBackColor = true;
+            // 
             // tabPage11
             // 
             this.tabPage11.Controls.Add(this.lbAddedProducts);
@@ -1424,6 +1694,18 @@
             this.tabPage11.Size = new System.Drawing.Size(506, 873);
             this.tabPage11.TabIndex = 7;
             this.tabPage11.UseVisualStyleBackColor = true;
+            // 
+            // lbAddedProducts
+            // 
+            this.lbAddedProducts.AutoSize = true;
+            this.lbAddedProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbAddedProducts.Location = new System.Drawing.Point(45, 203);
+            this.lbAddedProducts.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbAddedProducts.Name = "lbAddedProducts";
+            this.lbAddedProducts.Size = new System.Drawing.Size(269, 25);
+            this.lbAddedProducts.TabIndex = 20;
+            this.lbAddedProducts.Text = "Eklediğiniz Ürün Sayısı: ";
+            this.lbAddedProducts.Click += new System.EventHandler(this.lbAddedProducts_Click);
             // 
             // button55
             // 
@@ -1530,8 +1812,37 @@
             this.button45.UseVisualStyleBackColor = true;
             this.button45.Click += new System.EventHandler(this.button45_Click);
             // 
+            // button41
+            // 
+            this.button41.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button41.BackgroundImage")));
+            this.button41.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button41.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button41.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button41.Location = new System.Drawing.Point(10, 780);
+            this.button41.Margin = new System.Windows.Forms.Padding(2);
+            this.button41.Name = "button41";
+            this.button41.Size = new System.Drawing.Size(75, 75);
+            this.button41.TabIndex = 9;
+            this.button41.UseVisualStyleBackColor = true;
+            this.button41.Click += new System.EventHandler(this.button41_Click);
+            // 
+            // button42
+            // 
+            this.button42.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
+            this.button42.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button42.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button42.Location = new System.Drawing.Point(10, 10);
+            this.button42.Margin = new System.Windows.Forms.Padding(2);
+            this.button42.Name = "button42";
+            this.button42.Size = new System.Drawing.Size(75, 75);
+            this.button42.TabIndex = 10;
+            this.button42.UseVisualStyleBackColor = true;
+            this.button42.Click += new System.EventHandler(this.button42_Click);
+            // 
             // tabPage17
             // 
+            this.tabPage17.Controls.Add(this.lbFavori);
+            this.tabPage17.Controls.Add(this.pbFavorite);
             this.tabPage17.Controls.Add(this.button63);
             this.tabPage17.Controls.Add(this.label25);
             this.tabPage17.Controls.Add(this.button56);
@@ -1556,6 +1867,37 @@
             this.tabPage17.TabIndex = 8;
             this.tabPage17.UseVisualStyleBackColor = true;
             // 
+            // lbFavori
+            // 
+            this.lbFavori.AutoSize = true;
+            this.lbFavori.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFavori.Location = new System.Drawing.Point(232, 799);
+            this.lbFavori.Name = "lbFavori";
+            this.lbFavori.Size = new System.Drawing.Size(103, 20);
+            this.lbFavori.TabIndex = 24;
+            this.lbFavori.Text = "Favoriye Ekle";
+            // 
+            // pbFavorite
+            // 
+            this.pbFavorite.Image = global::YesilEvAppYigit.WinUI.Properties.Resources.icons8_star_50;
+            this.pbFavorite.Location = new System.Drawing.Point(158, 784);
+            this.pbFavorite.Name = "pbFavorite";
+            this.pbFavorite.Size = new System.Drawing.Size(50, 50);
+            this.pbFavorite.TabIndex = 23;
+            this.pbFavorite.TabStop = false;
+            this.pbFavorite.Click += new System.EventHandler(this.pbFavorite_Click);
+            // 
+            // button63
+            // 
+            this.button63.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button63.Location = new System.Drawing.Point(356, 449);
+            this.button63.Name = "button63";
+            this.button63.Size = new System.Drawing.Size(76, 31);
+            this.button63.TabIndex = 22;
+            this.button63.Text = "Sırala";
+            this.button63.UseVisualStyleBackColor = true;
+            this.button63.Click += new System.EventHandler(this.button63_Click);
+            // 
             // label25
             // 
             this.label25.AutoSize = true;
@@ -1566,6 +1908,44 @@
             this.label25.Size = new System.Drawing.Size(297, 37);
             this.label25.TabIndex = 21;
             this.label25.Text = "Ürün Görüntüleme";
+            // 
+            // button56
+            // 
+            this.button56.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
+            this.button56.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button56.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button56.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button56.Location = new System.Drawing.Point(418, 14);
+            this.button56.Margin = new System.Windows.Forms.Padding(2);
+            this.button56.Name = "button56";
+            this.button56.Size = new System.Drawing.Size(75, 75);
+            this.button56.TabIndex = 16;
+            this.button56.UseVisualStyleBackColor = true;
+            // 
+            // button57
+            // 
+            this.button57.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button57.BackgroundImage")));
+            this.button57.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button57.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button57.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button57.Location = new System.Drawing.Point(13, 784);
+            this.button57.Margin = new System.Windows.Forms.Padding(2);
+            this.button57.Name = "button57";
+            this.button57.Size = new System.Drawing.Size(75, 75);
+            this.button57.TabIndex = 14;
+            this.button57.UseVisualStyleBackColor = true;
+            // 
+            // button58
+            // 
+            this.button58.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
+            this.button58.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button58.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button58.Location = new System.Drawing.Point(13, 14);
+            this.button58.Margin = new System.Windows.Forms.Padding(2);
+            this.button58.Name = "button58";
+            this.button58.Size = new System.Drawing.Size(75, 75);
+            this.button58.TabIndex = 15;
+            this.button58.UseVisualStyleBackColor = true;
             // 
             // lbIngredients
             // 
@@ -1684,325 +2064,6 @@
             this.lbCategoryName.TabIndex = 1;
             this.lbCategoryName.Text = "Category Name";
             // 
-            // button63
-            // 
-            this.button63.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button63.Location = new System.Drawing.Point(356, 449);
-            this.button63.Name = "button63";
-            this.button63.Size = new System.Drawing.Size(76, 31);
-            this.button63.TabIndex = 22;
-            this.button63.Text = "Sırala";
-            this.button63.UseVisualStyleBackColor = true;
-            this.button63.Click += new System.EventHandler(this.button63_Click);
-            // 
-            // lbAddedProducts
-            // 
-            this.lbAddedProducts.AutoSize = true;
-            this.lbAddedProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbAddedProducts.Location = new System.Drawing.Point(45, 203);
-            this.lbAddedProducts.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbAddedProducts.Name = "lbAddedProducts";
-            this.lbAddedProducts.Size = new System.Drawing.Size(238, 25);
-            this.lbAddedProducts.TabIndex = 20;
-            this.lbAddedProducts.Text = "Eklediği Ürün Sayısı: ";
-            // 
-            // tbBrand
-            // 
-            this.tbBrand.Enabled = false;
-            this.tbBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbBrand.Location = new System.Drawing.Point(126, 172);
-            this.tbBrand.Margin = new System.Windows.Forms.Padding(2);
-            this.tbBrand.Name = "tbBrand";
-            this.tbBrand.ReadOnly = true;
-            this.tbBrand.Size = new System.Drawing.Size(168, 29);
-            this.tbBrand.TabIndex = 24;
-            // 
-            // tbCategory
-            // 
-            this.tbCategory.Enabled = false;
-            this.tbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbCategory.Location = new System.Drawing.Point(126, 262);
-            this.tbCategory.Margin = new System.Windows.Forms.Padding(2);
-            this.tbCategory.Name = "tbCategory";
-            this.tbCategory.ReadOnly = true;
-            this.tbCategory.Size = new System.Drawing.Size(168, 29);
-            this.tbCategory.TabIndex = 25;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Image = global::YesilEvAppYigit.WinUI.Properties.Resources.icons8_leaf_windows_11_color_70;
-            this.pictureBox2.Location = new System.Drawing.Point(220, 54);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(70, 68);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
-            // button18
-            // 
-            this.button18.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
-            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button18.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button18.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button18.Location = new System.Drawing.Point(415, 10);
-            this.button18.Margin = new System.Windows.Forms.Padding(2);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(75, 75);
-            this.button18.TabIndex = 5;
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
-            // 
-            // button13
-            // 
-            this.button13.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button13.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button13.Location = new System.Drawing.Point(10, 10);
-            this.button13.Margin = new System.Windows.Forms.Padding(2);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 75);
-            this.button13.TabIndex = 3;
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
-            // 
-            // button19
-            // 
-            this.button19.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
-            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button19.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button19.Location = new System.Drawing.Point(415, 10);
-            this.button19.Margin = new System.Windows.Forms.Padding(2);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(75, 75);
-            this.button19.TabIndex = 10;
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // button20
-            // 
-            this.button20.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
-            this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button20.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button20.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button20.Location = new System.Drawing.Point(415, 10);
-            this.button20.Margin = new System.Windows.Forms.Padding(2);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(75, 75);
-            this.button20.TabIndex = 5;
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
-            // 
-            // button21
-            // 
-            this.button21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button21.BackgroundImage")));
-            this.button21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button21.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button21.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button21.Location = new System.Drawing.Point(10, 780);
-            this.button21.Margin = new System.Windows.Forms.Padding(2);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(75, 75);
-            this.button21.TabIndex = 2;
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
-            // 
-            // button23
-            // 
-            this.button23.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
-            this.button23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button23.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button23.Location = new System.Drawing.Point(10, 10);
-            this.button23.Margin = new System.Windows.Forms.Padding(2);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(75, 75);
-            this.button23.TabIndex = 3;
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.button23_Click);
-            // 
-            // button28
-            // 
-            this.button28.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
-            this.button28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button28.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button28.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button28.Location = new System.Drawing.Point(415, 10);
-            this.button28.Margin = new System.Windows.Forms.Padding(2);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(75, 75);
-            this.button28.TabIndex = 8;
-            this.button28.UseVisualStyleBackColor = true;
-            this.button28.Click += new System.EventHandler(this.button28_Click);
-            // 
-            // button29
-            // 
-            this.button29.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button29.BackgroundImage")));
-            this.button29.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button29.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button29.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button29.Location = new System.Drawing.Point(10, 780);
-            this.button29.Margin = new System.Windows.Forms.Padding(2);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(75, 75);
-            this.button29.TabIndex = 6;
-            this.button29.UseVisualStyleBackColor = true;
-            this.button29.Click += new System.EventHandler(this.button29_Click);
-            // 
-            // button30
-            // 
-            this.button30.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
-            this.button30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button30.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button30.Location = new System.Drawing.Point(10, 10);
-            this.button30.Margin = new System.Windows.Forms.Padding(2);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(75, 75);
-            this.button30.TabIndex = 7;
-            this.button30.UseVisualStyleBackColor = true;
-            this.button30.Click += new System.EventHandler(this.button30_Click);
-            // 
-            // button34
-            // 
-            this.button34.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
-            this.button34.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button34.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button34.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button34.Location = new System.Drawing.Point(415, 10);
-            this.button34.Margin = new System.Windows.Forms.Padding(2);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(75, 75);
-            this.button34.TabIndex = 11;
-            this.button34.UseVisualStyleBackColor = true;
-            this.button34.Click += new System.EventHandler(this.button34_Click);
-            // 
-            // button35
-            // 
-            this.button35.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button35.BackgroundImage")));
-            this.button35.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button35.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button35.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button35.Location = new System.Drawing.Point(10, 780);
-            this.button35.Margin = new System.Windows.Forms.Padding(2);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(75, 75);
-            this.button35.TabIndex = 9;
-            this.button35.UseVisualStyleBackColor = true;
-            // 
-            // button36
-            // 
-            this.button36.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
-            this.button36.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button36.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button36.Location = new System.Drawing.Point(10, 10);
-            this.button36.Margin = new System.Windows.Forms.Padding(2);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(75, 75);
-            this.button36.TabIndex = 10;
-            this.button36.UseVisualStyleBackColor = true;
-            // 
-            // button37
-            // 
-            this.button37.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
-            this.button37.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button37.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button37.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button37.Location = new System.Drawing.Point(415, 10);
-            this.button37.Margin = new System.Windows.Forms.Padding(2);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(75, 75);
-            this.button37.TabIndex = 11;
-            this.button37.UseVisualStyleBackColor = true;
-            this.button37.Click += new System.EventHandler(this.button37_Click);
-            // 
-            // button38
-            // 
-            this.button38.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button38.BackgroundImage")));
-            this.button38.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button38.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button38.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button38.Location = new System.Drawing.Point(10, 780);
-            this.button38.Margin = new System.Windows.Forms.Padding(2);
-            this.button38.Name = "button38";
-            this.button38.Size = new System.Drawing.Size(75, 75);
-            this.button38.TabIndex = 9;
-            this.button38.UseVisualStyleBackColor = true;
-            // 
-            // button39
-            // 
-            this.button39.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
-            this.button39.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button39.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button39.Location = new System.Drawing.Point(10, 10);
-            this.button39.Margin = new System.Windows.Forms.Padding(2);
-            this.button39.Name = "button39";
-            this.button39.Size = new System.Drawing.Size(75, 75);
-            this.button39.TabIndex = 10;
-            this.button39.UseVisualStyleBackColor = true;
-            // 
-            // button41
-            // 
-            this.button41.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button41.BackgroundImage")));
-            this.button41.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button41.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button41.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button41.Location = new System.Drawing.Point(10, 780);
-            this.button41.Margin = new System.Windows.Forms.Padding(2);
-            this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(75, 75);
-            this.button41.TabIndex = 9;
-            this.button41.UseVisualStyleBackColor = true;
-            this.button41.Click += new System.EventHandler(this.button41_Click);
-            // 
-            // button42
-            // 
-            this.button42.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
-            this.button42.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button42.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button42.Location = new System.Drawing.Point(10, 10);
-            this.button42.Margin = new System.Windows.Forms.Padding(2);
-            this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(75, 75);
-            this.button42.TabIndex = 10;
-            this.button42.UseVisualStyleBackColor = true;
-            this.button42.Click += new System.EventHandler(this.button42_Click);
-            // 
-            // button56
-            // 
-            this.button56.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
-            this.button56.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button56.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button56.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button56.Location = new System.Drawing.Point(418, 14);
-            this.button56.Margin = new System.Windows.Forms.Padding(2);
-            this.button56.Name = "button56";
-            this.button56.Size = new System.Drawing.Size(75, 75);
-            this.button56.TabIndex = 16;
-            this.button56.UseVisualStyleBackColor = true;
-            // 
-            // button57
-            // 
-            this.button57.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button57.BackgroundImage")));
-            this.button57.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button57.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button57.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button57.Location = new System.Drawing.Point(13, 784);
-            this.button57.Margin = new System.Windows.Forms.Padding(2);
-            this.button57.Name = "button57";
-            this.button57.Size = new System.Drawing.Size(75, 75);
-            this.button57.TabIndex = 14;
-            this.button57.UseVisualStyleBackColor = true;
-            // 
-            // button58
-            // 
-            this.button58.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
-            this.button58.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button58.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.button58.Location = new System.Drawing.Point(13, 14);
-            this.button58.Margin = new System.Windows.Forms.Padding(2);
-            this.button58.Name = "button58";
-            this.button58.Size = new System.Drawing.Size(75, 75);
-            this.button58.TabIndex = 15;
-            this.button58.UseVisualStyleBackColor = true;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(34, 110);
@@ -2010,6 +2071,79 @@
             this.pictureBox1.Size = new System.Drawing.Size(174, 246);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // tabPage18
+            // 
+            this.tabPage18.Controls.Add(this.label19);
+            this.tabPage18.Controls.Add(this.button64);
+            this.tabPage18.Controls.Add(this.button65);
+            this.tabPage18.Controls.Add(this.button66);
+            this.tabPage18.Controls.Add(this.dgvAddedProducts);
+            this.tabPage18.Location = new System.Drawing.Point(4, 24);
+            this.tabPage18.Name = "tabPage18";
+            this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage18.Size = new System.Drawing.Size(506, 873);
+            this.tabPage18.TabIndex = 9;
+            this.tabPage18.Text = "tabPage18";
+            this.tabPage18.UseVisualStyleBackColor = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label19.Location = new System.Drawing.Point(109, 30);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(276, 37);
+            this.label19.TabIndex = 25;
+            this.label19.Text = "Eklenilen Ürünler";
+            // 
+            // button64
+            // 
+            this.button64.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
+            this.button64.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button64.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button64.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button64.Location = new System.Drawing.Point(418, 14);
+            this.button64.Margin = new System.Windows.Forms.Padding(2);
+            this.button64.Name = "button64";
+            this.button64.Size = new System.Drawing.Size(75, 75);
+            this.button64.TabIndex = 24;
+            this.button64.UseVisualStyleBackColor = true;
+            // 
+            // button65
+            // 
+            this.button65.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button65.BackgroundImage")));
+            this.button65.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button65.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button65.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button65.Location = new System.Drawing.Point(13, 784);
+            this.button65.Margin = new System.Windows.Forms.Padding(2);
+            this.button65.Name = "button65";
+            this.button65.Size = new System.Drawing.Size(75, 75);
+            this.button65.TabIndex = 22;
+            this.button65.UseVisualStyleBackColor = true;
+            // 
+            // button66
+            // 
+            this.button66.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
+            this.button66.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button66.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button66.Location = new System.Drawing.Point(13, 14);
+            this.button66.Margin = new System.Windows.Forms.Padding(2);
+            this.button66.Name = "button66";
+            this.button66.Size = new System.Drawing.Size(75, 75);
+            this.button66.TabIndex = 23;
+            this.button66.UseVisualStyleBackColor = true;
+            // 
+            // dgvAddedProducts
+            // 
+            this.dgvAddedProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAddedProducts.Location = new System.Drawing.Point(17, 114);
+            this.dgvAddedProducts.Name = "dgvAddedProducts";
+            this.dgvAddedProducts.ReadOnly = true;
+            this.dgvAddedProducts.Size = new System.Drawing.Size(471, 552);
+            this.dgvAddedProducts.TabIndex = 5;
             // 
             // MainForm
             // 
@@ -2030,6 +2164,7 @@
             this.tabPage1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -2071,8 +2206,11 @@
             this.tabPage11.PerformLayout();
             this.tabPage17.ResumeLayout(false);
             this.tabPage17.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFavorite)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage18.ResumeLayout(false);
+            this.tabPage18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAddedProducts)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2229,5 +2367,15 @@
         private System.Windows.Forms.Label lbAddedProducts;
         private System.Windows.Forms.TextBox tbCategory;
         private System.Windows.Forms.TextBox tbBrand;
+        private System.Windows.Forms.PictureBox pbFavorite;
+        private System.Windows.Forms.Label lbFavori;
+        private System.Windows.Forms.ListBox lbSubCategory;
+        private System.Windows.Forms.ListBox lbUpperCategory;
+        private System.Windows.Forms.TabPage tabPage18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button button64;
+        private System.Windows.Forms.Button button65;
+        private System.Windows.Forms.Button button66;
+        private System.Windows.Forms.DataGridView dgvAddedProducts;
     }
 }

@@ -31,11 +31,7 @@ namespace YesilEvAppYigit.WinUI
         private void loadUpperCategories()
         {
             listUpperCategories.Items.Clear();
-            foreach (CategoryDTO category in getUpperCategories())
-            {
-                if ((bool)category.IsActive)
-                    listUpperCategories.Items.Add(category);
-            }
+            getUpperCategories().ForEach(a => listUpperCategories.Items.Add(a));
         }
 
         private List<CategoryDTO> getUpperCategories()
@@ -46,11 +42,7 @@ namespace YesilEvAppYigit.WinUI
         private void loadSubCategories()
         {
             listSubCategories.Items.Clear();
-            foreach (CategoryDTO category in getSubCategories())
-            {
-                if ((bool)category.IsActive)
-                    listSubCategories.Items.Add(category);
-            }
+            getSubCategories().ForEach(a => listSubCategories.Items.Add(a));
         }
 
         private List<CategoryDTO> getSubCategories()
@@ -78,7 +70,11 @@ namespace YesilEvAppYigit.WinUI
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //todo delegate ile gönder
+            if (selectedSubCategory != null)
+            {
+                //todo delegate ile gönder
+            }
+            else MessageBox.Show("Kategori seçimi yapınız!");
         }
     }
 }

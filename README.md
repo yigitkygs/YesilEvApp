@@ -53,11 +53,11 @@ Winform tabanlı mobil UI mock up olarak yapılmıştır.
 
 
 
- |Raporlama Örnek 1|Raporlama Örnek 2|
-  |-|-|
-   |![image](https://user-images.githubusercontent.com/18614094/196934836-0ebba086-5aa2-4733-8485-b0b51d8d9c99.png)|![image](https://user-images.githubusercontent.com/18614094/196935973-f4d9498c-8b07-412e-b24b-8b083d9b8f6a.png)|
+ |Raporlama Örnek 1|
+  |-|
+  |![image](https://user-images.githubusercontent.com/18614094/196934836-0ebba086-5aa2-4733-8485-b0b51d8d9c99.png)|
 
  |Raporlama Örnek 2|
   |-|
-   |![image](https://user-images.githubusercontent.com/18614094/196935973-f4d9498c-8b07-412e-b24b-8b083d9b8f6a.png)|
+  |![image](https://user-images.githubusercontent.com/18614094/196935973-f4d9498c-8b07-412e-b24b-8b083d9b8f6a.png)|
 

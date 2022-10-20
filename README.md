@@ -4,6 +4,7 @@ Bu uygulama bir alerjimiz bulunan ürünleri öğrenip karalistemize eklememizi,
 Ürünleri barkod numarasına göre veya adıyla arayabiliriz.
 Eğer aradığımız ürün yoksa yeni ürün olarak ekleyebiliriz.
 
+Entity Framework Code First yaklaşımı kullanılarak geliştirilmiştir.
 Winform tabanlı mobil UI mock up olarak yapılmıştır.
 
 |Uygulama Giriş Ekranı|

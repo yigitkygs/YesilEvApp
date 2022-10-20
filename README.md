@@ -5,7 +5,7 @@ Bu uygulama bir alerjimiz bulunan ürünleri öğrenip karalistemize eklememizi,
 Eğer aradığımız ürün yoksa yeni ürün olarak ekleyebiliriz.
 
 Entity Framework Code First yaklaşımı kullanılarak geliştirilmiştir.
-Winform tabanlı mobil UI mock up olarak yapılmıştır.
+Winform tabanlı olup mobil UI mock up mantığıyla yapılmıştır.
 
 |Uygulama Giriş Ekranı|
   |-|

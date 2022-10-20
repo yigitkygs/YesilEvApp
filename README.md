@@ -8,30 +8,40 @@ Winform tabanlı mobil UI mock up olarak yapılmıştır.
 
 |Uygulama Giriş Ekranı|
   |-|
-  |![login](https://user-images.githubusercontent.com/18614094/196908255-67b46e13-96f2-462a-8f53-b5e6c84a7221.png)|
+  |![image](https://user-images.githubusercontent.com/18614094/196908255-67b46e13-96f2-462a-8f53-b5e6c84a7221.png)|
   
   
   
  |Kullanıcı Ana Sayfası|Admin Ana Sayfası|
   |-|-|
-  |![userMain](https://user-images.githubusercontent.com/18614094/196911253-60340cfc-0f4f-4922-b667-76058550e7b3.png)|![adminMain](https://user-images.githubusercontent.com/18614094/196909181-d94403d9-c9f5-489c-9475-01d52b61f3f8.png)|
+  |![image](https://user-images.githubusercontent.com/18614094/196911253-60340cfc-0f4f-4922-b667-76058550e7b3.png)|![adminMain](https://user-images.githubusercontent.com/18614094/196909181-d94403d9-c9f5-489c-9475-01d52b61f3f8.png)|
 
 
  |Ürün Arama Sayfası|Barkod Kullanarak Arama|Ürün Adı Kullanarak Arama|
   |-|-|-|
-  |![searchMain](https://user-images.githubusercontent.com/18614094/196931012-47ebb4a3-7aa4-4cbd-86b3-7a121824d875.png)|![searchBarcode](https://user-images.githubusercontent.com/18614094/196931206-bf92a590-cb1d-44c4-99de-f5715a9acaba.png)|![seacrhProductName](https://user-images.githubusercontent.com/18614094/196931414-81e1f8c2-0e4c-4784-8984-487d81b6069a.png)|
+  |![image](https://user-images.githubusercontent.com/18614094/196931012-47ebb4a3-7aa4-4cbd-86b3-7a121824d875.png)|![searchBarcode](https://user-images.githubusercontent.com/18614094/196931206-bf92a590-cb1d-44c4-99de-f5715a9acaba.png)|![seacrhProductName](https://user-images.githubusercontent.com/18614094/196931414-81e1f8c2-0e4c-4784-8984-487d81b6069a.png)|
 
 
  |Yeni Ürün Ekleme|Ürün Düzenleme|
   |-|-|
-  |![newProduct]()|![editProduct]()|
+  |![image]()|![image]()|
   
   
  |Ürün İçeriği Ekleme|Ürün Kategorisi Seçme|Ürün Markası Seçme|
   |-|-|-|
-  |![proIngredient]()|![proCat]()|![proBrand]()|
+  |![image]()|![image]()|![image]()|
 
-
+ |Kullanıcın Eklediği Ürünler|
+  |-|
+  |![image]()|
+  
+ |Favori Sayfası|Karaliste Sayfası|
+  |-|-|
+  |![image]()|![image]()|
+  
+   |Kullanıcı Adı Değiştirme|Şifre Değiştirme|
+  |-|-|
+  |![image]()|![image]()|
 
  |Admin Paneli Örnek 1|Admin Paneli Örnek 2|
   |-|-|

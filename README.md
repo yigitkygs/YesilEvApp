@@ -41,7 +41,7 @@ Winform tabanlı mobil UI mock up olarak yapılmıştır.
   
    |Kullanıcı Adı Değiştirme|Şifre Değiştirme|
   |-|-|
-  |![image]()|![image]()|
+  |![image](https://user-images.githubusercontent.com/18614094/196942898-a00e36e8-79f1-4730-afd6-7bde0984647d.png)|![image](https://user-images.githubusercontent.com/18614094/196942972-ffd3a653-e90d-4662-8577-470d5344f6a8.png)|
 
  |Admin Paneli Örnek 1|
   |-|

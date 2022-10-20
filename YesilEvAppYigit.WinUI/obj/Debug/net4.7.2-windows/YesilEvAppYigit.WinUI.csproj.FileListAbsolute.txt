@@ -62,3 +62,6 @@ C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.WinUI\obj\Debug\net4.
 C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.WinUI\obj\Debug\net4.7.2-windows\YesilEvAppYigit.WinUI.CategoryPopUpForm.resources
 C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.WinUI\obj\Debug\net4.7.2-windows\YesilEvAppYigit.WinUI.BrandPopUpForm.resources
 C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.WinUI\obj\Debug\net4.7.2-windows\YesilEvAppYigit.WinUI.ProductIngedientsPopUpForm.resources
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.WinUI\bin\Debug\net4.7.2-windows\YesilEvAppYigit.Validation.dll
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.WinUI\bin\Debug\net4.7.2-windows\YesilEvAppYigit.Validation.pdb
+C:\Users\Yigit\Documents\GitHub\YesilEvApp\YesilEvAppYigit.WinUI\obj\Debug\net4.7.2-windows\YesilEvAppYigit.WinUI.FavoriteListPopUpForm.resources

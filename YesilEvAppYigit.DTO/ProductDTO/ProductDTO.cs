@@ -12,21 +12,24 @@ namespace YesilEvAppYigit.DTO
 {
     public class ProductDTO
     {
+        [DisplayName("Ürün No")]
         public int ProductID { get; set; }
 
+        [DisplayName("Barkod No")]
         [Required]
         public string BarcodeNo { get; set; }
 
+        [DisplayName("Marka No")]
         [Required]
         public int BrandID { get; set; }
 
+        [DisplayName("Ürün Adı")]
         [Required]
         public string ProductName { get; set; }
 
+        [DisplayName("Kategori No")]
         [Required]
         public int CategoryID { get; set; }
-        [Browsable(false)]
-        public string ProductIngredientsText { get; set; }
 
         [Browsable(false)]
         public byte[] ProductIngredientsImg { get; set; }
@@ -36,10 +39,22 @@ namespace YesilEvAppYigit.DTO
 
         [Browsable(false)]
         public byte[] BackImg { get; set; }
+        [DisplayName("Ürün Aktif Mi?")]
+
         public bool? IsActive { get; set; }
+
+        [DisplayName("Kullanıcı İzin Verdi Mi?")]
+
         public bool? DoesUserConsent { get; set; }
+        [DisplayName("Ekleme Tarihi")]
+
         public DateTime? CreateDate { get; set; }
+
+        [DisplayName("Ekleme Tarihi")]
+
         public int AddedBy { get; set; }
+
+        [DisplayName("Onaylandı Mı?")]
 
         public bool? IsApproved { get; set; }
 

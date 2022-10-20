@@ -61,6 +61,7 @@
     <Compile Include="Concrete\ManufacturerDAL.cs" />
     <Compile Include="Concrete\ProductDAL.cs" />
     <Compile Include="Concrete\ReportingDAL.cs" />
+    <Compile Include="Concrete\RiskDAL.cs" />
     <Compile Include="Concrete\SearchDAL.cs" />
     <Compile Include="Concrete\ProductAllergenDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,6 +80,10 @@
     <ProjectReference Include="..\YesilEvAppYigit.Mapping\YesilEvAppYigit.Mapping.csproj">
       <Project>{1C016621-5194-4358-9F79-715A63F02DA8}</Project>
       <Name>YesilEvAppYigit.Mapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\YesilEvAppYigit.Validation\YesilEvAppYigit.Validation.csproj">
+      <Project>{077A404B-7877-40B7-9F65-8FFA304E73AC}</Project>
+      <Name>YesilEvAppYigit.Validation</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -67,6 +67,21 @@ namespace YesilEvAppYigit.DAL.Concrete
             }
             return dto;
         }
+
+        public List<FavoriteDTO> GetFavoriteFromUserIDWithNotActive(object ID)
+        {
+            List<FavoriteDTO> dto = new List<FavoriteDTO>();
+            try
+            {
+                FavoriteDAL dal = new FavoriteDAL();
+                dto = MyMapper.ListFavoriteToListFavoriteDTO(dal.GetBy(a => a.UserID == (int)ID).ToList());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: GetFavoriteFromUserIDWithNotActive");
+            }
+            return dto;
+        }
         public bool AddNewFavorite(FavoriteDTO dto)
         {
             try

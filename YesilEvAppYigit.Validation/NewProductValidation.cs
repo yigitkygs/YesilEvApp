@@ -19,7 +19,6 @@ namespace YesilEvAppYigit.Validation
             CheckProductName();
             CheckBrand();
             CheckCategory();
-            CheckProductIngredients(); 
         }
         private void CheckBarcode()
         {
@@ -51,14 +50,6 @@ namespace YesilEvAppYigit.Validation
             {
                 IsValid = false;
                 ValidationMessages.Add("Kategori seçilmesi gerekiyor.");
-            }
-        }
-        private void CheckProductIngredients()
-        {
-            if (Model.ProductAllergens.Count == 0)
-            {
-                IsValid = false;
-                ValidationMessages.Add("Ürün içeriği boş olamaz.");
             }
         }
     }

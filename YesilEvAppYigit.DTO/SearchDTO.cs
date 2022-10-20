@@ -12,7 +12,11 @@ namespace YesilEvAppYigit.DTO
     {
         [Browsable(false)]
         public int SearchID { get; set; }
+
+        [DisplayName("Aranan Kelime")]
         public string SearchKeyword { get; set; }
+
+        [DisplayName("Arama Tarihi")]
         public DateTime? SearchDate { get; set; } = DateTime.Now;
 
         [Browsable(false)]

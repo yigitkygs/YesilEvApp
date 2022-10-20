@@ -53,6 +53,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnSaveUser = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button7 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.button9 = new System.Windows.Forms.Button();
@@ -60,51 +61,50 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.tabPage11 = new System.Windows.Forms.TabPage();
-            this.tabPage12 = new System.Windows.Forms.TabPage();
             this.button8 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.btnSaveManufacturer = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.btnSaveFavorite = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.button21 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
             this.btnSaveBlacklist = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.button25 = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
             this.btnSaveCategory = new System.Windows.Forms.Button();
             this.button28 = new System.Windows.Forms.Button();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
             this.button29 = new System.Windows.Forms.Button();
             this.button30 = new System.Windows.Forms.Button();
             this.btnSaveAllergen = new System.Windows.Forms.Button();
             this.button32 = new System.Windows.Forms.Button();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
             this.button33 = new System.Windows.Forms.Button();
             this.button34 = new System.Windows.Forms.Button();
             this.btnSaveSearch = new System.Windows.Forms.Button();
             this.button36 = new System.Windows.Forms.Button();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
             this.button37 = new System.Windows.Forms.Button();
             this.button38 = new System.Windows.Forms.Button();
             this.btnSaveProductAllergen = new System.Windows.Forms.Button();
             this.button40 = new System.Windows.Forms.Button();
+            this.tabPage11 = new System.Windows.Forms.TabPage();
             this.button41 = new System.Windows.Forms.Button();
             this.button42 = new System.Windows.Forms.Button();
             this.btnSaveBlacklistAllergen = new System.Windows.Forms.Button();
             this.button44 = new System.Windows.Forms.Button();
+            this.tabPage12 = new System.Windows.Forms.TabPage();
             this.button45 = new System.Windows.Forms.Button();
             this.button46 = new System.Windows.Forms.Button();
             this.btnSaveFavoriteProduct = new System.Windows.Forms.Button();
             this.button48 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdminPanel)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -307,10 +307,10 @@
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.btnSaveUser);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 5);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(777, 120);
+            this.tabPage1.Size = new System.Drawing.Size(777, 137);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
@@ -370,6 +370,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(393, 53);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(183, 41);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "Onayla";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            // 
             // button13
             // 
             this.button13.Location = new System.Drawing.Point(393, 6);
@@ -386,10 +396,10 @@
             this.tabPage3.Controls.Add(this.btnSaveBrand);
             this.tabPage3.Controls.Add(this.button11);
             this.tabPage3.Controls.Add(this.button12);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 5);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(777, 120);
+            this.tabPage3.Size = new System.Drawing.Size(777, 137);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
@@ -440,116 +450,12 @@
             this.tabPage4.Controls.Add(this.button14);
             this.tabPage4.Controls.Add(this.btnSaveManufacturer);
             this.tabPage4.Controls.Add(this.button16);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 5);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(777, 120);
+            this.tabPage4.Size = new System.Drawing.Size(777, 137);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.button17);
-            this.tabPage5.Controls.Add(this.button18);
-            this.tabPage5.Controls.Add(this.btnSaveFavorite);
-            this.tabPage5.Controls.Add(this.button20);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(777, 120);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.button21);
-            this.tabPage6.Controls.Add(this.button22);
-            this.tabPage6.Controls.Add(this.btnSaveBlacklist);
-            this.tabPage6.Controls.Add(this.button24);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(777, 120);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Controls.Add(this.button25);
-            this.tabPage7.Controls.Add(this.button26);
-            this.tabPage7.Controls.Add(this.btnSaveCategory);
-            this.tabPage7.Controls.Add(this.button28);
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(777, 120);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // tabPage8
-            // 
-            this.tabPage8.Controls.Add(this.button29);
-            this.tabPage8.Controls.Add(this.button30);
-            this.tabPage8.Controls.Add(this.btnSaveAllergen);
-            this.tabPage8.Controls.Add(this.button32);
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(777, 120);
-            this.tabPage8.TabIndex = 7;
-            this.tabPage8.UseVisualStyleBackColor = true;
-            // 
-            // tabPage9
-            // 
-            this.tabPage9.Controls.Add(this.button33);
-            this.tabPage9.Controls.Add(this.button34);
-            this.tabPage9.Controls.Add(this.btnSaveSearch);
-            this.tabPage9.Controls.Add(this.button36);
-            this.tabPage9.Location = new System.Drawing.Point(4, 22);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(777, 120);
-            this.tabPage9.TabIndex = 8;
-            this.tabPage9.UseVisualStyleBackColor = true;
-            // 
-            // tabPage10
-            // 
-            this.tabPage10.Controls.Add(this.button37);
-            this.tabPage10.Controls.Add(this.button38);
-            this.tabPage10.Controls.Add(this.btnSaveProductAllergen);
-            this.tabPage10.Controls.Add(this.button40);
-            this.tabPage10.Location = new System.Drawing.Point(4, 22);
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(777, 120);
-            this.tabPage10.TabIndex = 9;
-            this.tabPage10.UseVisualStyleBackColor = true;
-            // 
-            // tabPage11
-            // 
-            this.tabPage11.Controls.Add(this.button41);
-            this.tabPage11.Controls.Add(this.button42);
-            this.tabPage11.Controls.Add(this.btnSaveBlacklistAllergen);
-            this.tabPage11.Controls.Add(this.button44);
-            this.tabPage11.Location = new System.Drawing.Point(4, 22);
-            this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage11.Size = new System.Drawing.Size(777, 120);
-            this.tabPage11.TabIndex = 10;
-            this.tabPage11.UseVisualStyleBackColor = true;
-            // 
-            // tabPage12
-            // 
-            this.tabPage12.Controls.Add(this.button45);
-            this.tabPage12.Controls.Add(this.button46);
-            this.tabPage12.Controls.Add(this.btnSaveFavoriteProduct);
-            this.tabPage12.Controls.Add(this.button48);
-            this.tabPage12.Location = new System.Drawing.Point(4, 22);
-            this.tabPage12.Name = "tabPage12";
-            this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage12.Size = new System.Drawing.Size(777, 120);
-            this.tabPage12.TabIndex = 11;
-            this.tabPage12.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
@@ -592,6 +498,19 @@
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.button17);
+            this.tabPage5.Controls.Add(this.button18);
+            this.tabPage5.Controls.Add(this.btnSaveFavorite);
+            this.tabPage5.Controls.Add(this.button20);
+            this.tabPage5.Location = new System.Drawing.Point(4, 5);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(777, 137);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
             // button17
             // 
             this.button17.Location = new System.Drawing.Point(6, 6);
@@ -632,6 +551,19 @@
             this.button20.Text = "Seçili Favoriyi Aktif Et";
             this.button20.UseVisualStyleBackColor = true;
             this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.button21);
+            this.tabPage6.Controls.Add(this.button22);
+            this.tabPage6.Controls.Add(this.btnSaveBlacklist);
+            this.tabPage6.Controls.Add(this.button24);
+            this.tabPage6.Location = new System.Drawing.Point(4, 5);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(777, 137);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // button21
             // 
@@ -674,6 +606,19 @@
             this.button24.UseVisualStyleBackColor = true;
             this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.button25);
+            this.tabPage7.Controls.Add(this.button26);
+            this.tabPage7.Controls.Add(this.btnSaveCategory);
+            this.tabPage7.Controls.Add(this.button28);
+            this.tabPage7.Location = new System.Drawing.Point(4, 5);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(777, 137);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
             // button25
             // 
             this.button25.Location = new System.Drawing.Point(6, 6);
@@ -714,6 +659,19 @@
             this.button28.Text = "Seçili Kategoriyi Aktif Et";
             this.button28.UseVisualStyleBackColor = true;
             this.button28.Click += new System.EventHandler(this.button28_Click);
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.button29);
+            this.tabPage8.Controls.Add(this.button30);
+            this.tabPage8.Controls.Add(this.btnSaveAllergen);
+            this.tabPage8.Controls.Add(this.button32);
+            this.tabPage8.Location = new System.Drawing.Point(4, 5);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(777, 137);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // button29
             // 
@@ -756,6 +714,19 @@
             this.button32.UseVisualStyleBackColor = true;
             this.button32.Click += new System.EventHandler(this.button32_Click);
             // 
+            // tabPage9
+            // 
+            this.tabPage9.Controls.Add(this.button33);
+            this.tabPage9.Controls.Add(this.button34);
+            this.tabPage9.Controls.Add(this.btnSaveSearch);
+            this.tabPage9.Controls.Add(this.button36);
+            this.tabPage9.Location = new System.Drawing.Point(4, 5);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(777, 137);
+            this.tabPage9.TabIndex = 8;
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
             // button33
             // 
             this.button33.Location = new System.Drawing.Point(6, 6);
@@ -796,6 +767,19 @@
             this.button36.Text = "Seçili Aramayı Aktif Et";
             this.button36.UseVisualStyleBackColor = true;
             this.button36.Click += new System.EventHandler(this.button36_Click);
+            // 
+            // tabPage10
+            // 
+            this.tabPage10.Controls.Add(this.button37);
+            this.tabPage10.Controls.Add(this.button38);
+            this.tabPage10.Controls.Add(this.btnSaveProductAllergen);
+            this.tabPage10.Controls.Add(this.button40);
+            this.tabPage10.Location = new System.Drawing.Point(4, 5);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage10.Size = new System.Drawing.Size(777, 137);
+            this.tabPage10.TabIndex = 9;
+            this.tabPage10.UseVisualStyleBackColor = true;
             // 
             // button37
             // 
@@ -838,6 +822,19 @@
             this.button40.UseVisualStyleBackColor = true;
             this.button40.Click += new System.EventHandler(this.button40_Click);
             // 
+            // tabPage11
+            // 
+            this.tabPage11.Controls.Add(this.button41);
+            this.tabPage11.Controls.Add(this.button42);
+            this.tabPage11.Controls.Add(this.btnSaveBlacklistAllergen);
+            this.tabPage11.Controls.Add(this.button44);
+            this.tabPage11.Location = new System.Drawing.Point(4, 5);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage11.Size = new System.Drawing.Size(777, 137);
+            this.tabPage11.TabIndex = 10;
+            this.tabPage11.UseVisualStyleBackColor = true;
+            // 
             // button41
             // 
             this.button41.Location = new System.Drawing.Point(6, 6);
@@ -878,6 +875,19 @@
             this.button44.Text = "Seçili Kara Liste-Alerjen\'i \r\nAktif Et";
             this.button44.UseVisualStyleBackColor = true;
             this.button44.Click += new System.EventHandler(this.button44_Click);
+            // 
+            // tabPage12
+            // 
+            this.tabPage12.Controls.Add(this.button45);
+            this.tabPage12.Controls.Add(this.button46);
+            this.tabPage12.Controls.Add(this.btnSaveFavoriteProduct);
+            this.tabPage12.Controls.Add(this.button48);
+            this.tabPage12.Location = new System.Drawing.Point(4, 5);
+            this.tabPage12.Name = "tabPage12";
+            this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage12.Size = new System.Drawing.Size(777, 137);
+            this.tabPage12.TabIndex = 11;
+            this.tabPage12.UseVisualStyleBackColor = true;
             // 
             // button45
             // 
@@ -920,16 +930,6 @@
             this.button48.UseVisualStyleBackColor = true;
             this.button48.Click += new System.EventHandler(this.button48_Click);
             // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(393, 53);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(183, 41);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Onayla";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
-            // 
             // AdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -942,6 +942,7 @@
             this.Name = "AdminPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminPaneli";
+            this.Load += new System.EventHandler(this.AdminPanel_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdminPanel)).EndInit();

@@ -66,6 +66,27 @@ namespace YesilEvAppYigit.DAL.Concrete
             }
             return gonderilecek;
         }
+        public List<FavoriteProductDTO> GetFavoriteProductByProductIdAndUserID(int productID,int userID)
+        {
+            List<FavoriteProductDTO> gonderilecek = null;
+            try
+            {
+                var t =new FavoriteProductDAL().GetBy(a => a.ProductID == productID).Join(new FavoriteDAL().GetBy(b => b.UserID == userID), a => a.FavoriteID, b => b.FavoriteID, (a, b) => new FavoriteProduct()
+                {
+                    FavoriteProductID = a.FavoriteProductID,
+                    FavoriteID=a.FavoriteID,
+                    ProductID= a.ProductID,
+                    CreateDate= a.CreateDate
+
+                }).ToList();
+                gonderilecek = MyMapper.ListFavoriteProductToListFavoriteProductDTO(t);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: GetFavoriteProductByProductIdAndUserID");
+            }
+            return gonderilecek;
+        }
         public List<FavoriteProductDTO> GetFavoriteProductListsFromFavoriID(object ID)
         {
             List<FavoriteProductDTO> dto = new List<FavoriteProductDTO>();
@@ -73,6 +94,20 @@ namespace YesilEvAppYigit.DAL.Concrete
             {
                 FavoriteProductDAL dal = new FavoriteProductDAL();
                 dto = MyMapper.ListFavoriteProductToListFavoriteProductDTO(dal.GetBy(a => a.FavoriteID == (int)ID).Where(a => a.IsActive == true).ToList());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: GetFavoriteProductListsFromFavoriID");
+            }
+            return dto;
+        }
+        public List<FavoriteProductDTO> GetFavoriteProductListsFromFavoriIDWithNotActive(object ID)
+        {
+            List<FavoriteProductDTO> dto = new List<FavoriteProductDTO>();
+            try
+            {
+                FavoriteProductDAL dal = new FavoriteProductDAL();
+                dto = MyMapper.ListFavoriteProductToListFavoriteProductDTO(dal.GetBy(a => a.FavoriteID == (int)ID).ToList());
             }
             catch (Exception e)
             {
@@ -108,6 +143,41 @@ namespace YesilEvAppYigit.DAL.Concrete
                 Console.WriteLine("Hata: UpdateFavoriteProduct");
             }
         }
+        public bool SoftDeleteFavoriteProduct(int ID)
+        {
+            try
+            {
+                FavoriteProductDAL dal = new FavoriteProductDAL();
+                FavoriteProductDTO dto = dal.GetFavoriteProduct(ID);
+                dto.IsActive = false;
+                dal.Update(MyMapper.FavoriteProductDTOToFavoriteProduct(dto), dto.FavoriteProductID);
+                dal.MySaveChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: SoftDeleteFavoriteProduct");
+                return false;
+            }
+        }
+        public bool RevertSoftDeleteFavoriteProduct(int ID)
+        {
+            try
+            {
+                FavoriteProductDAL dal = new FavoriteProductDAL();
+                FavoriteProductDTO dto = dal.GetFavoriteProduct(ID);
+                dto.IsActive = true;
+                dal.Update(MyMapper.FavoriteProductDTOToFavoriteProduct(dto), dto.FavoriteProductID);
+                dal.MySaveChanges();
+                return true;
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Hata: RevertSoftDeleteFavoriteProduct");
+                return false;
+            }
+        }
         public bool DeleteFavoriteProduct(object ID)
         {
             try
@@ -121,11 +191,6 @@ namespace YesilEvAppYigit.DAL.Concrete
                 Console.WriteLine("Hata: DeleteFavoriteProduct");
             }
             return false;
-        }
-
-        public void RevertSoftDeleteFavoriteProduct(FavoriteProductDTO dto)
-        {
-            throw new NotImplementedException();
         }
     }
 }

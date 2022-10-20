@@ -9,6 +9,7 @@ using YesilEvAppYigit.Core.Repos;
 using YesilEvAppYigit.DAL.Concrete;
 using YesilEvAppYigit.DTO;
 using YesilEvAppYigit.Mapping;
+using YesilEvAppYigit.Validation;
 
 namespace YesilEvAppYigit.DAL
 {
@@ -71,6 +72,12 @@ namespace YesilEvAppYigit.DAL
             try
             {
                 ProductDAL dal = new ProductDAL();
+                NewProductValidation validation = new NewProductValidation(dto);
+
+                if (!validation.IsValid)
+                {
+                    throw new Exception(validation.ValidationMessages[0]);
+                }
                 dal.Add(MyMapper.ProductDTOToProduct(dto));
                 dal.MySaveChanges();
                 return true;
@@ -82,18 +89,21 @@ namespace YesilEvAppYigit.DAL
             }
             return false;
         }
-        public void UpdateProduct(ProductDTO dto)
+        public bool UpdateProduct(ProductDTO dto)
         {
             try
             {
                 ProductDAL dal = new ProductDAL();
                 dal.Update(MyMapper.ProductDTOToProduct(dto),dto.ProductID);
                 dal.MySaveChanges();
+                return true;
+
             }
             catch (Exception e)
             {
                 Console.WriteLine("Hata: UpdateProduct");
             }
+            return false;
         }
         public void ApproveProduct(object ID)
         {

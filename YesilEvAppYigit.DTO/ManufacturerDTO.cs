@@ -10,14 +10,25 @@ namespace YesilEvAppYigit.DTO
 {
     public class ManufacturerDTO
     {
+        [DisplayName("Üretici No")]
         public int ManufacturerID { get; set; }
 
         [Required]
+        [DisplayName("Üretici Adı")]
         public string ManufacturerName { get; set; }
+
+        [DisplayName("Aktif mi?")]
         public bool? IsActive { get; set; }
+
+        [DisplayName("Ekleme Tarihi")]
         public DateTime? CreateDate { get; set; }
 
         [Browsable(false)]
         public List<BrandDTO> Brand { get; set; }
+
+        public override string ToString()
+        {
+            return ManufacturerName;
+        }
     }
 }

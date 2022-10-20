@@ -79,15 +79,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button26 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
+            this.btnAddProductBackImg = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtBarkod = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button22 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtUrunAdi = new System.Windows.Forms.TextBox();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
+            this.btnAddProductFrontImg = new System.Windows.Forms.Button();
+            this.btnAddProductIngredientImage = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
@@ -98,9 +98,11 @@
             this.button32 = new System.Windows.Forms.Button();
             this.button31 = new System.Windows.Forms.Button();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.label21 = new System.Windows.Forms.Label();
             this.button33 = new System.Windows.Forms.Button();
             this.txtBarkodSearch = new System.Windows.Forms.TextBox();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.label22 = new System.Windows.Forms.Label();
             this.lbSubCategory = new System.Windows.Forms.ListBox();
             this.lbUpperCategory = new System.Windows.Forms.ListBox();
             this.dgvSearchedProducts = new System.Windows.Forms.DataGridView();
@@ -161,10 +163,11 @@
             this.button41 = new System.Windows.Forms.Button();
             this.button42 = new System.Windows.Forms.Button();
             this.tabPage17 = new System.Windows.Forms.TabPage();
+            this.lbProductIsInBlacklist = new System.Windows.Forms.Label();
             this.lbFavori = new System.Windows.Forms.Label();
-            this.pbFavorite = new System.Windows.Forms.PictureBox();
             this.button63 = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
+            this.pbFavorite = new System.Windows.Forms.PictureBox();
             this.button56 = new System.Windows.Forms.Button();
             this.button57 = new System.Windows.Forms.Button();
             this.button58 = new System.Windows.Forms.Button();
@@ -179,14 +182,27 @@
             this.lbProductName = new System.Windows.Forms.Label();
             this.lbBrandName = new System.Windows.Forms.Label();
             this.lbCategoryName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbProductImage = new System.Windows.Forms.PictureBox();
             this.tabPage18 = new System.Windows.Forms.TabPage();
             this.label19 = new System.Windows.Forms.Label();
             this.dgvAddedProducts = new System.Windows.Forms.DataGridView();
             this.button64 = new System.Windows.Forms.Button();
             this.button65 = new System.Windows.Forms.Button();
             this.button66 = new System.Windows.Forms.Button();
-            this.lbProductIsInBlacklist = new System.Windows.Forms.Label();
+            this.tabPage19 = new System.Windows.Forms.TabPage();
+            this.btnAllergenPageAddRemoveFromBlacklist = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.lbAllergenPageAllergenIsInUsersBlacklist = new System.Windows.Forms.Label();
+            this.button72 = new System.Windows.Forms.Button();
+            this.label27 = new System.Windows.Forms.Label();
+            this.button68 = new System.Windows.Forms.Button();
+            this.button69 = new System.Windows.Forms.Button();
+            this.button70 = new System.Windows.Forms.Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.lbAllergenPageHowManyProductHasThisAllergen = new System.Windows.Forms.Label();
+            this.lbAllergenPageAllergenName = new System.Windows.Forms.Label();
+            this.lbAllergenPageProductName = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -220,9 +236,10 @@
             this.tabPage11.SuspendLayout();
             this.tabPage17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFavorite)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProductImage)).BeginInit();
             this.tabPage18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddedProducts)).BeginInit();
+            this.tabPage19.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -237,7 +254,8 @@
             this.tabControl1.Controls.Add(this.tabPage11);
             this.tabControl1.Controls.Add(this.tabPage17);
             this.tabControl1.Controls.Add(this.tabPage18);
-            this.tabControl1.ItemSize = new System.Drawing.Size(40, 20);
+            this.tabControl1.Controls.Add(this.tabPage19);
+            this.tabControl1.ItemSize = new System.Drawing.Size(1, 1);
             this.tabControl1.Location = new System.Drawing.Point(9, 9);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
@@ -250,11 +268,11 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.panel1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Location = new System.Drawing.Point(4, 14);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(506, 873);
+            this.tabPage1.Size = new System.Drawing.Size(506, 883);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
@@ -360,11 +378,11 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.panel2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Location = new System.Drawing.Point(4, 14);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(506, 873);
+            this.tabPage2.Size = new System.Drawing.Size(506, 883);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
@@ -515,10 +533,10 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.panelMenu);
-            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Location = new System.Drawing.Point(4, 14);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(506, 873);
+            this.tabPage3.Size = new System.Drawing.Size(506, 883);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
@@ -668,10 +686,10 @@
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.panel3);
-            this.tabPage4.Location = new System.Drawing.Point(4, 24);
+            this.tabPage4.Location = new System.Drawing.Point(4, 14);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(506, 873);
+            this.tabPage4.Size = new System.Drawing.Size(506, 883);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
@@ -711,15 +729,15 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.button26);
-            this.groupBox2.Controls.Add(this.button27);
+            this.groupBox2.Controls.Add(this.btnAddProductBackImg);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.txtBarkod);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.button22);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txtUrunAdi);
-            this.groupBox2.Controls.Add(this.button24);
-            this.groupBox2.Controls.Add(this.button25);
+            this.groupBox2.Controls.Add(this.btnAddProductFrontImg);
+            this.groupBox2.Controls.Add(this.btnAddProductIngredientImage);
             this.groupBox2.Location = new System.Drawing.Point(25, 90);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(451, 685);
@@ -730,11 +748,11 @@
             // 
             this.tbCategory.Enabled = false;
             this.tbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbCategory.Location = new System.Drawing.Point(126, 262);
+            this.tbCategory.Location = new System.Drawing.Point(126, 260);
             this.tbCategory.Margin = new System.Windows.Forms.Padding(2);
             this.tbCategory.Name = "tbCategory";
             this.tbCategory.ReadOnly = true;
-            this.tbCategory.Size = new System.Drawing.Size(168, 29);
+            this.tbCategory.Size = new System.Drawing.Size(209, 29);
             this.tbCategory.TabIndex = 25;
             // 
             // tbBrand
@@ -745,7 +763,7 @@
             this.tbBrand.Margin = new System.Windows.Forms.Padding(2);
             this.tbBrand.Name = "tbBrand";
             this.tbBrand.ReadOnly = true;
-            this.tbBrand.Size = new System.Drawing.Size(168, 29);
+            this.tbBrand.Size = new System.Drawing.Size(209, 29);
             this.tbBrand.TabIndex = 24;
             // 
             // button62
@@ -762,20 +780,21 @@
             // 
             // listCurrentIngredients
             // 
+            this.listCurrentIngredients.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listCurrentIngredients.FormattingEnabled = true;
+            this.listCurrentIngredients.ItemHeight = 18;
             this.listCurrentIngredients.Location = new System.Drawing.Point(6, 357);
             this.listCurrentIngredients.Name = "listCurrentIngredients";
-            this.listCurrentIngredients.Size = new System.Drawing.Size(138, 121);
+            this.listCurrentIngredients.Size = new System.Drawing.Size(138, 112);
             this.listCurrentIngredients.TabIndex = 22;
-            this.listCurrentIngredients.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // button61
             // 
             this.button61.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button61.Location = new System.Drawing.Point(314, 246);
+            this.button61.Location = new System.Drawing.Point(346, 246);
             this.button61.Margin = new System.Windows.Forms.Padding(2);
             this.button61.Name = "button61";
-            this.button61.Size = new System.Drawing.Size(122, 63);
+            this.button61.Size = new System.Drawing.Size(96, 63);
             this.button61.TabIndex = 21;
             this.button61.Text = "Kategori Seç";
             this.button61.UseVisualStyleBackColor = true;
@@ -784,10 +803,10 @@
             // button60
             // 
             this.button60.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button60.Location = new System.Drawing.Point(314, 155);
+            this.button60.Location = new System.Drawing.Point(346, 155);
             this.button60.Margin = new System.Windows.Forms.Padding(2);
             this.button60.Name = "button60";
-            this.button60.Size = new System.Drawing.Size(122, 65);
+            this.button60.Size = new System.Drawing.Size(96, 65);
             this.button60.TabIndex = 20;
             this.button60.Text = "Marka Seç";
             this.button60.UseVisualStyleBackColor = true;
@@ -808,18 +827,18 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(14, 21);
+            this.label5.Location = new System.Drawing.Point(-4, 19);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 24);
+            this.label5.Size = new System.Drawing.Size(114, 24);
             this.label5.TabIndex = 16;
-            this.label5.Text = "Barkod No";
+            this.label5.Text = "Barkod No:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(14, 327);
+            this.label7.Location = new System.Drawing.Point(11, 330);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(118, 24);
@@ -838,28 +857,28 @@
             this.button26.Text = "Barkod Oku";
             this.button26.UseVisualStyleBackColor = true;
             // 
-            // button27
+            // btnAddProductBackImg
             // 
-            this.button27.Enabled = false;
-            this.button27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button27.Location = new System.Drawing.Point(230, 489);
-            this.button27.Margin = new System.Windows.Forms.Padding(2);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(197, 67);
-            this.button27.TabIndex = 13;
-            this.button27.Text = "Arka Yüz\r\nFotoğrafı Ekle";
-            this.button27.UseVisualStyleBackColor = true;
+            this.btnAddProductBackImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAddProductBackImg.Location = new System.Drawing.Point(230, 489);
+            this.btnAddProductBackImg.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddProductBackImg.Name = "btnAddProductBackImg";
+            this.btnAddProductBackImg.Size = new System.Drawing.Size(197, 67);
+            this.btnAddProductBackImg.TabIndex = 13;
+            this.btnAddProductBackImg.Text = "Arka Yüz\r\nFotoğrafı Ekle";
+            this.btnAddProductBackImg.UseVisualStyleBackColor = true;
+            this.btnAddProductBackImg.Click += new System.EventHandler(this.button27_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(14, 114);
+            this.label6.Location = new System.Drawing.Point(-4, 112);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 24);
+            this.label6.Size = new System.Drawing.Size(98, 24);
             this.label6.TabIndex = 17;
-            this.label6.Text = "Ürün Adı";
+            this.label6.Text = "Ürün Adı:";
             // 
             // txtBarkod
             // 
@@ -867,7 +886,7 @@
             this.txtBarkod.Location = new System.Drawing.Point(126, 16);
             this.txtBarkod.Margin = new System.Windows.Forms.Padding(2);
             this.txtBarkod.Name = "txtBarkod";
-            this.txtBarkod.Size = new System.Drawing.Size(275, 29);
+            this.txtBarkod.Size = new System.Drawing.Size(291, 29);
             this.txtBarkod.TabIndex = 8;
             this.txtBarkod.Enter += new System.EventHandler(this.txtBarkod_Enter);
             // 
@@ -875,12 +894,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(14, 265);
+            this.label3.Location = new System.Drawing.Point(-4, 265);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 24);
+            this.label3.Size = new System.Drawing.Size(93, 24);
             this.label3.TabIndex = 14;
-            this.label3.Text = "Kategori";
+            this.label3.Text = "Kategori:";
             // 
             // button22
             // 
@@ -898,12 +917,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(14, 175);
+            this.label4.Location = new System.Drawing.Point(-4, 177);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 24);
+            this.label4.Size = new System.Drawing.Size(72, 24);
             this.label4.TabIndex = 15;
-            this.label4.Text = "Marka";
+            this.label4.Text = "Marka:";
             // 
             // txtUrunAdi
             // 
@@ -911,32 +930,32 @@
             this.txtUrunAdi.Location = new System.Drawing.Point(126, 109);
             this.txtUrunAdi.Margin = new System.Windows.Forms.Padding(2);
             this.txtUrunAdi.Name = "txtUrunAdi";
-            this.txtUrunAdi.Size = new System.Drawing.Size(275, 29);
+            this.txtUrunAdi.Size = new System.Drawing.Size(291, 29);
             this.txtUrunAdi.TabIndex = 11;
             // 
-            // button24
+            // btnAddProductFrontImg
             // 
-            this.button24.Enabled = false;
-            this.button24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button24.Location = new System.Drawing.Point(28, 489);
-            this.button24.Margin = new System.Windows.Forms.Padding(2);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(182, 67);
-            this.button24.TabIndex = 6;
-            this.button24.Text = "Ön Yüz\r\nFotoğrafı Ekle";
-            this.button24.UseVisualStyleBackColor = true;
+            this.btnAddProductFrontImg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAddProductFrontImg.Location = new System.Drawing.Point(28, 489);
+            this.btnAddProductFrontImg.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddProductFrontImg.Name = "btnAddProductFrontImg";
+            this.btnAddProductFrontImg.Size = new System.Drawing.Size(182, 67);
+            this.btnAddProductFrontImg.TabIndex = 6;
+            this.btnAddProductFrontImg.Text = "Ön Yüz\r\nFotoğrafı Ekle";
+            this.btnAddProductFrontImg.UseVisualStyleBackColor = true;
+            this.btnAddProductFrontImg.Click += new System.EventHandler(this.button24_Click);
             // 
-            // button25
+            // btnAddProductIngredientImage
             // 
-            this.button25.Enabled = false;
-            this.button25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button25.Location = new System.Drawing.Point(186, 411);
-            this.button25.Margin = new System.Windows.Forms.Padding(2);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(231, 57);
-            this.button25.TabIndex = 5;
-            this.button25.Text = "Ürün İçeriği\r\nFotoğraf Ekle\r\n";
-            this.button25.UseVisualStyleBackColor = true;
+            this.btnAddProductIngredientImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAddProductIngredientImage.Location = new System.Drawing.Point(186, 411);
+            this.btnAddProductIngredientImage.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddProductIngredientImage.Name = "btnAddProductIngredientImage";
+            this.btnAddProductIngredientImage.Size = new System.Drawing.Size(231, 57);
+            this.btnAddProductIngredientImage.TabIndex = 5;
+            this.btnAddProductIngredientImage.Text = "Ürün İçeriği\r\nFotoğraf Ekle\r\n";
+            this.btnAddProductIngredientImage.UseVisualStyleBackColor = true;
+            this.btnAddProductIngredientImage.Click += new System.EventHandler(this.button25_Click);
             // 
             // button20
             // 
@@ -986,11 +1005,11 @@
             this.tabPage5.Controls.Add(this.button28);
             this.tabPage5.Controls.Add(this.button29);
             this.tabPage5.Controls.Add(this.button30);
-            this.tabPage5.Location = new System.Drawing.Point(4, 24);
+            this.tabPage5.Location = new System.Drawing.Point(4, 5);
             this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage5.Size = new System.Drawing.Size(506, 873);
+            this.tabPage5.Size = new System.Drawing.Size(506, 892);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
@@ -1011,22 +1030,22 @@
             this.tabControl2.Controls.Add(this.tabPage7);
             this.tabControl2.Controls.Add(this.tabPage8);
             this.tabControl2.ItemSize = new System.Drawing.Size(1, 1);
-            this.tabControl2.Location = new System.Drawing.Point(10, 107);
+            this.tabControl2.Location = new System.Drawing.Point(10, 105);
             this.tabControl2.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(490, 669);
+            this.tabControl2.Size = new System.Drawing.Size(490, 671);
             this.tabControl2.TabIndex = 11;
             // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.button32);
             this.tabPage6.Controls.Add(this.button31);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Location = new System.Drawing.Point(4, 5);
             this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage6.Size = new System.Drawing.Size(482, 643);
+            this.tabPage6.Size = new System.Drawing.Size(482, 662);
             this.tabPage6.TabIndex = 0;
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
@@ -1056,15 +1075,26 @@
             // 
             // tabPage7
             // 
+            this.tabPage7.Controls.Add(this.label21);
             this.tabPage7.Controls.Add(this.button33);
             this.tabPage7.Controls.Add(this.txtBarkodSearch);
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Location = new System.Drawing.Point(4, 5);
             this.tabPage7.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage7.Size = new System.Drawing.Size(482, 643);
+            this.tabPage7.Size = new System.Drawing.Size(482, 662);
             this.tabPage7.TabIndex = 1;
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(11, 162);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(72, 16);
+            this.label21.TabIndex = 2;
+            this.label21.Text = "Barkod No";
             // 
             // button33
             // 
@@ -1089,6 +1119,7 @@
             // 
             // tabPage8
             // 
+            this.tabPage8.Controls.Add(this.label22);
             this.tabPage8.Controls.Add(this.lbSubCategory);
             this.tabPage8.Controls.Add(this.lbUpperCategory);
             this.tabPage8.Controls.Add(this.dgvSearchedProducts);
@@ -1098,9 +1129,19 @@
             this.tabPage8.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage8.Size = new System.Drawing.Size(482, 660);
+            this.tabPage8.Size = new System.Drawing.Size(482, 662);
             this.tabPage8.TabIndex = 2;
             this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(12, 169);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(58, 16);
+            this.label22.TabIndex = 7;
+            this.label22.Text = "Ürün Adı";
             // 
             // lbSubCategory
             // 
@@ -1202,10 +1243,10 @@
             this.tabPage9.Controls.Add(this.button34);
             this.tabPage9.Controls.Add(this.button35);
             this.tabPage9.Controls.Add(this.button36);
-            this.tabPage9.Location = new System.Drawing.Point(4, 24);
+            this.tabPage9.Location = new System.Drawing.Point(4, 14);
             this.tabPage9.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(506, 873);
+            this.tabPage9.Size = new System.Drawing.Size(506, 883);
             this.tabPage9.TabIndex = 5;
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
@@ -1226,7 +1267,7 @@
             this.tabControl4.Controls.Add(this.tabPage15);
             this.tabControl4.Controls.Add(this.tabPage16);
             this.tabControl4.ItemSize = new System.Drawing.Size(1, 1);
-            this.tabControl4.Location = new System.Drawing.Point(10, 104);
+            this.tabControl4.Location = new System.Drawing.Point(11, 104);
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.SelectedIndex = 0;
             this.tabControl4.Size = new System.Drawing.Size(489, 591);
@@ -1271,10 +1312,10 @@
             this.tabPage15.Controls.Add(this.dgvFavorite);
             this.tabPage15.Controls.Add(this.groupBox1);
             this.tabPage15.Controls.Add(this.button53);
-            this.tabPage15.Location = new System.Drawing.Point(4, 22);
+            this.tabPage15.Location = new System.Drawing.Point(4, 5);
             this.tabPage15.Name = "tabPage15";
             this.tabPage15.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage15.Size = new System.Drawing.Size(481, 565);
+            this.tabPage15.Size = new System.Drawing.Size(481, 582);
             this.tabPage15.TabIndex = 1;
             this.tabPage15.UseVisualStyleBackColor = true;
             // 
@@ -1289,34 +1330,36 @@
             this.dgvFavorite.RowTemplate.Height = 24;
             this.dgvFavorite.Size = new System.Drawing.Size(470, 340);
             this.dgvFavorite.TabIndex = 17;
-            this.dgvFavorite.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFavorite_CellContentClick);
+            this.dgvFavorite.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFavorite_CellContentDoubleClick);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cbFavori);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Location = new System.Drawing.Point(123, 27);
+            this.groupBox1.Location = new System.Drawing.Point(55, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(241, 54);
+            this.groupBox1.Size = new System.Drawing.Size(363, 54);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             // 
             // cbFavori
             // 
             this.cbFavori.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFavori.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFavori.FormattingEnabled = true;
-            this.cbFavori.Location = new System.Drawing.Point(103, 26);
+            this.cbFavori.Location = new System.Drawing.Point(138, 19);
             this.cbFavori.Name = "cbFavori";
-            this.cbFavori.Size = new System.Drawing.Size(122, 21);
+            this.cbFavori.Size = new System.Drawing.Size(213, 28);
             this.cbFavori.TabIndex = 1;
             this.cbFavori.SelectedIndexChanged += new System.EventHandler(this.cbFavori_SelectedIndexChanged);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 29);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(5, 22);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(77, 13);
+            this.label13.Size = new System.Drawing.Size(114, 20);
             this.label13.TabIndex = 0;
             this.label13.Text = "Favori Listeleri:";
             // 
@@ -1335,10 +1378,10 @@
             // 
             this.tabPage16.Controls.Add(this.dgvBlacklist);
             this.tabPage16.Controls.Add(this.button54);
-            this.tabPage16.Location = new System.Drawing.Point(4, 22);
+            this.tabPage16.Location = new System.Drawing.Point(4, 5);
             this.tabPage16.Name = "tabPage16";
             this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage16.Size = new System.Drawing.Size(481, 565);
+            this.tabPage16.Size = new System.Drawing.Size(481, 582);
             this.tabPage16.TabIndex = 2;
             this.tabPage16.UseVisualStyleBackColor = true;
             // 
@@ -1413,10 +1456,10 @@
             this.tabPage10.Controls.Add(this.button37);
             this.tabPage10.Controls.Add(this.button38);
             this.tabPage10.Controls.Add(this.button39);
-            this.tabPage10.Location = new System.Drawing.Point(4, 24);
+            this.tabPage10.Location = new System.Drawing.Point(4, 14);
             this.tabPage10.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(506, 873);
+            this.tabPage10.Size = new System.Drawing.Size(506, 883);
             this.tabPage10.TabIndex = 6;
             this.tabPage10.UseVisualStyleBackColor = true;
             // 
@@ -1531,11 +1574,11 @@
             this.tabPage13.Controls.Add(this.label11);
             this.tabPage13.Controls.Add(this.tbYeniSifre);
             this.tabPage13.Controls.Add(this.label12);
-            this.tabPage13.Location = new System.Drawing.Point(4, 22);
+            this.tabPage13.Location = new System.Drawing.Point(4, 5);
             this.tabPage13.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage13.Name = "tabPage13";
             this.tabPage13.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage13.Size = new System.Drawing.Size(482, 621);
+            this.tabPage13.Size = new System.Drawing.Size(482, 638);
             this.tabPage13.TabIndex = 1;
             this.tabPage13.UseVisualStyleBackColor = true;
             // 
@@ -1659,10 +1702,10 @@
             this.tabPage11.Controls.Add(this.button45);
             this.tabPage11.Controls.Add(this.button41);
             this.tabPage11.Controls.Add(this.button42);
-            this.tabPage11.Location = new System.Drawing.Point(4, 24);
+            this.tabPage11.Location = new System.Drawing.Point(4, 14);
             this.tabPage11.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Size = new System.Drawing.Size(506, 873);
+            this.tabPage11.Size = new System.Drawing.Size(506, 883);
             this.tabPage11.TabIndex = 7;
             this.tabPage11.UseVisualStyleBackColor = true;
             // 
@@ -1814,9 +1857,9 @@
             // 
             this.tabPage17.Controls.Add(this.lbProductIsInBlacklist);
             this.tabPage17.Controls.Add(this.lbFavori);
-            this.tabPage17.Controls.Add(this.pbFavorite);
             this.tabPage17.Controls.Add(this.button63);
             this.tabPage17.Controls.Add(this.label25);
+            this.tabPage17.Controls.Add(this.pbFavorite);
             this.tabPage17.Controls.Add(this.button56);
             this.tabPage17.Controls.Add(this.button57);
             this.tabPage17.Controls.Add(this.button58);
@@ -1831,13 +1874,24 @@
             this.tabPage17.Controls.Add(this.lbProductName);
             this.tabPage17.Controls.Add(this.lbBrandName);
             this.tabPage17.Controls.Add(this.lbCategoryName);
-            this.tabPage17.Controls.Add(this.pictureBox1);
-            this.tabPage17.Location = new System.Drawing.Point(4, 24);
+            this.tabPage17.Controls.Add(this.pbProductImage);
+            this.tabPage17.Location = new System.Drawing.Point(4, 14);
             this.tabPage17.Name = "tabPage17";
             this.tabPage17.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage17.Size = new System.Drawing.Size(506, 873);
+            this.tabPage17.Size = new System.Drawing.Size(506, 883);
             this.tabPage17.TabIndex = 8;
             this.tabPage17.UseVisualStyleBackColor = true;
+            // 
+            // lbProductIsInBlacklist
+            // 
+            this.lbProductIsInBlacklist.AutoSize = true;
+            this.lbProductIsInBlacklist.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbProductIsInBlacklist.Location = new System.Drawing.Point(84, 91);
+            this.lbProductIsInBlacklist.Name = "lbProductIsInBlacklist";
+            this.lbProductIsInBlacklist.Size = new System.Drawing.Size(337, 24);
+            this.lbProductIsInBlacklist.TabIndex = 25;
+            this.lbProductIsInBlacklist.Text = "BU İÇERİK KARA LİSTENİZDEDİR!!";
+            this.lbProductIsInBlacklist.Visible = false;
             // 
             // lbFavori
             // 
@@ -1848,18 +1902,6 @@
             this.lbFavori.Size = new System.Drawing.Size(103, 20);
             this.lbFavori.TabIndex = 24;
             this.lbFavori.Text = "Favoriye Ekle";
-            this.lbFavori.Visible = false;
-            // 
-            // pbFavorite
-            // 
-            this.pbFavorite.Image = global::YesilEvAppYigit.WinUI.Properties.Resources.icons8_star_50;
-            this.pbFavorite.Location = new System.Drawing.Point(158, 784);
-            this.pbFavorite.Name = "pbFavorite";
-            this.pbFavorite.Size = new System.Drawing.Size(50, 50);
-            this.pbFavorite.TabIndex = 23;
-            this.pbFavorite.TabStop = false;
-            this.pbFavorite.Visible = false;
-            this.pbFavorite.Click += new System.EventHandler(this.pbFavorite_Click);
             // 
             // button63
             // 
@@ -1882,6 +1924,16 @@
             this.label25.Size = new System.Drawing.Size(297, 37);
             this.label25.TabIndex = 21;
             this.label25.Text = "Ürün Görüntüleme";
+            // 
+            // pbFavorite
+            // 
+            this.pbFavorite.Image = global::YesilEvAppYigit.WinUI.Properties.Resources.icons8_star_50;
+            this.pbFavorite.Location = new System.Drawing.Point(158, 784);
+            this.pbFavorite.Name = "pbFavorite";
+            this.pbFavorite.Size = new System.Drawing.Size(50, 50);
+            this.pbFavorite.TabIndex = 23;
+            this.pbFavorite.TabStop = false;
+            this.pbFavorite.Click += new System.EventHandler(this.pbFavorite_Click);
             // 
             // button56
             // 
@@ -1940,6 +1992,7 @@
             this.lbIngredients.Name = "lbIngredients";
             this.lbIngredients.Size = new System.Drawing.Size(339, 268);
             this.lbIngredients.TabIndex = 11;
+            this.lbIngredients.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbIngredients_MouseDoubleClick);
             // 
             // label24
             // 
@@ -2045,18 +2098,18 @@
             this.lbCategoryName.TabIndex = 1;
             this.lbCategoryName.Text = "Category Name";
             // 
-            // pictureBox1
+            // pbProductImage
             // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::YesilEvAppYigit.WinUI.Properties.Resources.images;
-            this.pictureBox1.InitialImage = global::YesilEvAppYigit.WinUI.Properties.Resources.images;
-            this.pictureBox1.Location = new System.Drawing.Point(34, 121);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 246);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pbProductImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbProductImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbProductImage.InitialImage = null;
+            this.pbProductImage.Location = new System.Drawing.Point(34, 121);
+            this.pbProductImage.Name = "pbProductImage";
+            this.pbProductImage.Size = new System.Drawing.Size(174, 246);
+            this.pbProductImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbProductImage.TabIndex = 0;
+            this.pbProductImage.TabStop = false;
+            this.pbProductImage.Click += new System.EventHandler(this.pbProductImage_Click);
             // 
             // tabPage18
             // 
@@ -2065,10 +2118,10 @@
             this.tabPage18.Controls.Add(this.button64);
             this.tabPage18.Controls.Add(this.button65);
             this.tabPage18.Controls.Add(this.button66);
-            this.tabPage18.Location = new System.Drawing.Point(4, 24);
+            this.tabPage18.Location = new System.Drawing.Point(4, 14);
             this.tabPage18.Name = "tabPage18";
             this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage18.Size = new System.Drawing.Size(506, 873);
+            this.tabPage18.Size = new System.Drawing.Size(506, 883);
             this.tabPage18.TabIndex = 9;
             this.tabPage18.UseVisualStyleBackColor = true;
             // 
@@ -2134,22 +2187,174 @@
             this.button66.UseVisualStyleBackColor = true;
             this.button66.Click += new System.EventHandler(this.button66_Click);
             // 
-            // lbProductIsInBlacklist
+            // tabPage19
             // 
-            this.lbProductIsInBlacklist.AutoSize = true;
-            this.lbProductIsInBlacklist.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbProductIsInBlacklist.Location = new System.Drawing.Point(84, 91);
-            this.lbProductIsInBlacklist.Name = "lbProductIsInBlacklist";
-            this.lbProductIsInBlacklist.Size = new System.Drawing.Size(337, 24);
-            this.lbProductIsInBlacklist.TabIndex = 25;
-            this.lbProductIsInBlacklist.Text = "BU İÇERİK KARA LİSTENİZDEDİR!!";
-            this.lbProductIsInBlacklist.Visible = false;
+            this.tabPage19.Controls.Add(this.btnAllergenPageAddRemoveFromBlacklist);
+            this.tabPage19.Controls.Add(this.richTextBox1);
+            this.tabPage19.Controls.Add(this.lbAllergenPageAllergenIsInUsersBlacklist);
+            this.tabPage19.Controls.Add(this.button72);
+            this.tabPage19.Controls.Add(this.label27);
+            this.tabPage19.Controls.Add(this.button68);
+            this.tabPage19.Controls.Add(this.button69);
+            this.tabPage19.Controls.Add(this.button70);
+            this.tabPage19.Controls.Add(this.label28);
+            this.tabPage19.Controls.Add(this.lbAllergenPageHowManyProductHasThisAllergen);
+            this.tabPage19.Controls.Add(this.lbAllergenPageAllergenName);
+            this.tabPage19.Controls.Add(this.lbAllergenPageProductName);
+            this.tabPage19.Location = new System.Drawing.Point(4, 14);
+            this.tabPage19.Name = "tabPage19";
+            this.tabPage19.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage19.Size = new System.Drawing.Size(506, 883);
+            this.tabPage19.TabIndex = 10;
+            this.tabPage19.UseVisualStyleBackColor = true;
+            // 
+            // btnAllergenPageAddRemoveFromBlacklist
+            // 
+            this.btnAllergenPageAddRemoveFromBlacklist.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAllergenPageAddRemoveFromBlacklist.Location = new System.Drawing.Point(173, 789);
+            this.btnAllergenPageAddRemoveFromBlacklist.Name = "btnAllergenPageAddRemoveFromBlacklist";
+            this.btnAllergenPageAddRemoveFromBlacklist.Size = new System.Drawing.Size(202, 75);
+            this.btnAllergenPageAddRemoveFromBlacklist.TabIndex = 51;
+            this.btnAllergenPageAddRemoveFromBlacklist.Text = "+ Kara liste\'ye ekle";
+            this.btnAllergenPageAddRemoveFromBlacklist.UseVisualStyleBackColor = true;
+            this.btnAllergenPageAddRemoveFromBlacklist.Click += new System.EventHandler(this.btnAllergenPageAddRemoveFromBlacklist_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Enabled = false;
+            this.richTextBox1.Location = new System.Drawing.Point(32, 420);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(440, 347);
+            this.richTextBox1.TabIndex = 50;
+            this.richTextBox1.Text = "";
+            // 
+            // lbAllergenPageAllergenIsInUsersBlacklist
+            // 
+            this.lbAllergenPageAllergenIsInUsersBlacklist.AutoSize = true;
+            this.lbAllergenPageAllergenIsInUsersBlacklist.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAllergenPageAllergenIsInUsersBlacklist.Location = new System.Drawing.Point(47, 238);
+            this.lbAllergenPageAllergenIsInUsersBlacklist.Name = "lbAllergenPageAllergenIsInUsersBlacklist";
+            this.lbAllergenPageAllergenIsInUsersBlacklist.Size = new System.Drawing.Size(425, 29);
+            this.lbAllergenPageAllergenIsInUsersBlacklist.TabIndex = 49;
+            this.lbAllergenPageAllergenIsInUsersBlacklist.Text = "BU İÇERİK KARA LİSTENİZDEDİR!!";
+            this.lbAllergenPageAllergenIsInUsersBlacklist.Visible = false;
+            // 
+            // button72
+            // 
+            this.button72.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button72.BackgroundImage")));
+            this.button72.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button72.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button72.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button72.Location = new System.Drawing.Point(13, 789);
+            this.button72.Margin = new System.Windows.Forms.Padding(2);
+            this.button72.Name = "button72";
+            this.button72.Size = new System.Drawing.Size(75, 75);
+            this.button72.TabIndex = 48;
+            this.button72.UseVisualStyleBackColor = true;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label27.Location = new System.Drawing.Point(151, 35);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(203, 37);
+            this.label27.TabIndex = 41;
+            this.label27.Text = "İçerik Detayı";
+            // 
+            // button68
+            // 
+            this.button68.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._16671574911586787867_512;
+            this.button68.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button68.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button68.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button68.Location = new System.Drawing.Point(418, 19);
+            this.button68.Margin = new System.Windows.Forms.Padding(2);
+            this.button68.Name = "button68";
+            this.button68.Size = new System.Drawing.Size(75, 75);
+            this.button68.TabIndex = 40;
+            this.button68.UseVisualStyleBackColor = true;
+            // 
+            // button69
+            // 
+            this.button69.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources.noun_back_3844749;
+            this.button69.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button69.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button69.Location = new System.Drawing.Point(13, 104);
+            this.button69.Margin = new System.Windows.Forms.Padding(2);
+            this.button69.Name = "button69";
+            this.button69.Size = new System.Drawing.Size(75, 75);
+            this.button69.TabIndex = 38;
+            this.button69.UseVisualStyleBackColor = true;
+            this.button69.Click += new System.EventHandler(this.button69_Click);
+            // 
+            // button70
+            // 
+            this.button70.BackgroundImage = global::YesilEvAppYigit.WinUI.Properties.Resources._18293293931543238902_512;
+            this.button70.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button70.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.button70.Location = new System.Drawing.Point(13, 19);
+            this.button70.Margin = new System.Windows.Forms.Padding(2);
+            this.button70.Name = "button70";
+            this.button70.Size = new System.Drawing.Size(75, 75);
+            this.button70.TabIndex = 39;
+            this.button70.UseVisualStyleBackColor = true;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(185, 384);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(148, 24);
+            this.label28.TabIndex = 36;
+            this.label28.Text = "İçerik Açıklaması";
+            // 
+            // lbAllergenPageHowManyProductHasThisAllergen
+            // 
+            this.lbAllergenPageHowManyProductHasThisAllergen.AutoSize = true;
+            this.lbAllergenPageHowManyProductHasThisAllergen.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAllergenPageHowManyProductHasThisAllergen.Location = new System.Drawing.Point(32, 309);
+            this.lbAllergenPageHowManyProductHasThisAllergen.Name = "lbAllergenPageHowManyProductHasThisAllergen";
+            this.lbAllergenPageHowManyProductHasThisAllergen.Size = new System.Drawing.Size(455, 24);
+            this.lbAllergenPageHowManyProductHasThisAllergen.TabIndex = 35;
+            this.lbAllergenPageHowManyProductHasThisAllergen.Text = "Bu içerik 0 ürünün bileşenleri arasında yer almaktadır.";
+            // 
+            // lbAllergenPageAllergenName
+            // 
+            this.lbAllergenPageAllergenName.AutoSize = true;
+            this.lbAllergenPageAllergenName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAllergenPageAllergenName.Location = new System.Drawing.Point(154, 178);
+            this.lbAllergenPageAllergenName.Name = "lbAllergenPageAllergenName";
+            this.lbAllergenPageAllergenName.Size = new System.Drawing.Size(112, 29);
+            this.lbAllergenPageAllergenName.TabIndex = 30;
+            this.lbAllergenPageAllergenName.Text = "İçerik Adı";
+            // 
+            // lbAllergenPageProductName
+            // 
+            this.lbAllergenPageProductName.AutoSize = true;
+            this.lbAllergenPageProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAllergenPageProductName.Location = new System.Drawing.Point(154, 130);
+            this.lbAllergenPageProductName.Name = "lbAllergenPageProductName";
+            this.lbAllergenPageProductName.Size = new System.Drawing.Size(167, 29);
+            this.lbAllergenPageProductName.TabIndex = 29;
+            this.lbAllergenPageProductName.Text = "Product Name";
+            // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(-15, -91);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(573, 110);
+            this.panel4.TabIndex = 6;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(524, 921);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -2207,10 +2412,12 @@
             this.tabPage17.ResumeLayout(false);
             this.tabPage17.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFavorite)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProductImage)).EndInit();
             this.tabPage18.ResumeLayout(false);
             this.tabPage18.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddedProducts)).EndInit();
+            this.tabPage19.ResumeLayout(false);
+            this.tabPage19.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2249,15 +2456,15 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.Button btnAddProductBackImg;
         private System.Windows.Forms.TextBox txtUrunAdi;
         private System.Windows.Forms.TextBox txtBarkod;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button21;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.Button btnAddProductFrontImg;
+        private System.Windows.Forms.Button btnAddProductIngredientImage;
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.Button button28;
@@ -2347,7 +2554,7 @@
         private System.Windows.Forms.Label lbProductName;
         private System.Windows.Forms.Label lbBrandName;
         private System.Windows.Forms.Label lbCategoryName;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbProductImage;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button button56;
         private System.Windows.Forms.Button button57;
@@ -2375,5 +2582,21 @@
         private System.Windows.Forms.Button button66;
         private System.Windows.Forms.DataGridView dgvAddedProducts;
         private System.Windows.Forms.Label lbProductIsInBlacklist;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TabPage tabPage19;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Button button68;
+        private System.Windows.Forms.Button button69;
+        private System.Windows.Forms.Button button70;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label lbAllergenPageHowManyProductHasThisAllergen;
+        private System.Windows.Forms.Label lbAllergenPageAllergenName;
+        private System.Windows.Forms.Label lbAllergenPageProductName;
+        private System.Windows.Forms.Label lbAllergenPageAllergenIsInUsersBlacklist;
+        private System.Windows.Forms.Button button72;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button btnAllergenPageAddRemoveFromBlacklist;
+        private System.Windows.Forms.Panel panel4;
     }
 }

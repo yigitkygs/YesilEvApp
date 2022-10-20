@@ -147,7 +147,11 @@ namespace YesilEvAppYigit.Mapping
         #region Brand Mapper
         public static Brand BrandDTOToBrand(BrandDTO dto)
         {
-            var mapperConfig = new MapperConfiguration(cfg => cfg.CreateMap<BrandDTO, Brand>());
+            var mapperConfig = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<BrandDTO, Brand>()
+                .ForMember(dest => dest.Manufacturer, opt => opt.Ignore());
+            });
             var mapper = new Mapper(mapperConfig);
             return mapper.Map<Brand>(dto);
         }
@@ -164,11 +168,11 @@ namespace YesilEvAppYigit.Mapping
             return mapper.Map<BrandDTO>(obj);
         }
 
-        public static List<Brand> ListBrandDTOToListBrand(List<BrandDTO> dto)
+        public static List<Brand> ListBrandDTOToListBrand(List<BrandDTO> obj)
         {
-            var mapperConfig = new MapperConfiguration(cfg => cfg.CreateMap<List<BrandDTO>, List<Brand>>());
-            var mapper = new Mapper(mapperConfig);
-            return mapper.Map<List<Brand>>(dto);
+            List<Brand> dto = new List<Brand>();
+            obj.ForEach(a => dto.Add(BrandDTOToBrand(a)));
+            return dto;
         }
 
         public static List<BrandDTO> ListBrandToListBrandDTO(List<Brand> obj)
@@ -264,7 +268,14 @@ namespace YesilEvAppYigit.Mapping
         {
             var mapperConfig = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<FavoriteProductDTO, FavoriteProduct>();
+                cfg.CreateMap<FavoriteProductDTO, FavoriteProduct>()
+                .ForMember(dest => dest.Product, opt => opt.Ignore())
+                .ForMember(dest => dest.Favorite, opt => opt.Ignore());
+                cfg.CreateMap<ProductDTO, Product>()
+                .ForMember(dest => dest.User, opt => opt.Ignore());
+                cfg.CreateMap<FavoriteDTO, Favorite>()
+                .ForMember(dest => dest.FavoriteProducts, opt => opt.Ignore())
+                .ForMember(dest => dest.User, opt => opt.Ignore());
                 cfg.AllowNullCollections = true;
             });
             var mapper = new Mapper(mapperConfig);

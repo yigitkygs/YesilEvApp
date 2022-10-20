@@ -19,29 +19,43 @@ namespace YesilEvAppYigit.WinUI
             InitializeComponent();
         }
 
-        public ProductIngedientsPopUpForm(ProductDTO p)
+        public ProductIngedientsPopUpForm(ProductDTO p) : this()
         {
-            currProduct = p;
-            productIngredientsDTOs.Clear();
-            p.ProductAllergens.ForEach(a => productIngredientsDTOs.Add(a.Allergen));
+            if(p != null)
+            {
+                currProduct = p;
+                productIngredientsDTOs.Clear();
+                new ProductAllergenDAL().GetProductAllergenFromProductID(p.ProductID).ForEach(a => productIngredientsDTOs.Add(a.Allergen));
+            } 
         }
 
-        List<AllergenDTO> allergenDTOs = new List<AllergenDTO>();
         List<AllergenDTO> allIngredientsDTOs = new List<AllergenDTO>();
+        List<AllergenDTO> notUsedIngredientsDTOs = new List<AllergenDTO>();
         List<AllergenDTO> productIngredientsDTOs = new List<AllergenDTO>();
+        List<RiskDTO> risks = new RiskDAL().GetAllRisks();
+
         ProductDTO currProduct;
+
+        public delegate void IngredientDelegate(List<AllergenDTO> allergens);
+        public IngredientDelegate delegem;
 
         private void ProductIngedientsPopUpForm_Load(object sender, EventArgs e)
         {
             loadAllIngredients();
             LoadLists();
+            risks.ForEach(x => cbRiskLevel.Items.Add(x)); 
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            if (listProductIngedients.Items.Count < 1)
+            if (productIngredientsDTOs.Count < 1)
             {
                 MessageBox.Show("Ürün içeriği eklemediniz");
                 return;
+            }
+            else
+            {
+                delegem(productIngredientsDTOs);
+                this.Close();
             }
         }
 
@@ -49,17 +63,17 @@ namespace YesilEvAppYigit.WinUI
         {
             listAllIngredients.Items.Clear();
             listProductIngedients.Items.Clear();
-            allIngredientsDTOs = allIngredientsDTOs.OrderBy(a => a.AllergenName).ToList();
+            notUsedIngredientsDTOs = notUsedIngredientsDTOs.OrderBy(a => a.AllergenName).ToList();
             productIngredientsDTOs = productIngredientsDTOs.OrderBy(a => a.AllergenName).ToList();
-            allIngredientsDTOs.ForEach(a => listAllIngredients.Items.Add(a));
+            notUsedIngredientsDTOs.ForEach(a => listAllIngredients.Items.Add(a));
             productIngredientsDTOs.ForEach(a => listProductIngedients.Items.Add(a));
         }
 
         private void loadAllIngredients()
         {
-            allergenDTOs = new AllergenDAL().GetAllAllergens();
-            allIngredientsDTOs = allergenDTOs;
-            productIngredientsDTOs.ForEach(dto => allIngredientsDTOs.Remove(dto));
+            allIngredientsDTOs = new AllergenDAL().GetAllAllergens();
+            notUsedIngredientsDTOs = allIngredientsDTOs;
+            productIngredientsDTOs.ForEach(dto => { notUsedIngredientsDTOs = notUsedIngredientsDTOs.SkipWhile(a => a.AllergenID == dto.AllergenID).ToList(); });
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -67,7 +81,7 @@ namespace YesilEvAppYigit.WinUI
             if (listAllIngredients.SelectedItem != null)
             {
                 AllergenDTO temp = (AllergenDTO)listAllIngredients.SelectedItem;
-                allIngredientsDTOs.Remove(temp);
+                notUsedIngredientsDTOs.Remove(temp);
                 productIngredientsDTOs.Add(temp);
                 LoadLists();
             }
@@ -79,9 +93,53 @@ namespace YesilEvAppYigit.WinUI
             {
                 AllergenDTO temp = (AllergenDTO)listProductIngedients.SelectedItem;
                 productIngredientsDTOs.Remove(temp);
-                allIngredientsDTOs.Add(temp);
+                notUsedIngredientsDTOs.Add(temp);
                 LoadLists();
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (tbNewIngredientName.Text != "" && tbNewIngredientName.Text != " " && cbRiskLevel.SelectedItem != null)
+            {
+                RiskDTO riskDTO = (RiskDTO)cbRiskLevel.SelectedItem;
+                foreach (AllergenDTO item in allIngredientsDTOs)
+                {
+                    if (item.AllergenName == tbNewIngredientName.Text)
+                    {
+                        MessageBox.Show("Eklemek istediğiniz içerik zaten mevcuttur!!");
+                        ResetAddNewIngredient();
+                        return;
+                    }
+                }
+                bool result = new AllergenDAL().AddNewAllergen(new AllergenDTO()
+                {
+                    AllergenName = tbNewIngredientName.Text,
+                    IsActive = true,
+                    CreateDate = DateTime.Now,
+                    Description = rtbDescription.Text,
+                    RiskID = riskDTO.RiskID
+                });
+                if
+                    (!result) MessageBox.Show("Yeni içerik eklenirken bir hata oluştu");
+                else
+                {
+                    loadAllIngredients();
+                    LoadLists();
+                }
+            }
+            ResetAddNewIngredient();
+        }
+
+        private void ResetAddNewIngredient()
+        {
+            tbNewIngredientName.Text = String.Empty;
+            rtbDescription.Text = String.Empty;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            groupBox1.Visible = !groupBox1.Visible;
         }
     }
 }

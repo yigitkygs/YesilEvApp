@@ -29,8 +29,6 @@ namespace YesilEvAppYigit.Core
 
         public int? CategoryID { get; set; }
 
-        public string ProductIngredientsText { get; set; }
-
         [Column(TypeName = "image")]
         public byte[] ProductIngredientsImg { get; set; }
 

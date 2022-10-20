@@ -42,73 +42,73 @@ namespace YesilEvAppYigit.WinUI
         }
         private void GetUsersToTable()
         {
-            users = new UserDAL().GetAllUsers();
+            users = new UserDAL().GetAllUsersAdmin();
             dgvAdminPanel.DataSource = users;
         }
 
         private void GetProductsToTable()
         {
-            products = new ProductDAL().GetAllProducts();
+            products = new ProductDAL().GetAllProductsAdmin();
             dgvAdminPanel.DataSource = products;
         }
 
         private void GetBrandsToTable()
         {
-            brands = new BrandDAL().GetAllBrands();
+            brands = new BrandDAL().GetAllBrandsAdmin();
             dgvAdminPanel.DataSource = brands;
         }
 
         private void GetManufacturersToTable()
         {
-            manufacturers = new ManufacturerDAL().GetAllManufacturers();
+            manufacturers = new ManufacturerDAL().GetAllManufacturersAdmin();
             dgvAdminPanel.DataSource = manufacturers;
         }
 
         private void GetFavoritesToTable()
         {
-            favorites = new FavoriteDAL().GetAllFavorites();
+            favorites = new FavoriteDAL().GetAllFavoritesAdmin();
             dgvAdminPanel.DataSource = favorites;
         }
 
         private void GetBlacklistsToTable()
         {
-            blacklists = new BlacklistDAL().GetAllBlacklists();
+            blacklists = new BlacklistDAL().GetAllBlacklistsAdmin();
             dgvAdminPanel.DataSource = blacklists;
         }
 
         private void GetCategoriesToTable()
         {
-            categories = new CategoryDAL().GetAllCategories();
+            categories = new CategoryDAL().GetAllCategoriesAdmin();
             dgvAdminPanel.DataSource = categories;
         }
 
         private void GetAllergensToTable()
         {
-            allergens = new AllergenDAL().GetAllAllergens();
+            allergens = new AllergenDAL().GetAllAllergensAdmin();
             dgvAdminPanel.DataSource = allergens;
         }
 
         private void GetSearchesToTable()
         {
-            searches = new SearchDAL().GetAllSearches();
+            searches = new SearchDAL().GetAllSearchesAdmin();
             dgvAdminPanel.DataSource = searches;
         }
 
         private void GetProductAllergensToTable()
         {
-            productAllergens = new ProductAllergenDAL().GetAllProductAllergens();
+            productAllergens = new ProductAllergenDAL().GetAllProductAllergensAdmin();
             dgvAdminPanel.DataSource = productAllergens;
         }
 
         private void GetBlacklistAllergensToTable()
         {
-            blacklistAllergens = new BlacklistAllergenDAL().GetAllBlacklistAllergens();
+            blacklistAllergens = new BlacklistAllergenDAL().GetAllBlacklistAllergensAdmin();
             dgvAdminPanel.DataSource = blacklistAllergens;
         }
 
         private void GetFavoriteProductsToTable()
         {
-            favoriteProducts = new FavoriteProductDAL().GetAllFavoriteProducts();
+            favoriteProducts = new FavoriteProductDAL().GetAllFavoriteProductsAdmin();
             dgvAdminPanel.DataSource = favoriteProducts;
         }
 
@@ -559,7 +559,8 @@ namespace YesilEvAppYigit.WinUI
         {
             if (dgvAdminPanel.CurrentRow != null)
             {
-                new FavoriteProductDAL().RevertSoftDeleteFavoriteProduct((FavoriteProductDTO)dgvAdminPanel.CurrentRow.DataBoundItem);
+                FavoriteProductDTO temp = (FavoriteProductDTO)dgvAdminPanel.CurrentRow.DataBoundItem;
+                new FavoriteProductDAL().RevertSoftDeleteFavoriteProduct(temp.FavoriteProductID);
                 GetFavoriteProductsToTable();
             }
         }
@@ -632,7 +633,8 @@ namespace YesilEvAppYigit.WinUI
         {
             if (dgvAdminPanel.CurrentRow != null)
             {
-                new FavoriteProductDAL().RevertSoftDeleteFavoriteProduct((FavoriteProductDTO)dgvAdminPanel.CurrentRow.DataBoundItem);
+                FavoriteProductDTO temp = (FavoriteProductDTO)dgvAdminPanel.CurrentRow.DataBoundItem;
+                new FavoriteProductDAL().RevertSoftDeleteFavoriteProduct(temp.FavoriteProductID);
                 GetFavoriteProductsToTable();
             }
         }
@@ -645,6 +647,11 @@ namespace YesilEvAppYigit.WinUI
                 new ProductDAL().ApproveProduct(productDTO.ProductID);
                 GetProductsToTable();
             }
+        }
+
+        private void AdminPanel_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

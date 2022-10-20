@@ -10,17 +10,25 @@ namespace YesilEvAppYigit.DTO
 {
     public class UserDTO
     {
+        [DisplayName("Kullanıcı ID")]
         public int UserID { get; set; }
 
         [Required]
+        [DisplayName("Kullanıcı Adı")]
         public string Username { get; set; }
 
         [Required]
+        [DisplayName("Şifre Hash'i")]
         public string Password { get; set; }
 
         [Required]
+        [DisplayName("Rol No")]
         public int RoleID { get; set; }
+
+        [DisplayName("Aktif Mi?")]
         public bool? IsActive { get; set; }
+
+        [DisplayName("Ekleme Tarihi")]
         public DateTime? CreateDate { get; set; }
 
         [Browsable(false)]

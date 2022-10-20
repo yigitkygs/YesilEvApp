@@ -43,9 +43,13 @@ Winform tabanlı mobil UI mock up olarak yapılmıştır.
   |-|-|
   |![image]()|![image]()|
 
- |Admin Paneli Örnek 1|Admin Paneli Örnek 2|
-  |-|-|
-  |![image](https://user-images.githubusercontent.com/18614094/196935465-62cd0a61-fd4d-4364-a0d9-cc1016f7e8ce.png)|![image](https://user-images.githubusercontent.com/18614094/196935724-5ecc1651-291d-4a7e-b29e-b584493ae230.png)|
+ |Admin Paneli Örnek 1|
+  |-|
+  |![image](https://user-images.githubusercontent.com/18614094/196935465-62cd0a61-fd4d-4364-a0d9-cc1016f7e8ce.png)|
+
+|Admin Paneli Örnek 2|
+  |-|
+  |![image](https://user-images.githubusercontent.com/18614094/196935724-5ecc1651-291d-4a7e-b29e-b584493ae230.png)|
 
 
 
@@ -53,5 +57,7 @@ Winform tabanlı mobil UI mock up olarak yapılmıştır.
   |-|-|
    |![image](https://user-images.githubusercontent.com/18614094/196934836-0ebba086-5aa2-4733-8485-b0b51d8d9c99.png)|![image](https://user-images.githubusercontent.com/18614094/196935973-f4d9498c-8b07-412e-b24b-8b083d9b8f6a.png)|
 
-
+ |Raporlama Örnek 2|
+  |-|
+   |![image](https://user-images.githubusercontent.com/18614094/196935973-f4d9498c-8b07-412e-b24b-8b083d9b8f6a.png)|
 
